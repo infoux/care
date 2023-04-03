@@ -6996,7 +6996,7 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 {
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 h5 {
-  margin: 0;
+  margin: 15px 0 0 0;
   font-size: 17px;
   color: #333333;
   font-weight: 400;
@@ -7028,7 +7028,7 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 p
   body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 p {
     display: block;
     font-size: 16px;
-    margin-left: auto;
+    margin: 20px 0 0 0;
     text-align: start;
     color: #555555;
     display: -webkit-box;
@@ -8006,6 +8006,15 @@ body div#content.sub section.sub-board div.photo div.vlog-title::after {
   right: 0;
 }
 
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.photo div.vlog-title::after {
+    width: 240px;
+    height: 213px;
+    top: -75px;
+    right: 25px;
+  }
+}
+
 body div#content.sub section.sub-board div.photo div.vlog-title h3 {
   font-size: 22px;
   font-weight: 700;
@@ -8022,6 +8031,12 @@ body div#content.sub section.sub-board div.photo div.vlog-title p {
 
 body div#content.sub section.sub-board div.photo div.vlog-title p span {
   display: block;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.photo div.vlog-title p span {
+    display: inline-block;
+  }
 }
 
 body div#content.sub section.sub-board div.photo ul {
