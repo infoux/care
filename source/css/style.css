@@ -3868,6 +3868,92 @@ body .container {
   }
 }
 
+body div.modal {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 20px #00000026;
+          box-shadow: 0px 0px 20px #00000026;
+}
+
+@media (min-width: 1195px) {
+  body div.modal {
+    top: 20%;
+    left: 20%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    width: 300px;
+    height: 400px;
+  }
+}
+
+body div.modal a {
+  display: block;
+  width: 300px;
+  height: 350px;
+}
+
+body div.modal a img {
+  width: 300px;
+  height: 350px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+body div.modal > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 49px;
+  padding-left: 5px;
+  border-top: 1px solid #aaa;
+}
+
+body div.modal > div div.checkbox {
+  width: 220px;
+  height: 49px;
+  border-right: 1px solid #aaa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body div.modal > div div.checkbox input {
+  scale: 1.3;
+}
+
+body div.modal > div div.checkbox label {
+  margin-left: 5px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #555555;
+}
+
+body div.modal > div button {
+  display: inline-block;
+  width: 79px;
+  height: 49px;
+  outline: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  font-size: 16px;
+  color: #555555;
+}
+
 body div.shadow {
   position: fixed;
   display: none;
@@ -3930,7 +4016,7 @@ body div.shadow.active {
   }
 }
 
-body div.modal {
+body div.youtube {
   position: fixed;
   display: none;
   left: 0;
@@ -3946,7 +4032,7 @@ body div.modal {
   padding: 0 50px;
 }
 
-body div.modal.on {
+body div.youtube.on {
   z-index: 1000000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3960,7 +4046,7 @@ body div.modal.on {
   opacity: 1;
 }
 
-body div.modal button.close {
+body div.youtube button.close {
   position: absolute;
   right: 20px;
   top: 5px;
@@ -3973,7 +4059,7 @@ body div.modal button.close {
 }
 
 @media (min-width: 1195px) {
-  body div.modal button.close {
+  body div.youtube button.close {
     right: 20px;
     top: 0;
     width: 50px;
@@ -3982,20 +4068,20 @@ body div.modal button.close {
   }
 }
 
-body div.modal button.close.youtube {
+body div.youtube button.close.youtube {
   top: -40px;
   right: 10px;
   color: #fff;
 }
 
 @media (min-width: 1195px) {
-  body div.modal button.close.youtube {
+  body div.youtube button.close.youtube {
     top: -65px;
     right: 0px;
   }
 }
 
-body div.modal div.youtube {
+body div.youtube div.youtubebox {
   position: relative;
   width: 100%;
   height: 365px;
@@ -4003,19 +4089,19 @@ body div.modal div.youtube {
 }
 
 @media (min-width: 1195px) {
-  body div.modal div.youtube {
+  body div.youtube div.youtubebox {
     width: 700px;
     height: 490px;
   }
 }
 
-body div.modal div.youtube iframe {
+body div.youtube div.youtubebox iframe {
   width: 100%;
   height: 365px;
 }
 
 @media (min-width: 1195px) {
-  body div.modal div.youtube iframe {
+  body div.youtube div.youtubebox iframe {
     width: 100%;
     height: 100%;
   }
