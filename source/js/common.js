@@ -54,7 +54,7 @@ $(function(){
       delay : 5000,
       disableOnInteraction: true
     },
-    loop: true, // 반복 재생 여부
+    loop: false, // 반복 재생 여부
     slidesPerView: 1, // 한 번에 보여줄 슬라이드 개수
     spaceBetween: 30, // 슬라이드 사이 여백
     navigation: {
@@ -65,6 +65,13 @@ $(function(){
       el: ".banner-pagination",
       type: "fraction",
     },
+    observer: true,
+    observeParents: true,
+    a11y: {
+      prevSlideMessage: '이전 슬라이드',
+      nextSlideMessage: '다음 슬라이드',
+      slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+  },
   })
 
   $(".banner-stop").click(function(){

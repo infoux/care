@@ -495,6 +495,7 @@ div#content.sub05 div.sub-head.fix {
   margin: 50px 0;
   padding: 0 !important;
   width: 100%;
+  min-width: 330px;
 }
 
 .pagenation a {
@@ -506,9 +507,10 @@ div#content.sub05 div.sub-head.fix {
   overflow: hidden;
   display: inline-block;
   vertical-align: top;
-  font-size: 13px;
+  font-size: 14px;
   color: #555555;
   width: 30px;
+  height: 36px;
   line-height: 32px;
   margin: 0 2px;
   border: 1px solid #bbb;
@@ -526,7 +528,7 @@ div#content.sub05 div.sub-head.fix {
 .pagenation a.arrow,
 .pagenation strong.arrow {
   font-size: 0;
-  border-color: #AAAAAA;
+  border: none;
 }
 
 .pagenation a.arrow.jump-left,
@@ -580,9 +582,10 @@ div#content.sub05 div.sub-head.fix {
 .pagenation .active,
 .pagenation strong {
   font-weight: 600;
-  color: #fff;
-  background: #333333;
-  border: 1px solid #2C2C2C;
+  color: #DD488E;
+  background: #fff;
+  border: 1px solid #DD488E;
+  text-decoration: underline;
 }
 
 * {
@@ -3813,6 +3816,36 @@ body {
   /* footer */
 }
 
+body .sr-only {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+body .sr-only-focusable:active,
+body .sr-only-focusable:focus {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  display: block !important;
+  width: 100% !important;
+  height: 80px !important;
+  background: #333 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
+  z-index: 999999999;
+}
+
 body .container {
   position: relative;
   display: inline-block;
@@ -3897,6 +3930,97 @@ body div.shadow.active {
   }
 }
 
+body div.modal {
+  position: fixed;
+  display: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  padding: 0 50px;
+}
+
+body div.modal.on {
+  z-index: 1000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+}
+
+body div.modal button.close {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  color: #333;
+  background: transparent;
+  font-size: 30px;
+}
+
+@media (min-width: 1195px) {
+  body div.modal button.close {
+    right: 20px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+  }
+}
+
+body div.modal button.close.youtube {
+  top: -40px;
+  right: 10px;
+  color: #fff;
+}
+
+@media (min-width: 1195px) {
+  body div.modal button.close.youtube {
+    top: -65px;
+    right: 0px;
+  }
+}
+
+body div.modal div.youtube {
+  position: relative;
+  width: 100%;
+  height: 365px;
+  background: #eee;
+}
+
+@media (min-width: 1195px) {
+  body div.modal div.youtube {
+    width: 700px;
+    height: 490px;
+  }
+}
+
+body div.modal div.youtube iframe {
+  width: 100%;
+  height: 365px;
+}
+
+@media (min-width: 1195px) {
+  body div.modal div.youtube iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 body ul {
   list-style: none;
   margin: 0;
@@ -3913,6 +4037,7 @@ body header {
   height: 56px;
   text-align: center;
   background: #fff;
+  display: block;
 }
 
 @media (min-width: 1195px) {
@@ -4052,11 +4177,11 @@ body.sub header div.tools {
     line-height: 48px;
     color: #111;
     padding: 0 20px;
-    border-top: 1px solid #DDDDDD;
-    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
   }
   body nav#main-menu div.menus > ul > li h3 > a::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     right: 20px;
@@ -4091,10 +4216,10 @@ body.sub header div.tools {
     line-height: 48px;
     padding: 0 20px;
     color: #555555;
-    background: #F8F8F8;
+    background: #f8f8f8;
   }
   body nav#main-menu div.menus > ul > li ul li a::before {
-    content: "·";
+    content: '·';
     margin-right: 5px;
   }
   body nav#main-menu div.menus > ul > li ul li:last-child {
@@ -4194,7 +4319,7 @@ body.sub header div.tools {
     max-height: 0;
     overflow: hidden;
     text-align: left;
-    border-left: 1px solid #DEDEDE;
+    border-left: 1px solid #dedede;
   }
   body nav#main-menu div.menus > ul > li ul.last-border {
     border-right: 1px solid #dedede;
@@ -4217,9 +4342,9 @@ body.sub header div.tools {
     transition: all 0.2s ease;
   }
   body nav#main-menu div.menus > ul > li ul li a.active, body nav#main-menu div.menus > ul > li ul li a:hover {
-    color: #DD488E;
-    -webkit-text-decoration: underline #DD488E;
-            text-decoration: underline #DD488E;
+    color: #dd488e;
+    -webkit-text-decoration: underline #dd488e;
+            text-decoration: underline #dd488e;
   }
   body nav#main-menu.on {
     max-height: 1000px;
@@ -4460,8 +4585,8 @@ body div#content.main div.container section.main-menu ul li {
   width: 164px;
   height: 164px;
   border-radius: 50px;
-  -webkit-box-shadow: 4px 0px 20px #2B354A26;
-          box-shadow: 4px 0px 20px #2B354A26;
+  -webkit-box-shadow: 4px 0px 20px #2b354a26;
+          box-shadow: 4px 0px 20px #2b354a26;
   overflow: hidden;
   opacity: 0;
 }
@@ -4557,7 +4682,7 @@ body div#content.main div.container section.main-menu ul li.ani08 {
 }
 
 body div#content.main div.container section.main-menu ul li.opacity {
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 
 body div#content.main div.container section.main-menu ul li.opacity img.icon08 {
@@ -4594,6 +4719,7 @@ body div#content.main div.container section.main-menu ul li a {
 
 body div#content.main div.container section.main-menu ul li a:hover div.hover {
   bottom: 0;
+  opacity: 1;
 }
 
 body div#content.main div.container section.main-menu ul li a small {
@@ -4645,7 +4771,7 @@ body div#content.main div.container section.main-menu ul li a img.icon01 {
 body div#content.main div.container section.main-menu ul li a img.icon02 {
   width: 84px;
   height: 84px;
-  top: 80px;
+  top: 75px;
 }
 
 @media (min-width: 1195px) {
@@ -4728,7 +4854,7 @@ body div#content.main div.container section.main-menu ul li a img.icon07 {
 
 body div#content.main div.container section.main-menu ul li a div.hover {
   position: absolute;
-  bottom: -250px;
+  bottom: -280px;
   right: 0;
   background-color: #fff;
   width: 100%;
@@ -4759,7 +4885,7 @@ body div#content.main div.container section.main-menu ul li a div.hover p {
 body div#content.main div.container section.main-menu ul li a div.hover p.view {
   margin-top: 15px;
   font-size: 16px;
-  color: #DD488E;
+  color: #dd488e;
 }
 
 body div#content.main section.main-notice {
@@ -4840,7 +4966,7 @@ body div#content.main section.main-notice div.container div.notice-box ul.notice
 }
 
 body div#content.main section.main-notice div.container div.notice-box ul.notice li a h4::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 9px;
   height: 15px;
@@ -4868,7 +4994,7 @@ body div#content.main section.main-notice div.container div.notice-box ul.notice
 }
 
 body div#content.main section.main-notice div.container div.notice-box ul.notice li ul li a p:hover {
-  color: #DD488E;
+  color: #dd488e;
   text-decoration: underline;
 }
 
@@ -4891,8 +5017,8 @@ body div#content.main section.main-notice div.container div.notice-box div.cm {
   position: relative;
   width: 345px;
   height: 126px;
-  background: #DD488E;
-  border: 1px solid #DD488E;
+  background: #dd488e;
+  border: 1px solid #dd488e;
   border-radius: 20px;
   padding: 28px;
 }
@@ -4941,7 +5067,7 @@ body div#content.main section.main-notice div.container div.notice-box div.cm di
 }
 
 body div#content.main section.main-notice div.container div.notice-box div.cm div a::before {
-  content: "";
+  content: '';
   margin-right: 10px;
   margin-bottom: 5px;
   display: inline-block;
@@ -4959,7 +5085,7 @@ body div#content.main section.main-notice div.container div.notice-box div.cm di
 }
 
 body div#content.main section.main-notice div.container div.notice-box div.cm div a.center {
-  color: #FFD688;
+  color: #ffd688;
   text-decoration: underline;
 }
 
@@ -4982,7 +5108,7 @@ body div#content.main section.main-notice div.notice-bg {
   position: absolute;
   top: 35px;
   left: 0;
-  background: #FFC131;
+  background: #ffc131;
   width: 100%;
   height: 508px;
   z-index: -1;
@@ -4997,7 +5123,7 @@ body div#content.main section.main-notice div.notice-bg {
 
 body div#content.main section.main-vlog div.container {
   margin-top: 25px;
-  background: #F5F5F6;
+  background: #f5f5f6;
   padding: 45px 0;
 }
 
@@ -5016,7 +5142,7 @@ body div#content.main section.main-vlog div.container h3 {
 }
 
 body div#content.main section.main-vlog div.container h3::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 9px;
   height: 15px;
@@ -5062,7 +5188,7 @@ body div#content.main section.main-vlog div.container ul.vlog-box li a {
 }
 
 body div#content.main section.main-vlog div.container ul.vlog-box li a::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 55px;
   height: 45px;
@@ -5204,7 +5330,7 @@ body div#content.sub section.sub-head div.container div.nodepth ul li a.on span 
 }
 
 body div#content.sub section.sub-head div.container div.nodepth ul li a::before {
-  content: "· ";
+  content: '· ';
 }
 
 body div#content.sub section.sub-head div.container div.nodepth.on {
@@ -5225,15 +5351,16 @@ body div#content.sub section.sub-head div.container div.depth1 {
   text-align: center;
 }
 
-body div#content.sub section.sub-head div.container div.depth1 > a {
+body div#content.sub section.sub-head div.container div.depth1 > h2 {
   margin-top: 30px;
   font-size: 30px;
   font-weight: 900;
   color: #111111;
+  margin: 0;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-head div.container div.depth1 > a {
+  body div#content.sub section.sub-head div.container div.depth1 > h2 {
     font-size: 42px;
   }
 }
@@ -5265,7 +5392,7 @@ body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li
 }
 
 body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a:hover {
-  color: #C92D76;
+  color: #c92d76;
 }
 
 body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a.depth1-home {
@@ -5294,9 +5421,9 @@ body div#content.sub section.sub-head div.container div.depth2 a.depth2-link {
   position: relative;
   width: 100%;
   height: 46px;
-  border-top: 1px solid #D9D9D9;
-  border-bottom: 1px solid #D9D9D9;
-  color: #C92D76;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  color: #c92d76;
   font-weight: 600;
   font-size: 18px;
   display: block;
@@ -5311,7 +5438,7 @@ body div#content.sub section.sub-head div.container div.depth2 a.depth2-link {
 }
 
 body div#content.sub section.sub-head div.container div.depth2 a.depth2-link::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   right: 16px;
@@ -5356,7 +5483,7 @@ body div#content.sub section.sub-head div.container div.depth2 div ul {
   margin: 0;
   padding: 10px 20px;
   background: #fff;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   text-align: center;
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16) inset;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16) inset;
@@ -5383,7 +5510,7 @@ body div#content.sub section.sub-head div.container div.depth2 div ul li {
 
 body div#content.sub section.sub-head div.container div.depth2 div ul li a {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #555;
   line-height: 40px;
 }
@@ -5396,15 +5523,15 @@ body div#content.sub section.sub-head div.container div.depth2 div ul li a {
     transition: all 0.1s ease;
   }
   body div#content.sub section.sub-head div.container div.depth2 div ul li a:hover {
-    color: #DD488E;
+    color: #dd488e;
     padding-bottom: 12px;
-    border-bottom: 4px solid #DD488E;
+    border-bottom: 4px solid #dd488e;
   }
 }
 
 body div#content.sub section.sub-head div.container div.depth2 div ul li a.on {
   font-weight: 700;
-  color: #C92D76;
+  color: #c92d76;
   text-decoration: underline;
 }
 
@@ -5412,7 +5539,7 @@ body div#content.sub section.sub-head div.container div.depth2 div ul li a.on {
   body div#content.sub section.sub-head div.container div.depth2 div ul li a.on {
     text-decoration: none;
     padding-bottom: 12px;
-    border-bottom: 4px solid #DD488E;
+    border-bottom: 4px solid #dd488e;
   }
 }
 
@@ -5481,7 +5608,7 @@ body div#content.sub section.business div.container div.b-title h3.space span {
 }
 
 body div#content.sub section.business div.container div.b-title h3::before {
-  content: "";
+  content: '';
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -5533,9 +5660,9 @@ body div#content.sub section.business div.container div.b-title > h4.margin {
 body div#content.sub section.business div.container div.b-title div.b-info {
   width: 100%;
   height: 124px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   border-radius: 10px;
-  background: #F6F6F6;
+  background: #f6f6f6;
   text-align: center;
 }
 
@@ -5574,7 +5701,7 @@ body div#content.sub section.business div.container div.b-title div.b-info p {
 }
 
 body div#content.sub section.business div.container div.b-title div.b-info p span {
-  color: #D62727;
+  color: #d62727;
 }
 
 body div#content.sub section.business div.container div.b-content {
@@ -5607,7 +5734,7 @@ body div#content.sub section.business div.container div.b-content h4 {
 }
 
 body div#content.sub section.business div.container div.b-content h4::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -5617,9 +5744,9 @@ body div#content.sub section.business div.container div.b-content h4::before {
 }
 
 body div#content.sub section.business div.container div.b-content div.care-title {
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   border-bottom: none;
-  background: #FEF8FA;
+  background: #fef8fa;
   padding: 20px;
 }
 
@@ -5632,7 +5759,7 @@ body div#content.sub section.business div.container div.b-content div.care-title
 body div#content.sub section.business div.container div.b-content div.care-title h6 {
   font-size: 17px;
   font-weight: 700;
-  color: #BB1563;
+  color: #bb1563;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5675,7 +5802,7 @@ body div#content.sub section.business div.container div.b-content div.care-title
 
 body div#content.sub section.business div.container div.b-content > ul {
   width: 100%;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   padding: 0 20px 20px 20px;
 }
 
@@ -5719,8 +5846,28 @@ body div#content.sub section.business div.container div.b-content > ul li.title 
   margin-top: 20px;
   font-size: 16px;
   color: #333;
-  margin-left: 20px;
-  text-indent: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body div#content.sub section.business div.container div.b-content > ul li.title::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z'%3E%3C/path%3E%3C/svg%3E") no-repeat center/cover;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.business div.container div.b-content > ul li.title::before {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 body div#content.sub section.business div.container div.b-content > ul li.title.bold {
@@ -5752,8 +5899,8 @@ body div#content.sub section.business div.container div.b-content > ul li.b-tabl
 }
 
 body div#content.sub section.business div.container div.b-content > ul li.b-table thead {
-  border: 1px solid #5F5F5F;
-  background: #6E6E6E;
+  border: 1px solid #5f5f5f;
+  background: #6e6e6e;
 }
 
 body div#content.sub section.business div.container div.b-content > ul li.b-table thead tr {
@@ -5791,7 +5938,7 @@ body div#content.sub section.business div.container div.b-content > ul li.b-tabl
 
 body div#content.sub section.business div.container div.b-content > ul li.b-table thead tr th.th02 {
   width: 100%;
-  border-left: 1px solid #CCCCCC;
+  border-left: 1px solid #cccccc;
 }
 
 body div#content.sub section.business div.container div.b-content > ul li.b-table tbody tr {
@@ -5911,7 +6058,7 @@ body div#content.sub section.business div.container div.b-content > ul li h6.car
   }
 }
 
-body div#content.sub section.business div.container div.b-content > ul li h5.b-img {
+body div#content.sub section.business div.container div.b-content > ul li p.b-img {
   margin: 20px 0 0 0;
   font-size: 0;
   width: 290px;
@@ -5920,7 +6067,7 @@ body div#content.sub section.business div.container div.b-content > ul li h5.b-i
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.business div.container div.b-content > ul li h5.b-img {
+  body div#content.sub section.business div.container div.b-content > ul li p.b-img {
     width: 410px;
     height: 280px;
   }
@@ -5941,7 +6088,7 @@ body div#content.sub section.business div.container div.b-content > ul li p.b-na
 }
 
 body div#content.sub section.business div.container div.b-content > ul li p.b-name::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: 15px;
@@ -5964,7 +6111,7 @@ body div#content.sub section.business div.container div.b-content > ul li p.b-na
   }
 }
 
-body div#content.sub section.business div.container div.b-content > ul li h5.b-img2 {
+body div#content.sub section.business div.container div.b-content > ul li p.b-img2 {
   margin: 20px 0 0 0;
   font-size: 0;
   width: 290px;
@@ -5975,7 +6122,7 @@ body div#content.sub section.business div.container div.b-content > ul li h5.b-i
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.business div.container div.b-content > ul li h5.b-img2 {
+  body div#content.sub section.business div.container div.b-content > ul li p.b-img2 {
     width: 510px;
     height: 350px;
     background: url("../images/pc-house.svg") no-repeat center center/cover;
@@ -6068,7 +6215,7 @@ body div#content.sub section.business div.container div.b-content ul.procedure {
 
 body div#content.sub section.business div.container div.b-content ul.procedure li {
   position: relative;
-  border: 1px solid #DD488E;
+  border: 1px solid #dd488e;
   border-radius: 100px;
   width: 100%;
   margin: 15px 0 30px;
@@ -6133,7 +6280,7 @@ body div#content.sub section.business div.container div.b-content ul.procedure l
 }
 
 body div#content.sub section.business div.container div.b-content ul.procedure li::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: -20px;
@@ -6200,13 +6347,13 @@ body div#content.sub section.business div.container div.b-content > ul.step > li
   }
 }
 
-body div#content.sub section.business div.container div.b-content > ul.step > li small {
+body div#content.sub section.business div.container div.b-content > ul.step > li h5 {
   display: block;
   width: 100%;
   height: 30px;
-  border: 1px solid #C0C0C0;
+  border: 1px solid #c0c0c0;
   border-radius: 0px 20px 0px 20px;
-  background: #F5DAE3;
+  background: #f5dae3;
   font-size: 14px;
   font-weight: 700;
   color: #333333;
@@ -6215,7 +6362,7 @@ body div#content.sub section.business div.container div.b-content > ul.step > li
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.business div.container div.b-content > ul.step > li small {
+  body div#content.sub section.business div.container div.b-content > ul.step > li h5 {
     width: 295px;
     height: 40px;
     font-size: 16px;
@@ -6223,15 +6370,16 @@ body div#content.sub section.business div.container div.b-content > ul.step > li
 }
 
 body div#content.sub section.business div.container div.b-content > ul.step > li div {
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   text-align: center;
   height: 298px;
   margin-top: 5px;
+  padding: 15px 0;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.business div.container div.b-content > ul.step > li div {
-    height: 100%;
+    height: 350px;
   }
 }
 
@@ -6277,15 +6425,25 @@ body div#content.sub section.business div.container div.b-content > ul.step > li
   }
 }
 
-body div#content.sub section.business div.container div.b-content > ul.step > li div h5 {
+body div#content.sub section.business div.container div.b-content > ul.step > li div.sub7 {
+  height: 250px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.business div.container div.b-content > ul.step > li div.sub7 {
+    height: 270px;
+  }
+}
+
+body div#content.sub section.business div.container div.b-content > ul.step > li div strong {
   font-size: 18px;
   font-weight: 700;
-  color: #B9236A;
+  color: #b9236a;
   margin: 12px 0 4px 0;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.business div.container div.b-content > ul.step > li div h5 {
+  body div#content.sub section.business div.container div.b-content > ul.step > li div strong {
     font-size: 21px;
   }
 }
@@ -6307,11 +6465,11 @@ body div#content.sub section.business div.container div.b-content > ul.step > li
 }
 
 body div#content.sub section.business div.container div.b-content > ul.step > li div ul::before {
-  content: "";
+  content: '';
   display: block;
   width: 90%;
   height: 1px;
-  background: #DDDDDD;
+  background: #dddddd;
   margin: 0 auto 10px;
 }
 
@@ -6326,6 +6484,11 @@ body div#content.sub section.business div.container div.b-content > ul.step > li
   color: #555555;
   line-height: 1.8;
   text-align: center;
+}
+
+body div#content.sub section.business div.container div.b-content > ul.step > li div ul li::before {
+  content: "·";
+  margin-right: 5px;
 }
 
 @media (min-width: 1195px) {
@@ -6368,32 +6531,32 @@ body div#content.sub section.business div.container div.b-content ul.border li:n
 }
 
 body div#content.sub section.business div.container div.b-content ul.border li:nth-child(2) {
-  border-left: 3px solid #F27078;
+  border-left: 3px solid #f27078;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.business div.container div.b-content ul.border li:nth-child(2) {
-    border-left: 5px solid #F27078;
+    border-left: 5px solid #f27078;
   }
 }
 
 body div#content.sub section.business div.container div.b-content ul.border li:nth-child(3) {
-  border-left: 3px solid #A1B972;
+  border-left: 3px solid #a1b972;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.business div.container div.b-content ul.border li:nth-child(3) {
-    border-left: 5px solid #A1B972;
+    border-left: 5px solid #a1b972;
   }
 }
 
 body div#content.sub section.business div.container div.b-content ul.border li:nth-child(4) {
-  border-left: 3px solid #47ADB8;
+  border-left: 3px solid #47adb8;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.business div.container div.b-content ul.border li:nth-child(4) {
-    border-left: 5px solid #47ADB8;
+    border-left: 5px solid #47adb8;
   }
 }
 
@@ -6425,7 +6588,7 @@ body div#content.sub section.business div.container div.b-content ul.border li p
 
 body div#content.sub section.business div.container div.b-red {
   margin-top: 9px;
-  color: #D62727;
+  color: #d62727;
   font-size: 16px;
 }
 
@@ -6442,26 +6605,24 @@ body div#content.sub section.sub-board {
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board {
-    padding: 0 0 60px;
+    margin-top: 170px;
+    padding: 0;
   }
 }
 
-body div#content.sub section.sub-board div.boardMain h2 {
-  font-size: 24px;
-  color: #111111;
-  font-weight: 900;
-  margin: 0 0 40px 0;
-}
-
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.boardMain h2 {
-    font-size: 28px;
+  body div#content.sub section.sub-board div.boardMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
 body div#content.sub section.sub-board div.boardMain div.boadrdSearch {
-  height: 80px;
-  background: #F5F5F5;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6471,21 +6632,73 @@ body div#content.sub section.sub-board div.boardMain div.boadrdSearch {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 30px;
+  padding: 0 17px 0 26px;
+  width: 100%;
+  height: 42px;
+  background: #f1f3f4;
+  border: 1px solid #e8eaeb;
+  border-radius: 200px;
+}
+
+body div#content.sub section.sub-board div.boardMain div.boadrdSearch::before {
+  content: '';
+  position: absolute;
+  left: 110px;
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: #aaa;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.boardMain div.boadrdSearch::before {
+    left: 105px;
+  }
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.boardMain div.boadrdSearch {
-    height: 120px;
+    width: 430px;
+    height: 46px;
   }
 }
 
-body div#content.sub section.sub-board div.boardMain div.boadrdSearch input {
-  width: 100%;
-  height: 42px;
-  border: 1px solid #BBBBBB;
-  padding: 0 10px;
+body div#content.sub section.sub-board div.boardMain div.boadrdSearch select {
+  min-width: 70px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7.41' viewBox='0 0 12 7.41'%3E%3Cpath id='패스_4975' data-name='패스 4975' d='M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z' transform='translate(-6 -8.59)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat right center/10px auto;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #555555;
   font-size: 15px;
+  margin-right: 10px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.boardMain div.boadrdSearch select {
+    font-size: 17px;
+    width: 50px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7.41' viewBox='0 0 12 7.41'%3E%3Cpath id='패스_4975' data-name='패스 4975' d='M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z' transform='translate(-6 -8.59)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat right center/13px auto;
+  }
+}
+
+body div#content.sub section.sub-board div.boardMain div.boadrdSearch select option {
+  color: #555555;
+}
+
+body div#content.sub section.sub-board div.boardMain div.boadrdSearch input {
+  width: 90%;
+  height: 42px;
+  border: none;
+  background: #f1f3f4;
+  padding: 0 5px 0 10px;
+  font-size: 15px;
+}
+
+body div#content.sub section.sub-board div.boardMain div.boadrdSearch input:focus {
+  outline: none;
 }
 
 @media (min-width: 1195px) {
@@ -6496,167 +6709,28 @@ body div#content.sub section.sub-board div.boardMain div.boadrdSearch input {
 }
 
 body div#content.sub section.sub-board div.boardMain div.boadrdSearch button {
-  width: 80px;
-  height: 42px;
-  background: #333333;
-  border: 1px solid #2C2C2C;
-  color: #fff;
-  font-size: 16px;
+  width: 27px;
+  height: 23px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.251' height='17.251' viewBox='0 0 17.251 17.251'%3E%3Cpath id='패스_4977' data-name='패스 4977' d='M59.963,23.251l-5.082-5.082a6.636,6.636,0,1,1,2.972-5.533,6.606,6.606,0,0,1-1.1,3.649l5.082,5.1ZM55.2,12.635a3.981,3.981,0,1,0-3.981,3.981A3.993,3.993,0,0,0,55.2,12.635Z' transform='translate(-44.583 -6)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat center/cover;
+  border: none;
+  font-size: 0;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.boardMain div.boadrdSearch button {
-    width: 100px;
-    height: 48px;
+    width: 20px;
+    height: 17px;
   }
-}
-
-body div#content.sub section.sub-board div.boardMain div.boadrdSearch button.write {
-  margin-left: 10px;
-  background: #FF8811;
-  border: none;
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure {
-  width: 346px;
-  height: 360px;
-  border: 1px solid #BBBBBB;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.boardMain .brochure {
-    width: 100%;
-    height: 480px;
-    padding: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: left;
-  }
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure img {
-  display: block;
-  width: 133px;
-  height: 198px;
-  margin: 15px auto;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.boardMain .brochure img {
-    display: inline-block;
-    width: 290px;
-    height: 430px;
-    margin: 0;
-  }
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text {
-  display: inline-block;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.boardMain .brochure .brochure-text {
-    margin: 90px 0 0 27px;
-  }
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text p {
-  font-size: 18px;
-  color: #111111;
-  margin: 0;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.boardMain .brochure .brochure-text p {
-    font-size: 21px;
-    display: block;
-  }
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text h4 {
-  font-size: 20px;
-  font-weight: 900;
-  color: #111111;
-  margin: 5px 0 15px 0;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.boardMain .brochure .brochure-text h4 {
-    display: block;
-    font-size: 25px;
-  }
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text h4 span {
-  font-weight: 400;
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text a {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 135px;
-  height: 46px;
-  background: #D43926;
-  border: 1px solid #561A12;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.boardMain .brochure .brochure-text a {
-    width: 140px;
-    height: 50px;
-  }
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text a:first-of-type {
-  margin-right: 15px;
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text a span {
-  font-size: 17px;
-  font-weight: 700;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.boardMain .brochure .brochure-text a span {
-    font-size: 18px;
-  }
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text a span.view::before {
-  content: "";
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  margin-right: 7px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20' height='20' viewBox='0 0 20 20'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_281' data-name='사각형 281' width='20' height='20' fill='%23ffd277'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_126' data-name='그룹 126' transform='translate(0 0)'%3E%3Cg id='그룹_125' data-name='그룹 125' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_803' data-name='패스 803' d='M16.057,8.029a8.029,8.029,0,1,0-8.046,8.029,7.913,7.913,0,0,0,4.264-1.249L17.467,20,20,17.467l-5.192-5.174a7.96,7.96,0,0,0,1.249-4.264m-8.029,4.46a4.46,4.46,0,1,1,4.46-4.46,4.462,4.462,0,0,1-4.46,4.46' transform='translate(0 0)' fill='%23ffd277'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/cover;
-}
-
-body div#content.sub section.sub-board div.boardMain .brochure .brochure-text a span.down::before {
-  content: "";
-  display: inline-block;
-  width: 25px;
-  height: 19px;
-  margin-right: 7px;
-  background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M20.111,9.274H15.793V3H9.317V9.274H5l7.555,7.32ZM5,18.686v2.091H20.111V18.686Z' transform='translate(-0.555 -0.333)' fill='%23ffd277'/%3E%3C/svg%3E") no-repeat center/cover;
 }
 
 body div#content.sub section.sub-board div.list {
   margin-top: 30px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list {
+    margin-top: 40px;
+  }
 }
 
 body div#content.sub section.sub-board div.list ul.list {
@@ -6673,7 +6747,7 @@ body div#content.sub section.sub-board div.list ul.list {
     border-top: none;
   }
   body div#content.sub section.sub-board div.list ul.list::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -6681,19 +6755,38 @@ body div#content.sub section.sub-board div.list ul.list {
     right: 0;
     height: 50px;
     border-top: 1px solid #111111;
-    border-bottom: 1px solid #BBBBBB;
+    border-bottom: 1px solid #bbbbbb;
   }
 }
 
+body div#content.sub section.sub-board div.list ul.list li:hover {
+  background: #fcf5f7;
+}
+
 body div#content.sub section.sub-board div.list ul.list li a {
+  position: relative;
   display: block;
-  border-bottom: 1px solid #CCCCCC;
-  padding: 20px 0;
+  border-bottom: 1px solid #cccccc;
+  padding: 37px 10px 10px 10px;
+  height: 100px;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.list ul.list li a {
-    padding: 28px 0;
+    padding: 21px 0;
+    height: 70px;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a.img {
+  height: 300px;
+  padding: 15px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a.img {
+    height: 200px;
+    padding: 21px 0;
   }
 }
 
@@ -6733,46 +6826,38 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.num {
         -ms-flex: none;
             flex: none;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     width: 100px;
   }
-  body div#content.sub section.sub-board div.list ul.list li a div.box div.num span.notice {
-    font-size: 0;
-    display: block;
-    width: 25px;
-    height: 25px;
-    margin: 0 auto;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='26' viewBox='0 0 40 26'%3E%3Cg id='그룹_1750' data-name='그룹 1750' transform='translate(-396 -1019)'%3E%3Crect id='사각형_278' data-name='사각형 278' width='40' height='26' rx='13' transform='translate(396 1019)' fill='%23fa0'/%3E%3Cg id='star_black_24dp' transform='translate(407 1023)'%3E%3Cpath id='패스_799' data-name='패스 799' d='M0,0H18V18H0Z' fill='none'/%3E%3Cpath id='패스_800' data-name='패스 800' d='M0,0H18V18H0Z' fill='none'/%3E%3Cpath id='패스_801' data-name='패스 801' d='M9.667,13.787,14.4,16.667,13.147,11.24l4.186-3.651-5.512-.471L9.667,2,7.512,7.118,2,7.589,6.186,11.24,4.929,16.667Z' transform='translate(-0.667 -0.667)' fill='%23333'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/cover;
-  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.text {
+  width: 100%;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.list ul.list li a div.box div.text {
-    width: calc(100% - 390px);
+    width: calc(100% - 490px);
   }
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div.text h5 {
   margin: 0;
-  font-size: 15px;
-  color: #111111;
-  font-weight: 500;
+  font-size: 17px;
+  color: #333333;
+  font-weight: 400;
   line-height: 1.6;
   display: block;
-}
-
-body div#content.sub section.sub-board div.list ul.list li a div.box div.text h5.file::before {
-  content: "";
-  display: inline-block;
-  background: url("data:image/svg+xml,%3Csvg id='attachment_black_24dp' xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21'%3E%3Cpath id='패스_787' data-name='패스 787' d='M0,0H21V21H0Z' fill='none'/%3E%3Cpath id='패스_788' data-name='패스 788' d='M2,11.813A4.81,4.81,0,0,1,6.813,7H16a3.5,3.5,0,0,1,0,7H8.563a2.188,2.188,0,0,1,0-4.375h6.563v1.75H8.484c-.481,0-.481.875,0,.875H16a1.75,1.75,0,0,0,0-3.5H6.813a3.063,3.063,0,0,0,0,6.125h8.313v1.75H6.813A4.81,4.81,0,0,1,2,11.813Z' transform='translate(-0.25 -0.875)' fill='%233a9a8f'/%3E%3C/svg%3E%0A") no-repeat center/cover;
-  width: 21px;
-  height: 13px;
-  margin-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.list ul.list li a div.box div.text h5 {
-    font-size: 16px;
+    font-size: 19px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -6781,17 +6866,92 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.text h5
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.list ul.list li a div.box div.text2 {
-    width: calc(100% - 241px);
+    width: calc(100% - 380px);
   }
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div.text2 h5 {
   margin: 0;
-  font-size: 15px;
-  color: #111111;
-  font-weight: 500;
+  font-size: 17px;
+  color: #333333;
+  font-weight: 400;
   line-height: 1.6;
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.text2 h5 {
+    font-size: 19px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 {
+  position: absolute;
+  top: 230px;
+  left: 15px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 {
+    position: relative;
+    width: calc(100% - 610px);
+    margin-left: 40px;
+    left: 0;
+    top: 0;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 h5 {
+  margin: 0;
+  font-size: 17px;
+  color: #333333;
+  font-weight: 400;
+  line-height: 1.6;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 h5 {
+    font-size: 19px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 p {
+  display: none;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.text3 p {
+    display: block;
+    font-size: 16px;
+    margin-left: auto;
+    text-align: start;
+    color: #555555;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.8;
+  }
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div.name {
@@ -6805,11 +6965,59 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.name {
         -ms-flex: none;
             flex: none;
     width: 140px;
-    font-size: 15px;
+    font-size: 17px;
     margin-left: auto;
     text-align: center;
     color: #555555;
     padding: 0 10px;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.name2 {
+  display: none;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.name2 {
+    display: inline-block;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 140px;
+    font-size: 17px;
+    margin-left: 49px;
+    margin-top: 64px;
+    text-align: center;
+    color: #555555;
+    padding: 0 10px;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.news {
+  margin-left: auto;
+  text-align: center;
+  font-size: 14px;
+  color: #555555;
+  padding: 0 10px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.news {
+    display: inline-block;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 140px;
+    font-size: 17px;
+    margin-left: auto;
+    text-align: center;
+    color: #555555;
+    padding: 0 10px;
+    position: relative;
+    top: 0;
   }
 }
 
@@ -6819,13 +7027,62 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.date {
   font-size: 14px;
   color: #555555;
   padding: 0 10px;
+  position: absolute;
+  top: 10px;
+  left: 0;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.list ul.list li a div.box div.date {
-    font-size: 15px;
+    font-size: 17px;
     width: 140px;
     color: #555555;
+    position: relative;
+    top: 0;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.date2 {
+  margin-left: auto;
+  text-align: center;
+  font-size: 14px;
+  color: #555555;
+  padding: 0 10px;
+  position: absolute;
+  top: 10px;
+  left: 150px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.date2 {
+    font-size: 17px;
+    width: 140px;
+    color: #555555;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.date3 {
+  margin-left: auto;
+  text-align: center;
+  font-size: 14px;
+  color: #555555;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 75px;
+  left: 5px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.date3 {
+    font-size: 17px;
+    width: 140px;
+    color: #555555;
+    position: relative;
+    top: 65px;
+    left: 0;
   }
 }
 
@@ -6853,7 +7110,7 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.file st
 body div#content.sub section.sub-board div.list ul.list li a div.box div.file span {
   position: absolute;
   display: block;
-  background: #DCDCDC;
+  background: #dcdcdc;
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -6870,12 +7127,45 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.file sp
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div.file span::before {
-  content: "";
+  content: '';
   background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M17.295,9.4H13.782V3H8.513V9.4H5l6.147,7.47ZM5,19.008v2.134H17.295V19.008Z' transform='translate(0.853 0.512)' fill='%233a9a8f'/%3E%3C/svg%3E%0A") no-repeat center/cover;
   display: block;
   margin-left: 3px;
   width: 28px;
   height: 30px;
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.view {
+  display: none;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.view {
+    display: inline-block;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 100px;
+    font-size: 17px;
+    margin-left: auto;
+    text-align: center;
+    color: #555555;
+    padding: 0 10px;
+  }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.img img {
+  width: 295px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.list ul.list li a div.box div.img img {
+    width: 240px;
+    height: 160px;
+  }
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div strong {
@@ -6891,11 +7181,14 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div strong 
     position: absolute;
     left: 0;
     right: 0;
-    top: -56px;
+    top: -58px;
     text-align: center;
     font-weight: 400;
-    color: #555555;
-    font-size: 15px;
+    color: #111;
+    font-size: 17px;
+  }
+  body div#content.sub section.sub-board div.list ul.list li:first-of-type a div.box div strong.date3 {
+    top: -123px;
   }
 }
 
@@ -6932,7 +7225,7 @@ body div#content.sub section.sub-board div.list ul.faqList li h5 {
 }
 
 body div#content.sub section.sub-board div.list ul.faqList li h5::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 10px;
@@ -6955,7 +7248,7 @@ body div#content.sub section.sub-board div.list ul.faqList li h5::before {
 }
 
 body div#content.sub section.sub-board div.list ul.faqList li h5::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   right: 10px;
@@ -6975,7 +7268,7 @@ body div#content.sub section.sub-board div.list ul.faqList li h5::after {
 }
 
 body div#content.sub section.sub-board div.list ul.faqList li h5.on::before {
-  background-color: #818CF2;
+  background-color: #818cf2;
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
 }
@@ -6991,8 +7284,8 @@ body div#content.sub section.sub-board div.list ul.faqList li div.answer {
   max-height: 0;
   overflow: hidden;
   font-size: 16px;
-  font-weight: 500;
-  background: #F5F5F5;
+  font-weight: 400;
+  background: #f5f5f5;
   padding: 0 25px 0 25px;
   color: #555;
   line-height: 1.6;
@@ -7021,49 +7314,36 @@ body div#content.sub section.sub-board div.list ul.faqList li h5.on + div {
   border-bottom: 1px solid #ccc;
 }
 
-body div#content.sub section.sub-board div.view div.board {
-  text-align: left;
-  padding: 15px 0;
-  word-break: keep-all;
-}
-
-body div#content.sub section.sub-board div.view div.board h3 {
-  font-size: 24px;
-  margin: 0 0 18px;
-  font-weight: 900;
-  color: #111111;
+body div#content.sub section.sub-board div.view div.board-title {
+  text-align: start;
+  border-top: 1px solid #000;
+  padding: 0 10px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.view div.board h3 {
-    font-size: 26px;
+  body div#content.sub section.sub-board div.view div.board-title {
+    padding: 0 0 0 20px;
   }
-}
-
-body div#content.sub section.sub-board div.view div.board-title {
-  text-align: center;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #BBBBBB;
 }
 
 body div#content.sub section.sub-board div.view div.board-title h4 {
   font-size: 19px;
   font-weight: 800;
   color: #111111;
-  margin: 25px 0;
+  margin: 20px 0 9px;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.view div.board-title h4 {
     font-size: 21px;
-    margin: 27px 0;
+    margin: 27px 0 9px;
   }
 }
 
 body div#content.sub section.sub-board div.view div.board-info {
   text-align: start;
-  border-bottom: 1px solid #BBBBBB;
-  padding: 0 0 0 5px;
+  border-bottom: 1px solid #bbbbbb;
+  padding: 0 0 0 10px;
 }
 
 @media (min-width: 1195px) {
@@ -7073,6 +7353,7 @@ body div#content.sub section.sub-board div.view div.board-info {
 }
 
 body div#content.sub section.sub-board div.view div.board-info ul {
+  position: relative;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7082,7 +7363,25 @@ body div#content.sub section.sub-board div.view div.board-info ul {
           justify-content: flex-start;
   gap: 18px;
   padding: 0;
-  margin: 15px 0;
+  margin: 0 0 19px 0;
+}
+
+body div#content.sub section.sub-board div.view div.board-info ul::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background: #aaa;
+  position: absolute;
+  left: 42px;
+  bottom: 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.view div.board-info ul::after {
+    left: 65px;
+    bottom: 4px;
+  }
 }
 
 @media (min-width: 1195px) {
@@ -7106,10 +7405,14 @@ body div#content.sub section.sub-board div.view div.board-info ul li u {
   text-decoration: none;
 }
 
+body div#content.sub section.sub-board div.view div.board-info ul li span {
+  display: none;
+}
+
 body div#content.sub section.sub-board div.view div.board-file {
   text-align: start;
-  border-bottom: 1px solid #BBBBBB;
-  padding: 15px 0 15px 5px;
+  border-bottom: 1px solid #bbbbbb;
+  padding: 10px 0 10px 10px;
 }
 
 @media (min-width: 1195px) {
@@ -7134,11 +7437,16 @@ body div#content.sub section.sub-board div.view div.board-file span {
 }
 
 body div#content.sub section.sub-board div.view div.board-file a {
-  margin-top: 10px;
-  display: block;
-  font-size: 14px;
-  color: #5A83B4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  color: #54699d;
   width: 100%;
+  text-decoration: underline;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -7146,26 +7454,31 @@ body div#content.sub section.sub-board div.view div.board-file a {
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.view div.board-file a {
-    display: inline-block;
-    font-size: 16px;
-    margin: 0;
-    width: auto;
+    font-size: 17px;
   }
 }
 
 body div#content.sub section.sub-board div.view div.board-file a::before {
-  content: "";
+  content: '';
   display: inline-block;
   background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='21.333' height='21.333' viewBox='0 0 21.333 21.333'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H21.333V21.333H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M16.851,8.187H13.465V3H8.386V8.187H5l5.926,6.051ZM5,15.967V17.7H16.851V15.967Z' transform='translate(-0.259 -0.156)' fill='%235a83b4'/%3E%3C/svg%3E%0A") no-repeat center/cover;
-  width: 17px;
-  height: 11px;
+  width: 20px;
+  height: 15px;
+  margin-right: 8px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.view div.board-file a::before {
+    width: 28px;
+    height: 25px;
+  }
 }
 
 body div#content.sub section.sub-board div.view div.board-text {
   padding: 20px 10px;
   font-size: 15px;
   color: #555555;
-  border-bottom: 1px solid #BBBBBB;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 @media (min-width: 1195px) {
@@ -7197,16 +7510,11 @@ body div#content.sub section.sub-board div.view div.button-set {
 body div#content.sub section.sub-board div.view div.button-set a.list {
   display: inline-block;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
   background: #333333;
   line-height: 46px;
   padding: 0 30px;
-}
-
-body div#content.sub section.sub-board div.view div.button-set a.list.change {
-  margin-left: 10px;
-  background: #FF8811;
 }
 
 body div#content.sub section.sub-board div.view div.board-navi {
@@ -7222,7 +7530,7 @@ body div#content.sub section.sub-board div.view div.board-navi div.navi {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #BBBBBB;
+  border-bottom: 1px solid #bbbbbb;
   font-size: 15px;
 }
 
@@ -7239,7 +7547,7 @@ body div#content.sub section.sub-board div.view div.board-navi div.navi p {
 }
 
 body div#content.sub section.sub-board div.view div.board-navi div.navi p.left::before {
-  content: "";
+  content: '';
   display: inline-block;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='5' viewBox='0 0 10 5'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16' data-name='사각형 16' width='5' height='10' fill='%23111'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_1735' data-name='그룹 1735' transform='translate(0 5) rotate(-90)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M.536,10a.528.528,0,0,1-.358-.14.553.553,0,0,1-.041-.771L3.743,5,.137.911A.553.553,0,0,1,.178.14.53.53,0,0,1,.936.181L4.863,4.634a.554.554,0,0,1,0,.729L.936,9.819a.53.53,0,0,1-.4.181' transform='translate(0 0)' fill='%23111'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/cover;
   width: 10px;
@@ -7248,7 +7556,7 @@ body div#content.sub section.sub-board div.view div.board-navi div.navi p.left::
 }
 
 body div#content.sub section.sub-board div.view div.board-navi div.navi p.right::before {
-  content: "";
+  content: '';
   display: inline-block;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='5' viewBox='0 0 10 5'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16' data-name='사각형 16' width='5' height='10' fill='%23111'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_1736' data-name='그룹 1736' transform='translate(10) rotate(90)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M.536,10a.528.528,0,0,1-.358-.14.553.553,0,0,1-.041-.771L3.743,5,.137.911A.553.553,0,0,1,.178.14.53.53,0,0,1,.936.181L4.863,4.634a.554.554,0,0,1,0,.729L.936,9.819a.53.53,0,0,1-.4.181' transform='translate(0 0)' fill='%23111'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/cover;
   width: 10px;
@@ -7266,7 +7574,7 @@ body div#content.sub section.sub-board div.view div.board-navi div.navi span {
 }
 
 body div#content.sub section.sub-board div.view div.board-navi div.navi.nope {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 body div#content.sub section.sub-board div.write .write-title h3 {
@@ -7283,18 +7591,18 @@ body div#content.sub section.sub-board div.write .write-title h3 {
 }
 
 body div#content.sub section.sub-board div.write .write-box {
-  border-top: 1px solid #BBBBBB;
-  border-bottom: 1px solid #BBBBBB;
+  border-top: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.write .write-box {
-    border: 1px solid #BBBBBB;
+    border: 1px solid #bbbbbb;
   }
 }
 
 body div#content.sub section.sub-board div.write .write-box .write-name {
-  border-bottom: 1px solid #BBBBBB;
+  border-bottom: 1px solid #bbbbbb;
   padding: 20px 10px;
 }
 
@@ -7332,7 +7640,7 @@ body div#content.sub section.sub-board div.write .write-box .write-name input {
   display: block;
   width: 100%;
   height: 48px;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   border-radius: 6px;
   padding: 10px;
   font-size: 16px;
@@ -7345,7 +7653,7 @@ body div#content.sub section.sub-board div.write .write-box .write-name input {
 }
 
 body div#content.sub section.sub-board div.write .write-box .write-login {
-  border-bottom: 1px solid #BBBBBB;
+  border-bottom: 1px solid #bbbbbb;
   padding: 20px 10px;
 }
 
@@ -7384,7 +7692,7 @@ body div#content.sub section.sub-board div.write .write-box .write-login input {
   display: block;
   width: 100%;
   height: 48px;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   border-radius: 6px;
   padding: 10px;
   font-size: 16px;
@@ -7403,7 +7711,7 @@ body div#content.sub section.sub-board div.write .write-box .write-login button 
   height: 38px;
   border: none;
   outline: none;
-  background: #FF8811;
+  background: #ff8811;
   color: #fff;
   font-size: 17px;
   font-weight: 700;
@@ -7420,7 +7728,7 @@ body div#content.sub section.sub-board div.write .write-box .write-login button 
 
 body div#content.sub section.sub-board div.write .write-box .write-file {
   position: relative;
-  border-bottom: 1px solid #BBBBBB;
+  border-bottom: 1px solid #bbbbbb;
   padding: 20px 10px;
 }
 
@@ -7455,8 +7763,8 @@ body div#content.sub section.sub-board div.write .write-box .write-file .upload 
   margin-top: 12px;
   width: 126px;
   height: 38px;
-  background: #257A70;
-  border: 1px solid #1A5750;
+  background: #257a70;
+  border: 1px solid #1a5750;
   border-radius: 6px;
   color: #fff;
   font-size: 15px;
@@ -7482,7 +7790,7 @@ body div#content.sub section.sub-board div.write .write-box .write-file .upload 
 }
 
 body div#content.sub section.sub-board div.write .write-box .write-file .upload::before {
-  content: "";
+  content: '';
   display: inline-block;
   background: url("data:image/svg+xml,%3Csvg id='file_upload_black_24dp' xmlns='http://www.w3.org/2000/svg' width='21.154' height='21.154' viewBox='0 0 21.154 21.154'%3E%3Cpath id='패스_797' data-name='패스 797' d='M0,0H21.154V21.154H0Z' fill='none'/%3E%3Cpath id='패스_798' data-name='패스 798' d='M8.144,14.724H12.86V9.313H16L10.5,3,5,9.313H8.144ZM5,16.528H16v1.8H5Z' transform='translate(0.075 0.045)' fill='%23b4d8cb'/%3E%3C/svg%3E%0A") no-repeat center/cover;
   width: 20px;
@@ -7490,7 +7798,7 @@ body div#content.sub section.sub-board div.write .write-box .write-file .upload:
   margin-right: 5px;
 }
 
-body div#content.sub section.sub-board div.write .write-box .write-file input[type="file"] {
+body div#content.sub section.sub-board div.write .write-box .write-file input[type='file'] {
   display: none;
 }
 
@@ -7509,7 +7817,7 @@ body div#content.sub section.sub-board div.write .write-box .write-file .volume 
 }
 
 body div#content.sub section.sub-board div.write .write-box .write-file .volume span {
-  color: #3A9A8F;
+  color: #3a9a8f;
 }
 
 body div#content.sub section.sub-board div.write .write-box .write-file .file-name {
@@ -7556,7 +7864,7 @@ body div#content.sub section.sub-board div.write .write-box .write-text textarea
   height: 400px;
   color: #555555;
   font-size: 16px;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   border-radius: 6px;
   padding: 20px 10px;
 }
@@ -7580,32 +7888,54 @@ body div#content.sub section.sub-board div.write .write-btn button {
 }
 
 body div#content.sub section.sub-board div.write .write-btn button.cancle {
-  background: #F6F6F6;
-  border: 1px solid #AAAAAA;
+  background: #f6f6f6;
+  border: 1px solid #aaaaaa;
   color: #555555;
 }
 
 body div#content.sub section.sub-board div.write .write-btn button.enter {
   background: #333333;
-  border: 1px solid #2C2C2C;
+  border: 1px solid #2c2c2c;
   color: #fff;
 }
 
-body div#content.sub section.sub-board div.photo .total {
-  text-align: right;
-  font-size: 15px;
-  margin: 27px 0 15px;
+body div#content.sub section.sub-board div.photo div.vlog-title {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background: #EFEFF8;
+  border: 1px solid #F5F5F6;
+  padding: 25px 0 24px 24px;
+  margin-bottom: 40px;
 }
 
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.photo .total {
-    margin: 41px 0 20px;
-  }
+body div#content.sub section.sub-board div.photo div.vlog-title::after {
+  content: "";
+  display: block;
+  width: 173px;
+  height: 155px;
+  background: url("/source/images/vlogLogo.svg") no-repeat center/cover;
+  position: absolute;
+  top: -15px;
+  right: 0;
 }
 
-body div#content.sub section.sub-board div.photo .total strong {
+body div#content.sub section.sub-board div.photo div.vlog-title h3 {
+  font-size: 22px;
   font-weight: 700;
   color: #111111;
+  margin: 0;
+}
+
+body div#content.sub section.sub-board div.photo div.vlog-title p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  margin: 11px 0 0 0;
+}
+
+body div#content.sub section.sub-board div.photo div.vlog-title p span {
+  display: block;
 }
 
 body div#content.sub section.sub-board div.photo ul {
@@ -7617,13 +7947,22 @@ body div#content.sub section.sub-board div.photo ul {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 50px 10px;
-  min-width: 340px;
+  gap: 40px 20px;
+  min-width: 330px;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.photo ul {
-    gap: 70px 60px;
+    gap: 60px 27px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.photo ul.vlog {
+    gap: 60px 45px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -7632,16 +7971,51 @@ body div#content.sub section.sub-board div.photo ul {
 
 body div#content.sub section.sub-board div.photo ul li {
   position: relative;
-  width: 155px;
-  height: 190px;
-  -webkit-box-shadow: 0px 10px 20px #0000001A;
-          box-shadow: 0px 10px 20px #0000001A;
+  width: 330px;
+  height: 320px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body div#content.sub section.sub-board div.photo ul li:hover {
+  scale: 1.03;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.photo ul li {
-    width: 360px;
-    height: 320px;
+    width: 382px;
+    height: 350px;
+  }
+}
+
+body div#content.sub section.sub-board div.photo ul li.vlog {
+  width: 345px;
+  height: 270px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.photo ul li.vlog {
+    width: 370px;
+    height: 300px;
+  }
+}
+
+body div#content.sub section.sub-board div.photo ul li.vlog::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: url("/source/images/playlogo.svg") no-repeat center/cover;
+  top: 80px;
+  left: 135px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.photo ul li.vlog::before {
+    top: 95px;
+    left: 150px;
   }
 }
 
@@ -7651,99 +8025,34 @@ body div#content.sub section.sub-board div.photo ul li a {
   display: block;
 }
 
-body div#content.sub section.sub-board div.photo ul li a .img-bg {
-  width: 155px;
-  height: 106px;
-  margin: 0;
-  margin-bottom: 12px;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.photo ul li a .img-bg {
-    width: 360px;
-    height: 230px;
-  }
-}
-
-body div#content.sub section.sub-board div.photo ul li a .img-bg img {
-  width: 155px;
-  height: 106px;
+body div#content.sub section.sub-board div.photo ul li a img {
+  width: 330px;
+  height: 224px;
   margin: 0;
   margin-bottom: 12px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 50px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.photo ul li a .img-bg img {
-    width: 360px;
-    height: 230px;
+  body div#content.sub section.sub-board div.photo ul li a img {
+    width: 387px;
+    height: 261px;
   }
 }
 
-body div#content.sub section.sub-board div.photo ul li a .bghover {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 155px;
-  height: 106px;
-  color: #111111;
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body div#content.sub section.sub-board div.photo ul li a .bghover:hover {
-  opacity: 1;
-}
-
-body div#content.sub section.sub-board div.photo ul li a .bghover::before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  display: block;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='111' height='111' viewBox='0 0 111 111'%3E%3Cdefs%3E%3Cfilter id='패스_821' x='0' y='0' width='111' height='111' filterUnits='userSpaceOnUse'%3E%3CfeOffset input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='7.5' result='blur'/%3E%3CfeFlood flood-opacity='0.4'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg transform='matrix(1, 0, 0, 1, 0, 0)' filter='url(%23패스_821)'%3E%3Cpath id='패스_821-2' data-name='패스 821' d='M3,3V32.333H32.333V3ZM25,25H10.333V10.333H25ZM3,39.667V69H32.333V39.667Zm22,22H10.333V47H25ZM39.667,3V32.333H69V3Zm22,22H47V10.333H61.667Zm-22,14.667V69H69V39.667Zm22,22H47V47H61.667Z' transform='translate(19.5 19.5)' fill='%23fff' fill-rule='evenodd'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/cover;
+body div#content.sub section.sub-board div.photo ul li a img.vlog {
+  width: 345px;
+  height: 230px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.photo ul li a .bghover::before {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.photo ul li a .bghover {
-    width: 360px;
-    height: 230px;
-  }
-}
-
-body div#content.sub section.sub-board div.photo ul li a .bghover.youtube::before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  display: block;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='123.333' height='123.333' viewBox='0 0 123.333 123.333'%3E%3Cdefs%3E%3Cfilter id='패스_784' x='0' y='0' width='123.333' height='123.333' filterUnits='userSpaceOnUse'%3E%3CfeOffset input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='7.5' result='blur'/%3E%3CfeFlood flood-opacity='0.4'/%3E%3CfeComposite operator='in' in2='blur'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg transform='matrix(1, 0, 0, 1, 0, 0)' filter='url(%23패스_784)'%3E%3Cpath id='패스_784-2' data-name='패스 784' d='M33.333,58.792l23.5-17.625-23.5-17.625ZM41.167,2A39.167,39.167,0,1,0,80.333,41.167,39.181,39.181,0,0,0,41.167,2Zm0,70.5A31.333,31.333,0,1,1,72.5,41.167,31.375,31.375,0,0,1,41.167,72.5Z' transform='translate(20.5 20.5)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/cover;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.photo ul li a .bghover.youtube::before {
-    width: 150px;
-    height: 150px;
+  body div#content.sub section.sub-board div.photo ul li a img.vlog {
+    width: 370px;
+    height: 250px;
   }
 }
 
@@ -7754,15 +8063,32 @@ body div#content.sub section.sub-board div.photo ul li a i {
   padding: 0 15px;
 }
 
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.photo ul li a i {
+    font-size: 16px;
+  }
+}
+
 body div#content.sub section.sub-board div.photo ul li a h4 {
-  margin: 12px 0 0 0;
+  margin: 0 0 15px 0;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 400;
   color: #111111;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 0 15px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-board div.photo ul li a h4 {
+    font-size: 21px;
+  }
+}
+
+body div#content.sub section.sub-board div.photo ul li a h4.vlog {
+  font-size: 17px;
+  padding: 0 10px;
 }
 
 body div#content.sub section.login {
@@ -7824,8 +8150,8 @@ body div#content.sub section.login div.container fieldset .loginLogo h3 {
   }
 }
 
-body div#content.sub section.login div.container fieldset input[type=text],
-body div#content.sub section.login div.container fieldset input[type=password] {
+body div#content.sub section.login div.container fieldset input[type='text'],
+body div#content.sub section.login div.container fieldset input[type='password'] {
   width: 100%;
   height: 46px;
   border-radius: 6px;
@@ -7839,64 +8165,64 @@ body div#content.sub section.login div.container fieldset input[type=password] {
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.login div.container fieldset input[type=text],
-  body div#content.sub section.login div.container fieldset input[type=password] {
+  body div#content.sub section.login div.container fieldset input[type='text'],
+  body div#content.sub section.login div.container fieldset input[type='password'] {
     height: 50px;
     font-size: 16px;
   }
 }
 
-body div#content.sub section.login div.container fieldset input[type=text]::-webkit-input-placeholder,
-body div#content.sub section.login div.container fieldset input[type=password]::-webkit-input-placeholder {
+body div#content.sub section.login div.container fieldset input[type='text']::-webkit-input-placeholder,
+body div#content.sub section.login div.container fieldset input[type='password']::-webkit-input-placeholder {
   color: #999999;
 }
 
-body div#content.sub section.login div.container fieldset input[type=text]:-ms-input-placeholder,
-body div#content.sub section.login div.container fieldset input[type=password]:-ms-input-placeholder {
+body div#content.sub section.login div.container fieldset input[type='text']:-ms-input-placeholder,
+body div#content.sub section.login div.container fieldset input[type='password']:-ms-input-placeholder {
   color: #999999;
 }
 
-body div#content.sub section.login div.container fieldset input[type=text]::-ms-input-placeholder,
-body div#content.sub section.login div.container fieldset input[type=password]::-ms-input-placeholder {
+body div#content.sub section.login div.container fieldset input[type='text']::-ms-input-placeholder,
+body div#content.sub section.login div.container fieldset input[type='password']::-ms-input-placeholder {
   color: #999999;
 }
 
-body div#content.sub section.login div.container fieldset input[type=text]::placeholder,
-body div#content.sub section.login div.container fieldset input[type=password]::placeholder {
+body div#content.sub section.login div.container fieldset input[type='text']::placeholder,
+body div#content.sub section.login div.container fieldset input[type='password']::placeholder {
   color: #999999;
 }
 
-body div#content.sub section.login div.container fieldset input[type=text].id,
-body div#content.sub section.login div.container fieldset input[type=password].id {
+body div#content.sub section.login div.container fieldset input[type='text'].id,
+body div#content.sub section.login div.container fieldset input[type='password'].id {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='19' height='19' viewBox='0 0 19 19'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_292' data-name='사각형 292' width='19' height='19' transform='translate(0.397 0.396)' fill='%23AEAEAE'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_150' data-name='그룹 150' transform='translate(-0.397 -0.396)'%3E%3Cpath id='패스_826' data-name='패스 826' d='M4022.594,18215.125c.371,1.385,7.606,5.842,12.519.076a7.047,7.047,0,0,0-7.423-4A9.719,9.719,0,0,0,4022.594,18215.125Z' transform='translate(-4019.095 -18199.32)' fill='%23AEAEAE'/%3E%3Ccircle id='타원_10' data-name='타원 10' cx='3' cy='3' r='3' transform='translate(6.397 3.396)' fill='%23AEAEAE'/%3E%3Cg id='그룹_145' data-name='그룹 145' transform='translate(0 0)'%3E%3Cg id='그룹_141' data-name='그룹 141' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_824' data-name='패스 824' d='M29.691,19.9a3.285,3.285,0,1,0-3.284-3.285A3.288,3.288,0,0,0,29.691,19.9m0-5.1a1.819,1.819,0,1,1-1.819,1.819A1.821,1.821,0,0,1,29.691,14.8' transform='translate(-19.956 -10.074)' fill='%23AEAEAE'/%3E%3Cpath id='패스_825' data-name='패스 825' d='M16.868,16.352a9.735,9.735,0,1,0-14.265,0l-.025.062.138.057a9.712,9.712,0,0,0,14.039,0l.138-.057ZM9.735,1.466A8.263,8.263,0,0,1,16.2,14.885a7.426,7.426,0,0,0-12.927,0A8.263,8.263,0,0,1,9.735,1.466M4.344,16a5.962,5.962,0,0,1,10.782,0A8.245,8.245,0,0,1,4.344,16' transform='translate(0 0)' fill='%23AEAEAE'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat left 15px center/16px auto;
 }
 
-body div#content.sub section.login div.container fieldset input[type=text].password,
-body div#content.sub section.login div.container fieldset input[type=password].password {
+body div#content.sub section.login div.container fieldset input[type='text'].password,
+body div#content.sub section.login div.container fieldset input[type='password'].password {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17' height='21' viewBox='0 0 17 21'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_291' data-name='사각형 291' width='17' height='21' transform='translate(0.423 0.197)' fill='%23aeaeae'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_140' data-name='그룹 140' transform='translate(-0.423 -0.197)'%3E%3Cg id='그룹_139' data-name='그룹 139' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_822' data-name='패스 822' d='M13.543,7.69V4.962A4.879,4.879,0,0,0,8.762,0,4.88,4.88,0,0,0,3.981,4.962V7.69H0v9.8a3.867,3.867,0,0,0,3.788,3.932h9.947a3.866,3.866,0,0,0,3.788-3.932V7.69ZM5.535,4.962a3.294,3.294,0,0,1,3.227-3.35,3.294,3.294,0,0,1,3.227,3.35V7.69H5.535ZM15.97,17.486a2.281,2.281,0,0,1-2.235,2.319H3.788a2.281,2.281,0,0,1-2.235-2.319V9.3H15.97Z' transform='translate(0 0)' fill='%23aeaeae'/%3E%3Cpath id='패스_823' data-name='패스 823' d='M26.393,46.252v2.425h1.553V46.252A2.416,2.416,0,0,0,29.5,43.975a2.332,2.332,0,1,0-4.66,0,2.416,2.416,0,0,0,1.553,2.277m.777-3.084a.807.807,0,1,1-.777.806.793.793,0,0,1,.777-.806' transform='translate(-18.409 -30.389)' fill='%23aeaeae'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat left 15px center/16px auto;
 }
 
-body div#content.sub section.login div.container fieldset input[type=text]:focus,
-body div#content.sub section.login div.container fieldset input[type=password]:focus {
-  border-color: #FF8811;
+body div#content.sub section.login div.container fieldset input[type='text']:focus,
+body div#content.sub section.login div.container fieldset input[type='password']:focus {
+  border-color: #ff8811;
   -webkit-box-shadow: 0 6px 0 0 rgba(238, 155, 61, 0.15);
           box-shadow: 0 6px 0 0 rgba(238, 155, 61, 0.15);
 }
 
-body div#content.sub section.login div.container fieldset input[type=text]:focus.id,
-body div#content.sub section.login div.container fieldset input[type=password]:focus.id {
+body div#content.sub section.login div.container fieldset input[type='text']:focus.id,
+body div#content.sub section.login div.container fieldset input[type='password']:focus.id {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='19' height='19' viewBox='0 0 19 19'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_292' data-name='사각형 292' width='19' height='19' transform='translate(0.397 0.396)' fill='%233a3a3a'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_150' data-name='그룹 150' transform='translate(-0.397 -0.396)'%3E%3Cpath id='패스_826' data-name='패스 826' d='M4022.594,18215.125c.371,1.385,7.606,5.842,12.519.076a7.047,7.047,0,0,0-7.423-4A9.719,9.719,0,0,0,4022.594,18215.125Z' transform='translate(-4019.095 -18199.32)' fill='%23fa0'/%3E%3Ccircle id='타원_10' data-name='타원 10' cx='3' cy='3' r='3' transform='translate(6.397 3.396)' fill='%23fa0'/%3E%3Cg id='그룹_145' data-name='그룹 145' transform='translate(0 0)'%3E%3Cg id='그룹_141' data-name='그룹 141' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_824' data-name='패스 824' d='M29.691,19.9a3.285,3.285,0,1,0-3.284-3.285A3.288,3.288,0,0,0,29.691,19.9m0-5.1a1.819,1.819,0,1,1-1.819,1.819A1.821,1.821,0,0,1,29.691,14.8' transform='translate(-19.956 -10.074)' fill='%233a3a3a'/%3E%3Cpath id='패스_825' data-name='패스 825' d='M16.868,16.352a9.735,9.735,0,1,0-14.265,0l-.025.062.138.057a9.712,9.712,0,0,0,14.039,0l.138-.057ZM9.735,1.466A8.263,8.263,0,0,1,16.2,14.885a7.426,7.426,0,0,0-12.927,0A8.263,8.263,0,0,1,9.735,1.466M4.344,16a5.962,5.962,0,0,1,10.782,0A8.245,8.245,0,0,1,4.344,16' transform='translate(0 0)' fill='%233a3a3a'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
-body div#content.sub section.login div.container fieldset input[type=text]:focus.password,
-body div#content.sub section.login div.container fieldset input[type=password]:focus.password {
+body div#content.sub section.login div.container fieldset input[type='text']:focus.password,
+body div#content.sub section.login div.container fieldset input[type='password']:focus.password {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17' height='21' viewBox='0 0 17 21'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_291' data-name='사각형 291' width='17' height='21' transform='translate(0.423 0.197)' fill='%23FF8811'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_140' data-name='그룹 140' transform='translate(-0.423 -0.197)'%3E%3Cg id='그룹_139' data-name='그룹 139' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_822' data-name='패스 822' d='M13.543,7.69V4.962A4.879,4.879,0,0,0,8.762,0,4.88,4.88,0,0,0,3.981,4.962V7.69H0v9.8a3.867,3.867,0,0,0,3.788,3.932h9.947a3.866,3.866,0,0,0,3.788-3.932V7.69ZM5.535,4.962a3.294,3.294,0,0,1,3.227-3.35,3.294,3.294,0,0,1,3.227,3.35V7.69H5.535ZM15.97,17.486a2.281,2.281,0,0,1-2.235,2.319H3.788a2.281,2.281,0,0,1-2.235-2.319V9.3H15.97Z' transform='translate(0 0)' fill='%23FF8811'/%3E%3Cpath id='패스_823' data-name='패스 823' d='M26.393,46.252v2.425h1.553V46.252A2.416,2.416,0,0,0,29.5,43.975a2.332,2.332,0,1,0-4.66,0,2.416,2.416,0,0,0,1.553,2.277m.777-3.084a.807.807,0,1,1-.777.806.793.793,0,0,1,.777-.806' transform='translate(-18.409 -30.389)' fill='%23FF8811'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat left 15px center/16px auto;
 }
 
 body div#content.sub section.login div.container fieldset button.submit {
   width: 100%;
   height: 50px;
-  border: 1px solid #2C2C2C;
+  border: 1px solid #2c2c2c;
   background: #333333;
   color: #fff;
   font-size: 16px;
@@ -7931,7 +8257,7 @@ body div#content.sub section.login div.container fieldset ul.tools li {
 }
 
 body div#content.sub section.login div.container fieldset ul.tools li:first-of-type a {
-  color: #FF8811;
+  color: #ff8811;
   font-size: 15px;
   text-decoration: underline;
 }
@@ -7962,8 +8288,8 @@ body div#content.sub section.find div.container fieldset {
   border: none;
   padding: 0;
   width: 345px;
-  -webkit-box-shadow: 0px 10px 20px #0000001A;
-          box-shadow: 0px 10px 20px #0000001A;
+  -webkit-box-shadow: 0px 10px 20px #0000001a;
+          box-shadow: 0px 10px 20px #0000001a;
 }
 
 @media (min-width: 1195px) {
@@ -8001,8 +8327,8 @@ body div#content.sub section.find div.container fieldset div.find-type label {
   width: 173px;
   height: 48px;
   margin: 0;
-  background: #ECECEC;
-  border: 1px solid #ECECEC;
+  background: #ececec;
+  border: 1px solid #ececec;
   cursor: pointer;
 }
 
@@ -8018,8 +8344,8 @@ body div#content.sub section.find div.container fieldset div.find-type input {
 }
 
 body div#content.sub section.find div.container fieldset div.find-type input:checked + label {
-  background: #FEAD42;
-  border: 1px solid #D17C0C;
+  background: #fead42;
+  border: 1px solid #d17c0c;
   color: #111;
   font-weight: 700;
 }
@@ -8051,9 +8377,9 @@ body div#content.sub section.find div.container fieldset div.find-form label {
   }
 }
 
-body div#content.sub section.find div.container fieldset div.find-form input[type=text],
-body div#content.sub section.find div.container fieldset div.find-form input[type=email],
-body div#content.sub section.find div.container fieldset div.find-form input[type=email],
+body div#content.sub section.find div.container fieldset div.find-form input[type='text'],
+body div#content.sub section.find div.container fieldset div.find-form input[type='email'],
+body div#content.sub section.find div.container fieldset div.find-form input[type='email'],
 body div#content.sub section.find div.container fieldset div.find-form select {
   width: 100%;
   height: 46px;
@@ -8069,63 +8395,63 @@ body div#content.sub section.find div.container fieldset div.find-form select {
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.find div.container fieldset div.find-form input[type=text],
-  body div#content.sub section.find div.container fieldset div.find-form input[type=email],
-  body div#content.sub section.find div.container fieldset div.find-form input[type=email],
+  body div#content.sub section.find div.container fieldset div.find-form input[type='text'],
+  body div#content.sub section.find div.container fieldset div.find-form input[type='email'],
+  body div#content.sub section.find div.container fieldset div.find-form input[type='email'],
   body div#content.sub section.find div.container fieldset div.find-form select {
     font-size: 16px;
   }
 }
 
-body div#content.sub section.find div.container fieldset div.find-form input[type=text].tel,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email].tel,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email].tel,
+body div#content.sub section.find div.container fieldset div.find-form input[type='text'].tel,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email'].tel,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email'].tel,
 body div#content.sub section.find div.container fieldset div.find-form select.tel {
   width: calc((100% - 110px) / 3);
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.find div.container fieldset div.find-form input[type=text].tel,
-  body div#content.sub section.find div.container fieldset div.find-form input[type=email].tel,
-  body div#content.sub section.find div.container fieldset div.find-form input[type=email].tel,
+  body div#content.sub section.find div.container fieldset div.find-form input[type='text'].tel,
+  body div#content.sub section.find div.container fieldset div.find-form input[type='email'].tel,
+  body div#content.sub section.find div.container fieldset div.find-form input[type='email'].tel,
   body div#content.sub section.find div.container fieldset div.find-form select.tel {
     width: calc((100% - 120px) / 3);
   }
 }
 
-body div#content.sub section.find div.container fieldset div.find-form input[type=text]::-webkit-input-placeholder,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]::-webkit-input-placeholder,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]::-webkit-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='text']::-webkit-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']::-webkit-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']::-webkit-input-placeholder,
 body div#content.sub section.find div.container fieldset div.find-form select::-webkit-input-placeholder {
   color: #999999;
 }
 
-body div#content.sub section.find div.container fieldset div.find-form input[type=text]:-ms-input-placeholder,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]:-ms-input-placeholder,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]:-ms-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='text']:-ms-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']:-ms-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']:-ms-input-placeholder,
 body div#content.sub section.find div.container fieldset div.find-form select:-ms-input-placeholder {
   color: #999999;
 }
 
-body div#content.sub section.find div.container fieldset div.find-form input[type=text]::-ms-input-placeholder,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]::-ms-input-placeholder,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]::-ms-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='text']::-ms-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']::-ms-input-placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']::-ms-input-placeholder,
 body div#content.sub section.find div.container fieldset div.find-form select::-ms-input-placeholder {
   color: #999999;
 }
 
-body div#content.sub section.find div.container fieldset div.find-form input[type=text]::placeholder,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]::placeholder,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]::placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='text']::placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']::placeholder,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']::placeholder,
 body div#content.sub section.find div.container fieldset div.find-form select::placeholder {
   color: #999999;
 }
 
-body div#content.sub section.find div.container fieldset div.find-form input[type=text]:focus,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]:focus,
-body div#content.sub section.find div.container fieldset div.find-form input[type=email]:focus,
+body div#content.sub section.find div.container fieldset div.find-form input[type='text']:focus,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']:focus,
+body div#content.sub section.find div.container fieldset div.find-form input[type='email']:focus,
 body div#content.sub section.find div.container fieldset div.find-form select:focus {
-  border-color: #FEA100;
+  border-color: #fea100;
   -webkit-box-shadow: 0 6px 0 0 rgba(61, 90, 238, 0.15);
           box-shadow: 0 6px 0 0 rgba(61, 90, 238, 0.15);
 }
@@ -8151,8 +8477,8 @@ body div#content.sub section.find div.container fieldset div.find-form button.se
   vertical-align: top;
   border-radius: 6px;
   height: 46px;
-  border: 1px solid #4D4D4D;
-  background: #4D4D4D;
+  border: 1px solid #4d4d4d;
+  background: #4d4d4d;
   color: #fff;
 }
 
@@ -8168,7 +8494,7 @@ body div#content.sub section.find div.container fieldset div.find-form button.su
   width: 100px;
   height: 52px;
   border-radius: 6px;
-  border: 1px solid #2C2C2C;
+  border: 1px solid #2c2c2c;
   background: #333333;
   color: #fff;
   font-size: 16px;
@@ -8184,7 +8510,7 @@ body div#content.sub section.find div.container fieldset div.find-form button.su
 
 body div#content.sub section.find div.container fieldset div.find-form div.result {
   border: 1px solid #ccc;
-  background: #F8FBFC;
+  background: #f8fbfc;
   text-align: center;
   line-height: 68px;
   font-weight: 700;
@@ -8203,7 +8529,7 @@ body div#content.sub section.find div.container fieldset div.find-form div.resul
 body div#content.sub section.find div.container fieldset a.login {
   display: block;
   text-align: center;
-  color: #4E3DC4;
+  color: #4e3dc4;
   font-size: 15px;
   margin: 30px 0 0;
 }
@@ -8264,25 +8590,25 @@ body div#content.sub section.sign div.container div.terms .sign-check label {
 }
 
 body div#content.sub section.sign div.container div.terms .sign-check label::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 0;
   top: -8px;
   width: 30px;
   height: 30px;
-  border: 1px solid #7B7B7B;
+  border: 1px solid #7b7b7b;
   background: #fff;
   border-radius: 50%;
 }
 
 body div#content.sub section.sign div.container div.terms .sign-check input:checked + label::before {
-  border-color: #FF8811;
+  border-color: #ff8811;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 20 20'%3E%3Cg id='그룹_1752' data-name='그룹 1752' transform='translate(-29 -292)'%3E%3Cg id='그룹_1753' data-name='그룹 1753'%3E%3Cg id='사각형_2052' data-name='사각형 2052' transform='translate(29 292)' fill='%23FF8811' stroke='%23FF8811' stroke-width='1'%3E%3Crect width='20' height='20' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='19' height='19' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cpath id='패스_1647' data-name='패스 1647' d='M452.488,311.42l-3.936-3.935,1.575-1.576,2.451,2.451,6.493-5.764,1.479,1.666Z' transform='translate(-444.551 -297.008)' fill='%23fff'/%3E%3C/svg%3E%0A") no-repeat center/cover;
 }
 
 body div#content.sub section.sign div.container div.terms div.table {
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   margin: 20px 0;
 }
 
@@ -8299,8 +8625,8 @@ body div#content.sub section.sign div.container div.terms div.table strong {
   border-bottom: 1px solid #ccc;
   font-size: 16px;
   padding: 16px;
-  background: #F3F3F3;
-  font-weight: 500;
+  background: #f3f3f3;
+  font-weight: 400;
   color: #111;
 }
 
@@ -8311,7 +8637,7 @@ body div#content.sub section.sign div.container div.terms div.table strong {
   }
 }
 
-body div#content.sub section.sign div.container div.terms div.table strong input[type=checkbox] {
+body div#content.sub section.sign div.container div.terms div.table strong input[type='checkbox'] {
   margin-right: 10px;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -8334,7 +8660,7 @@ body div#content.sub section.sign div.container div.sign-write h4 {
   font-size: 17px;
   font-weight: 700;
   color: #222;
-  border-bottom: 1px solid #BBBBBB;
+  border-bottom: 1px solid #bbbbbb;
   padding: 0 0 15px;
   margin: 0 0 15px;
 }
@@ -8352,7 +8678,7 @@ body div#content.sub section.sign div.container div.sign-write h4 small {
   display: block;
   line-height: 1.6;
   margin: 10px 0 0;
-  color: #FF8811;
+  color: #ff8811;
   font-size: 13px;
   font-weight: 400;
 }
@@ -8366,14 +8692,14 @@ body div#content.sub section.sign div.container div.sign-write h4 small {
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table {
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #CCCCCC;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
   font-size: 0;
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p {
   position: relative;
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #cccccc;
   margin: 0;
   color: #555;
   word-break: keep-all;
@@ -8392,7 +8718,7 @@ body div#content.sub section.sign div.container div.sign-write div.table p stron
   width: 110px;
   line-height: 1.6;
   color: #111111;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 17px;
 }
 
@@ -8409,7 +8735,7 @@ body div#content.sub section.sign div.container div.sign-write div.table p stron
   left: 10px;
   top: 13px;
   font-size: 17px;
-  color: #FF8811;
+  color: #ff8811;
   padding-right: 4px;
 }
 
@@ -8418,7 +8744,7 @@ body div#content.sub section.sign div.container div.sign-write div.table p > i {
   text-align: right;
   margin: 10px 0 0;
   font-size: 13px;
-  color: #EC653B;
+  color: #ec653b;
   font-style: normal;
 }
 
@@ -8431,11 +8757,11 @@ body div#content.sub section.sign div.container div.sign-write div.table p > i {
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p > i.ok {
-  color: #FF8811;
+  color: #ff8811;
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p > i.ok::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 10px;
   height: 9px;
@@ -8497,21 +8823,21 @@ body div#content.sub section.sign div.container div.sign-write div.table p span.
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p span.check label::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 0;
   top: -2px;
   width: 20px;
   height: 20px;
-  border: 1px solid #7B7B7B;
+  border: 1px solid #7b7b7b;
   background: #fff;
   border-radius: 50%;
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p span.check input:checked + label::before {
-  border-color: #4335A9;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cg id='그룹_1742' data-name='그룹 1742' transform='translate(-230 -345)'%3E%3Ccircle id='타원_39' data-name='타원 39' cx='15' cy='15' r='15' transform='translate(230 345)' fill='%234e3dc4'/%3E%3Cpath id='패스_1624' data-name='패스 1624' d='M453.8,314.363l-5.248-5.248,2.1-2.1,3.269,3.269,8.658-7.686,1.972,2.222Z' transform='translate(-211.75 51.404)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat #4E3DC4 center/100% auto;
+  border-color: #4335a9;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cg id='그룹_1742' data-name='그룹 1742' transform='translate(-230 -345)'%3E%3Ccircle id='타원_39' data-name='타원 39' cx='15' cy='15' r='15' transform='translate(230 345)' fill='%234e3dc4'/%3E%3Cpath id='패스_1624' data-name='패스 1624' d='M453.8,314.363l-5.248-5.248,2.1-2.1,3.269,3.269,8.658-7.686,1.972,2.222Z' transform='translate(-211.75 51.404)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat #4e3dc4 center/100% auto;
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p button.sub {
@@ -8519,7 +8845,7 @@ body div#content.sub section.sign div.container div.sign-write div.table p butto
   color: #fff;
   width: 110px;
   height: 36px;
-  background: #4D4D4D;
+  background: #4d4d4d;
   border: 1px solid #222222;
   border-radius: 4px;
 }
@@ -8539,7 +8865,7 @@ body div#content.sub section.sign div.container div.sign-write div.table p butto
   text-align: end;
   padding-right: 15px;
   background: url("data:image/svg+xml,%3Csvg id='search_black_24dp' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='패스_1322' data-name='패스 1322' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='패스_1323' data-name='패스 1323' d='M15.5,14h-.79l-.28-.27a6.51,6.51,0,1,0-.7.7l.27.28v.79l5,4.99L20.49,19Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z' fill='%234d4d4d'/%3E%3C/svg%3E%0A") no-repeat left 10px center/24px auto;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   border-radius: 4px;
 }
 
@@ -8562,15 +8888,15 @@ body div#content.sub section.sign div.container div.sign-write div.table p butto
   margin-top: 5px;
 }
 
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=text],
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date],
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel],
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password],
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email],
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'],
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'],
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'],
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'],
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'],
 body div#content.sub section.sign div.container div.sign-write div.table p select {
   width: 100%;
   height: 36px;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   background: #fff;
   -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1) inset;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1) inset;
@@ -8580,11 +8906,11 @@ body div#content.sub section.sign div.container div.sign-write div.table p selec
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=text],
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=date],
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel],
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=password],
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=email],
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'],
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'],
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'],
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'],
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'],
   body div#content.sub section.sign div.container div.sign-write div.table p select {
     height: 36px;
     font-size: 16px;
@@ -8593,45 +8919,45 @@ body div#content.sub section.sign div.container div.sign-write div.table p selec
   }
 }
 
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].email,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].email,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].email,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].email,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].email,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].email,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].email,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].email,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].email,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].email,
 body div#content.sub section.sign div.container div.sign-write div.table p select.email {
   width: calc(50% - 13px);
   display: inline-block;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].email,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].email,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].email,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].email,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].email,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].email,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].email,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].email,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].email,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].email,
   body div#content.sub section.sign div.container div.sign-write div.table p select.email {
     width: 260px;
   }
 }
 
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].tel,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].tel,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].tel,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].tel,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].tel,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].tel,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].tel,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].tel,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].tel,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].tel,
 body div#content.sub section.sign div.container div.sign-write div.table p select.tel {
   width: calc(50% - 5px);
 }
 
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].tel#phone1, body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].tel#tel1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].tel#phone1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].tel#tel1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].tel#phone1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].tel#tel1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].tel#phone1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].tel#tel1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].tel#phone1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].tel#tel1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].tel#phone1, body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].tel#tel1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].tel#phone1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].tel#tel1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].tel#phone1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].tel#tel1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].tel#phone1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].tel#tel1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].tel#phone1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].tel#tel1,
 body div#content.sub section.sign div.container div.sign-write div.table p select.tel#phone1,
 body div#content.sub section.sign div.container div.sign-write div.table p select.tel#tel1 {
   display: block;
@@ -8639,15 +8965,15 @@ body div#content.sub section.sign div.container div.sign-write div.table p selec
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].tel#phone1, body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].tel#tel1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].tel#phone1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].tel#tel1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].tel#phone1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].tel#tel1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].tel#phone1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].tel#tel1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].tel#phone1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].tel#tel1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].tel#phone1, body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].tel#tel1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].tel#phone1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].tel#tel1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].tel#phone1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].tel#tel1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].tel#phone1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].tel#tel1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].tel#phone1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].tel#tel1,
   body div#content.sub section.sign div.container div.sign-write div.table p select.tel#phone1,
   body div#content.sub section.sign div.container div.sign-write div.table p select.tel#tel1 {
     display: inline-block;
@@ -8655,47 +8981,47 @@ body div#content.sub section.sign div.container div.sign-write div.table p selec
   }
 }
 
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].tel#phone2, body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].tel#tel2,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].tel#phone2,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].tel#tel2,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].tel#phone2,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].tel#tel2,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].tel#phone2,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].tel#tel2,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].tel#phone2,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].tel#tel2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].tel#phone2, body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].tel#tel2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].tel#phone2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].tel#tel2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].tel#phone2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].tel#tel2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].tel#phone2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].tel#tel2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].tel#phone2,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].tel#tel2,
 body div#content.sub section.sign div.container div.sign-write div.table p select.tel#phone2,
 body div#content.sub section.sign div.container div.sign-write div.table p select.tel#tel2 {
   margin-right: 10px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].tel,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].tel,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].tel,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].tel,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].tel,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].tel,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].tel,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].tel,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].tel,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].tel,
   body div#content.sub section.sign div.container div.sign-write div.table p select.tel {
     display: inline-block;
     width: 140px;
   }
 }
 
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].address1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].address1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].address1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].address1,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].address1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].address1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].address1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].address1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].address1,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].address1,
 body div#content.sub section.sign div.container div.sign-write div.table p select.address1 {
   margin-bottom: 10px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].address1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].address1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].address1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].address1,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].address1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].address1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].address1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].address1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].address1,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].address1,
   body div#content.sub section.sign div.container div.sign-write div.table p select.address1 {
     margin-left: 130px;
     display: block;
@@ -8705,11 +9031,11 @@ body div#content.sub section.sign div.container div.sign-write div.table p selec
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=text].address2,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=date].address2,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel].address2,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=password].address2,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=email].address2,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='text'].address2,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='date'].address2,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel'].address2,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='password'].address2,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='email'].address2,
   body div#content.sub section.sign div.container div.sign-write div.table p select.address2 {
     margin-top: 10px;
     margin-left: 130px;
@@ -8719,26 +9045,26 @@ body div#content.sub section.sign div.container div.sign-write div.table p selec
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=text]#farm,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=date]#farm,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel]#farm,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=password]#farm,
-  body div#content.sub section.sign div.container div.sign-write div.table p input[type=email]#farm,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='text']#farm,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='date']#farm,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel']#farm,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='password']#farm,
+  body div#content.sub section.sign div.container div.sign-write div.table p input[type='email']#farm,
   body div#content.sub section.sign div.container div.sign-write div.table p select#farm {
     width: calc(100% - 196px);
   }
 }
 
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=text]#check,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=date]#check,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=tel]#check,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=password]#check,
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=email]#check,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='text']#check,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='date']#check,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='tel']#check,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='password']#check,
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='email']#check,
 body div#content.sub section.sign div.container div.sign-write div.table p select#check {
   padding-right: 60px;
 }
 
-body div#content.sub section.sign div.container div.sign-write div.table p input[type=radio] {
+body div#content.sub section.sign div.container div.sign-write div.table p input[type='radio'] {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
   line-height: 1.2;
@@ -8759,11 +9085,11 @@ body div#content.sub section.sign div.container div.sign-write div.table p selec
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p input:-moz-read-only {
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p input:read-only {
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 
 body div#content.sub section.sign div.container div.sign-write div.table p input + button,
@@ -8774,7 +9100,7 @@ body div#content.sub section.sign div.container div.sign-write div.table p input
 
 body div#content.sub section.sign div.container div.sign-write div.table p u.counter {
   font-size: 12px;
-  color: #FF8811;
+  color: #ff8811;
   text-decoration: none;
   position: absolute;
   right: 22px;
@@ -8794,7 +9120,7 @@ body div#content.sub section.sign div.container div.sign-write div.table p texta
   width: 100%;
   height: 72px;
   border-radius: 6px;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1) inset;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1) inset;
   padding: 0 10px;
@@ -9158,7 +9484,7 @@ body footer#footer div.container ul.footer-link li:first-child {
 body footer#footer div.container ul.footer-link li a {
   display: inline-block;
   color: #333333;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -9235,7 +9561,7 @@ body footer#footer div.container div.pc a {
           justify-content: center;
   width: 100px;
   height: 38px;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   border-radius: 6px;
   font-size: 13px;
   color: #333;
@@ -9270,7 +9596,7 @@ body footer#footer div.container div.agency .agency-open {
   display: block;
   border: none;
   background: #fff;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   width: 100%;
   height: 38px;
   text-align: left;
