@@ -5935,9 +5935,6 @@ body div#content.sub section.business div.container div.b-content > ul li.title 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 body div#content.sub section.business div.container div.b-content > ul li.title::before {
@@ -5945,6 +5942,8 @@ body div#content.sub section.business div.container div.b-content > ul li.title:
   display: inline-block;
   width: 15px;
   height: 15px;
+  min-width: 15px;
+  margin-top: 5px;
   margin-right: 5px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z'%3E%3C/path%3E%3C/svg%3E") no-repeat center/cover;
 }
@@ -5953,6 +5952,19 @@ body div#content.sub section.business div.container div.b-content > ul li.title:
   body div#content.sub section.business div.container div.b-content > ul li.title::before {
     width: 20px;
     height: 20px;
+    margin-top: 4px;
+  }
+}
+
+body div#content.sub section.business div.container div.b-content > ul li.title > p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.business div.container div.b-content > ul li.title > p {
+    font-size: 18px;
   }
 }
 
@@ -5963,12 +5975,6 @@ body div#content.sub section.business div.container div.b-content > ul li.title.
 
 @media (min-width: 1195px) {
   body div#content.sub section.business div.container div.b-content > ul li.title.bold {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.business div.container div.b-content > ul li.title {
     font-size: 18px;
   }
 }
