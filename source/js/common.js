@@ -4,6 +4,7 @@ $(function(){
   menu();
   maintab();
   outlink();
+  popup();
 
 
 
@@ -36,12 +37,9 @@ $(function(){
   });
 
 
-  $(".sign-modal").on("click",function(){
-    $(".modal").addClass("on")
-  })
 
-  $(".modal-content .close").on("click",function(){
-    $(".modal").removeClass("on")
+  $(" button.close,youtube").on("click",function(){
+    $(".youtube").removeClass("on")
   })
 
   
@@ -104,29 +102,6 @@ $(function(){
     },
   });
 
-  new Swiper('.notice-swiper', {
-    direction: 'vertical', // 수직 슬라이드
-    // autoplay:{
-    //   delay : 5000,
-    //   disableOnInteraction: false
-    // },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: false,
-
-    navigation: {
-      nextEl: '.notice-next',
-      prevEl: '.notice-prev',
-    },
-    breakpoints: {
-      1199: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-    },
-  });
-
-
 
 });
 
@@ -150,8 +125,8 @@ function menu() {
           $("nav#main-menu").removeClass("on");
           $("#header").removeClass("on");
           $("a.main-menu").removeClass("on");
-      $("nav#main-menu a.close").removeClass("on");
-      $("div.shadow").removeClass("on");
+          $("nav#main-menu a.close").removeClass("on");
+          $("div.shadow").removeClass("on");
       }
   });
 
@@ -259,9 +234,57 @@ function maintab() {
 /* ----- outlink ----- */ 
 function outlink() {
   $(".agency-open").click(function() {
-      console.log("클릭");
       $(this).toggleClass("on");
   });
+}
+
+
+function popup() {
+
+  /* 스토리지 제어 함수 정의 */
+  var handleStorage = {
+    // 스토리지에 데이터 쓰기(이름, 만료일)
+    setStorage: function (name, exp) {
+      // 만료 시간 구하기(exp를 ms단위로 변경)
+      var date = new Date();
+      date = date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+
+      // 로컬 스토리지에 저장하기
+      // (값을 따로 저장하지 않고 만료 시간을 저장)
+      localStorage.setItem(name, date)
+    },
+    // 스토리지 읽어오기
+    getStorage: function (name) {
+      var now = new Date();
+      now = now.setTime(now.getTime());
+      // 현재 시각과 스토리지에 저장된 시각을 각각 비교하여
+      // 시간이 남아 있으면 true, 아니면 false 리턴
+      return parseInt(localStorage.getItem(name)) > now
+    }
+  };
+
+    // 쿠키 읽고 화면 보이게
+    if (handleStorage.getStorage("today")) {
+      $(".modal").removeClass("on");
+    } else {
+      $(".modal").addClass("on");
+    }
+  
+    // 오늘하루 보지 않기 버튼
+    $(".modal").on("click", ".modalClose", function () {
+      // 로컬 스토리지에 today라는 이름으로 1일(24시간 뒤) 동안 보이지 않게
+      if($(".cehckModal").is(":checked") == true){
+        handleStorage.setStorage("today", 1);
+        $(this).parents(".modal.on").removeClass("on");
+      } 
+      
+    });
+  
+    // 일반 닫기 버튼
+    $(".modal").on("click", ".modalClose", function () {
+      $(this).parents(".modal.on").removeClass("on");
+    });
+
 }
 
 
