@@ -74,26 +74,11 @@ body {
 
   div.modal{
     position: fixed;
-    display: none;
-    width: 300px;
-    height: 400px;
     background: #fff;
     box-shadow: 0px 0px 20px #00000026;
-    &.on{
-      display: block;
-    }
-    @media (min-width: $screen-size-pc) {
-      width: 300px;
-      height: 400px;
-    }
     a{
       display: block;
-      width: 300px;
-      height: 350px;
       img{
-        width: 300px;
-        height: 350px;
-        object-fit:fill;
       }
     }
     >div{

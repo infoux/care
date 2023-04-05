@@ -3870,36 +3870,13 @@ body .container {
 
 body div.modal {
   position: fixed;
-  display: none;
-  width: 300px;
-  height: 400px;
   background: #fff;
   -webkit-box-shadow: 0px 0px 20px #00000026;
           box-shadow: 0px 0px 20px #00000026;
 }
 
-body div.modal.on {
-  display: block;
-}
-
-@media (min-width: 1195px) {
-  body div.modal {
-    width: 300px;
-    height: 400px;
-  }
-}
-
 body div.modal a {
   display: block;
-  width: 300px;
-  height: 350px;
-}
-
-body div.modal a img {
-  width: 300px;
-  height: 350px;
-  -o-object-fit: fill;
-     object-fit: fill;
 }
 
 body div.modal > div {
