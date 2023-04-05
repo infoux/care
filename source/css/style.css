@@ -4467,56 +4467,44 @@ body div#content.main {
   text-align: center;
 }
 
-body div#content.main div.container {
-  padding: 0 10px;
-}
-
-@media (min-width: 1195px) {
-  body div#content.main div.container {
-    padding: 0;
-  }
-}
-
-body div#content.main div.container section.main-banner {
+body div#content.main section.main-banner {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner {
+  body div#content.main section.main-banner {
     width: 100%;
   }
 }
 
-body div#content.main div.container section.main-banner .banner-swiper {
-  width: 340px;
+body div#content.main section.main-banner .banner-swiper {
+  width: 360px;
   margin: 0 auto;
   overflow: hidden;
+  z-index: 99;
+  padding-left: 15px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner .banner-swiper {
-    margin: 0;
-    width: 1200px;
+  body div#content.main section.main-banner .banner-swiper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: 0 0 0 180px;
+    width: 1560px;
     height: 480px;
+    padding: 0;
   }
 }
 
-body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a {
+body div#content.main section.main-banner .banner-swiper .swiper-wrapper a {
   width: 100%;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a {
+  body div#content.main section.main-banner .banner-swiper .swiper-wrapper a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4527,26 +4515,28 @@ body div#content.main div.container section.main-banner .banner-swiper .swiper-w
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a .banner-title {
-    width: 300px;
-    margin: 70px 50px 0 0;
+  body div#content.main section.main-banner .banner-swiper .swiper-wrapper a .banner-title {
+    width: 356px;
+    margin: 85px 83px 0 0;
   }
 }
 
-body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a .banner-title p {
+body div#content.main section.main-banner .banner-swiper .swiper-wrapper a .banner-title p {
+  text-align: start;
   font-size: 15px;
+  margin: 12px 0;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a .banner-title p {
+  body div#content.main section.main-banner .banner-swiper .swiper-wrapper a .banner-title p {
     font-size: 25px;
     display: block;
   }
 }
 
-body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a .banner-title h2 {
+body div#content.main section.main-banner .banner-swiper .swiper-wrapper a .banner-title h2 {
   margin: 0 0 23px 0;
-  display: inline-block;
+  display: block;
   font-size: 20px;
   font-weight: 700;
   color: #111;
@@ -4554,53 +4544,53 @@ body div#content.main div.container section.main-banner .banner-swiper .swiper-w
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a .banner-title h2 span {
+  body div#content.main section.main-banner .banner-swiper .swiper-wrapper a .banner-title h2 span {
     display: block;
   }
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a .banner-title h2 {
-    font-size: 40px;
+  body div#content.main section.main-banner .banner-swiper .swiper-wrapper a .banner-title h2 {
+    font-size: 50px;
     display: block;
     margin: 0;
   }
 }
 
-body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a div.banner-img {
-  width: 340px;
+body div#content.main section.main-banner .banner-swiper .swiper-wrapper a div.banner-img {
+  width: 360px;
   height: 220px;
   overflow: hidden;
   border-radius: 100px 0 0 0;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a div.banner-img {
-    width: 850px;
+  body div#content.main section.main-banner .banner-swiper .swiper-wrapper a div.banner-img {
+    width: 1120px;
     height: 480px;
     border-radius: 240px 0 0 0;
   }
 }
 
-body div#content.main div.container section.main-banner .banner-swiper .swiper-wrapper a img {
+body div#content.main section.main-banner .banner-swiper .swiper-wrapper a img {
   width: 100%;
   height: 100%;
 }
 
-body div#content.main div.container section.main-banner .btn-box {
+body div#content.main section.main-banner .btn-box {
   position: relative;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-banner .btn-box {
+  body div#content.main section.main-banner .btn-box {
     position: absolute;
-    bottom: 110px;
+    bottom: 50px;
     left: 0;
     z-index: 9999;
   }
 }
 
-body div#content.main div.container section.main-banner .btn-box button {
+body div#content.main section.main-banner .btn-box button {
   padding: 0;
   font-size: 30px;
   outline: none;
@@ -4608,19 +4598,44 @@ body div#content.main div.container section.main-banner .btn-box button {
   background: transparent;
 }
 
-body div#content.main div.container section.main-banner .btn-box button.on {
+@media (min-width: 1195px) {
+  body div#content.main section.main-banner .btn-box button {
+    font-size: 40px;
+  }
+}
+
+body div#content.main section.main-banner .btn-box button.on {
   display: none;
 }
 
-body div#content.main div.container section.main-banner .btn-box .banner-pagination {
+body div#content.main section.main-banner .btn-box .banner-pagination {
   display: block;
   width: 50px;
   height: 20px;
   position: absolute;
   bottom: 12px;
-  left: 110px;
+  left: 230px;
   font-size: 12px;
   color: #111;
+}
+
+@media (min-width: 1195px) {
+  body div#content.main section.main-banner .btn-box .banner-pagination {
+    bottom: 25px;
+    left: 140px;
+    font-size: 17px;
+  }
+}
+
+body div#content.main div.container {
+  position: relative;
+  padding: 0 10px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.main div.container {
+    padding: 0;
+  }
 }
 
 body div#content.main div.container section.main-menu {
@@ -4629,7 +4644,7 @@ body div#content.main div.container section.main-menu {
 
 @media (min-width: 1195px) {
   body div#content.main div.container section.main-menu {
-    margin-top: 80px;
+    margin-top: 550px;
   }
 }
 
