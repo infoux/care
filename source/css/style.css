@@ -4246,7 +4246,6 @@ body div#content.sub {
 body div#content.sub section.sub-head {
   position: relative;
   z-index: 60000;
-  height: 155px;
   margin: 0 0 35px 0;
   padding: 30px 0 0 0;
   background-color: #fff;
@@ -4403,6 +4402,7 @@ body div#content.sub section.sub-head div.container div.depth2 {
 @media (min-width: 1195px) {
   body div#content.sub section.sub-head div.container div.depth2 {
     margin: 0 auto;
+    height: 120px;
   }
 }
 
@@ -4480,6 +4480,7 @@ body div#content.sub section.sub-head div.container div.depth2 div ul {
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-head div.container div.depth2 div ul {
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4552,7 +4553,7 @@ body div#content.sub section.sub-content {
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-content {
-    margin-top: 150px;
+    margin-top: 50px;
   }
 }
 

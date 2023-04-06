@@ -1242,7 +1242,6 @@ body {
       section.sub-head {
         position: relative;
         z-index: 60000;
-        height: 155px;
         margin: 0 0 35px 0;
         padding: 30px 0 0 0;
         background-color: #fff;
@@ -1378,6 +1377,7 @@ body {
             @include ani();
             @media (min-width: $screen-size-pc) {
               margin: 0 auto;
+              height: 120px;
             }
 
             a.depth2-link {
@@ -1440,6 +1440,7 @@ body {
                 text-align: center;
                 @include inner-shadow($x: 0, $y: 3px, $blur: 6px, $spread: 0, $alpha: 0.16);
                 @media (min-width: $screen-size-pc) {
+                  height: 100%;
                   display: flex;
                   justify-content: center;
                   border-left: none;
@@ -1501,7 +1502,7 @@ body {
       section.sub-content {
         text-align: center;
         @media (min-width: $screen-size-pc) {
-          margin-top: 150px;
+          margin-top: 50px;
         }
         div.container {
           div.b-title {
