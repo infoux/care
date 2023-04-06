@@ -74,6 +74,7 @@ body {
   
 
   div.shadow {
+    position: fixed;
     display: none;
     left: 0;
     right: 0;
@@ -89,20 +90,16 @@ body {
       display: none;
     }
     &.on {
+      display: block;
       z-index: 400000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       opacity: 1;
       @media (min-width: $screen-size-pc) {
         display: none;
       }
     }
     &.active {
+      display: block;
       z-index: 400;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       opacity: 1;
       @media (min-width: $screen-size-pc) {
         display: none;
