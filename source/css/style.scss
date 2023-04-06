@@ -990,12 +990,28 @@ body {
                   li {
                     a {
                       width: 100%;
+                      transition: all 0.3s ease;
+                      &:hover {
+                        color: #dd488e;
+                        text-decoration: underline;
+                      }
                       p {
                         display: inline-block;
                         font-size: 16px;
                         color: #333;
                         margin: 0 0 5px 0;
                         transition: all 0.3s ease;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        &.nt01{
+                          -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        }
+                        &.nt02{
+                          -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        }
                         @media (min-width: $screen-size-pc) {
                           font-size: 18px;
                         }
@@ -1003,14 +1019,15 @@ body {
                           color: #dd488e;
                           text-decoration: underline;
                         }
-                        span {
-                          display: block;
-                          &.day {
-                            margin-top: 20px;
-                            font-size: 14px;
-                            @media (min-width: $screen-size-pc) {
-                              font-size: 16px;
-                            }
+                        
+                      }
+                      span {
+                        display: block;
+                        &.day {
+                          margin-top: 10px;
+                          font-size: 14px;
+                          @media (min-width: $screen-size-pc) {
+                            font-size: 16px;
                           }
                         }
                       }
@@ -1052,6 +1069,11 @@ body {
                   font-size: 16px;
                   color: #fff;
                   margin-right: 20px;
+                  transition: all 0.3s ease;
+                  &:hover {
+                    color: #ffd688;
+                    text-decoration: underline;
+                  }
                   &::before {
                     content: '';
                     margin-right: 10px;
@@ -1066,10 +1088,7 @@ body {
                     font-size: 18px;
                     margin: 0 0 10px 0;
                   }
-                  &.center {
-                    color: #ffd688;
-                    text-decoration: underline;
-                  }
+                  
                 }
               }
               img {
