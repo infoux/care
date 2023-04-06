@@ -3932,11 +3932,6 @@ body div#content.main section.main-notice div.container div.notice-box ul.notice
   transition: all 0.3s ease;
 }
 
-body div#content.main section.main-notice div.container div.notice-box ul.notice li ul li a:hover {
-  color: #dd488e;
-  text-decoration: underline;
-}
-
 body div#content.main section.main-notice div.container div.notice-box ul.notice li ul li a p {
   display: inline-block;
   font-size: 16px;
