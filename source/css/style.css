@@ -6995,3 +6995,13 @@ body footer#footer div.container div.agency .agency-link a {
 body footer#footer div.container div.agency .agency-link a:hover {
   background-color: #eee;
 }
+
+body div.ctt_admin {
+  display: block;
+  width: 200px;
+  line-height: 40px;
+  margin: 20px auto;
+  background: #eee;
+  text-align: center;
+  border-radius: 10px;
+}
