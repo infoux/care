@@ -5602,7 +5602,7 @@ body div#content.sub section.sub-board {
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board {
-    margin-top: 170px;
+    margin-top: 50px;
     padding: 0;
   }
 }
@@ -6582,9 +6582,9 @@ body div#content.sub section.sub-board div.photo div.vlog-title::after {
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.photo div.vlog-title::after {
-    width: 240px;
-    height: 213px;
-    top: -75px;
+    width: 210px;
+    height: 195px;
+    top: -52px;
     right: 25px;
   }
 }

@@ -2230,7 +2230,7 @@ body {
         text-align: center;
 
         @media (min-width: $screen-size-pc) {
-          margin-top: 170px;
+          margin-top: 50px;
           padding: 0;
         }
 
@@ -3057,10 +3057,10 @@ body {
               top: -15px;
               right: 0;
               @media (min-width: $screen-size-pc) {
-                width: 240px;
-                height: 213px;
-                top: -75px;
-              right: 25px;
+                width: 210px;
+                height: 195px;
+                top: -52px;
+                right: 25px;
               }
             }
             h3{
