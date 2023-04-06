@@ -488,7 +488,7 @@ div#content.sub05 div.sub-head.fix {
 }
 
 /* basic */
-.pagenation {
+.pg_wrap {
   display: inline-block;
   text-align: center;
   font-size: 0;
@@ -498,12 +498,16 @@ div#content.sub05 div.sub-head.fix {
   min-width: 330px;
 }
 
-.pagenation a {
+.pg_wrap .sound_only {
+  display: none;
+}
+
+.pg_wrap a {
   background: #fff;
 }
 
-.pagenation a,
-.pagenation strong {
+.pg_wrap a,
+.pg_wrap strong {
   overflow: hidden;
   display: inline-block;
   vertical-align: top;
@@ -517,70 +521,72 @@ div#content.sub05 div.sub-head.fix {
 }
 
 @media (min-width: 1200px) {
-  .pagenation a,
-  .pagenation strong {
+  .pg_wrap a,
+  .pg_wrap strong {
     width: 32px;
     line-height: 34px;
     font-size: 15px;
   }
 }
 
-.pagenation a.arrow,
-.pagenation strong.arrow {
+.pg_wrap a.pg_start,
+.pg_wrap strong.pg_start {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.773' height='9.444' viewBox='0 0 13.773 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,9.444,6.69,4.722,0,0ZM7.083,0V9.444l6.69-4.722Z' transform='translate(13.773 9.444) rotate(180)' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center/13.77px auto;
   font-size: 0;
   border: none;
 }
 
-.pagenation a.arrow.jump-left,
-.pagenation strong.arrow.jump-left {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.773' height='9.444' viewBox='0 0 13.773 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,9.444,6.69,4.722,0,0ZM7.083,0V9.444l6.69-4.722Z' transform='translate(13.773 9.444) rotate(180)' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center/13.77px auto;
-}
-
 @media (min-width: 1200px) {
-  .pagenation a.arrow.jump-left,
-  .pagenation strong.arrow.jump-left {
+  .pg_wrap a.pg_start,
+  .pg_wrap strong.pg_start {
     background-size: 14.58px;
   }
 }
 
-.pagenation a.arrow.move-left,
-.pagenation strong.arrow.move-left {
+.pg_wrap a.pg_prev,
+.pg_wrap strong.pg_prev {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.69' height='9.444' viewBox='0 0 6.69 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,0V9.444L6.69,4.722Z' transform='translate(6.69 9.444) rotate(180)' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center/6.7px auto;
+  font-size: 0;
+  border: none;
 }
 
 @media (min-width: 1200px) {
-  .pagenation a.arrow.move-left,
-  .pagenation strong.arrow.move-left {
+  .pg_wrap a.pg_prev,
+  .pg_wrap strong.pg_prev {
     background-size: 7.08px;
   }
 }
 
-.pagenation a.arrow.move-right,
-.pagenation strong.arrow.move-right {
+.pg_wrap a.pg_next,
+.pg_wrap strong.pg_next {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.69' height='9.444' viewBox='0 0 6.69 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,0V9.444L6.69,4.722Z' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center/6.7px auto;
+  font-size: 0;
+  border: none;
 }
 
 @media (min-width: 1200px) {
-  .pagenation a.arrow.move-right,
-  .pagenation strong.arrow.move-right {
+  .pg_wrap a.pg_next,
+  .pg_wrap strong.pg_next {
     background-size: 7.08px;
   }
 }
 
-.pagenation a.arrow.jump-right,
-.pagenation strong.arrow.jump-right {
+.pg_wrap a.pg_end,
+.pg_wrap strong.pg_end {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.773' height='9.444' viewBox='0 0 13.773 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,9.444,6.69,4.722,0,0ZM7.083,0V9.444l6.69-4.722Z' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center/13.77px auto;
+  font-size: 0;
+  border: none;
 }
 
 @media (min-width: 1200px) {
-  .pagenation a.arrow.jump-right,
-  .pagenation strong.arrow.jump-right {
+  .pg_wrap a.pg_end,
+  .pg_wrap strong.pg_end {
     background-size: 14.58px;
   }
 }
 
-.pagenation .active,
-.pagenation strong {
+.pg_wrap .active,
+.pg_wrap strong {
   font-weight: 600;
   color: #DD488E;
   background: #fff;

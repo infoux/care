@@ -3,7 +3,7 @@ $min-width: 320px;
 $img-url: "../images";
 $screen-size-pc: 1200px;
 
-.pagenation {
+.pg_wrap {
 	display: inline-block;
 	text-align: center;
 	@include zero;
@@ -11,6 +11,9 @@ $screen-size-pc: 1200px;
 	padding:0 !important;
 	width: 100%;
   min-width: 330px;
+  .sound_only{
+    display: none;
+  }
 	a {
 		background: #fff;
 	}
@@ -34,46 +37,45 @@ $screen-size-pc: 1200px;
 			font-size:15px;
 		} 
 
-		&.arrow {
-			font-size:0;
-      border: none;
-
-
-			&.jump-left {
+			&.pg_start {
 				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.773' height='9.444' viewBox='0 0 13.773 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,9.444,6.69,4.722,0,0ZM7.083,0V9.444l6.69-4.722Z' transform='translate(13.773 9.444) rotate(180)' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center / 13.77px auto;
-                
+        font-size: 0;
+        border: none;       
 				@media (min-width: $screen-size-pc) {
 					background-size: 14.58px;
 				} 
 		
 			}
 
-			&.move-left {
+			&.pg_prev {
 				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.69' height='9.444' viewBox='0 0 6.69 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,0V9.444L6.69,4.722Z' transform='translate(6.69 9.444) rotate(180)' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center / 6.7px auto;
-				
+				font-size: 0;
+        border: none;
 				@media (min-width: $screen-size-pc) {
 					background-size: 7.08px;
 				} 
 
 			}
 
-			&.move-right {
+			&.pg_next {
 				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.69' height='9.444' viewBox='0 0 6.69 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,0V9.444L6.69,4.722Z' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center / 6.7px auto;
-
+        font-size: 0;
+        border: none;
 				@media (min-width: $screen-size-pc) {
 					background-size: 7.08px;
 				} 
 
 			}
 
-			&.jump-right {
+			&.pg_end {
 				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.773' height='9.444' viewBox='0 0 13.773 9.444'%3E%3Cpath id='패스_1257' data-name='패스 1257' d='M0,9.444,6.69,4.722,0,0ZM7.083,0V9.444l6.69-4.722Z' fill='%23555'/%3E%3C/svg%3E%0A") no-repeat center / 13.77px auto;
-				
+				font-size: 0;
+        border: none;
 				@media (min-width: $screen-size-pc) {
 					background-size: 14.58px;
 				} 
 			}
-		}
+		
 		
 	}
 
