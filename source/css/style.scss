@@ -71,50 +71,9 @@ body {
       padding: 0;
     }
   }
-
   
-  div.modal{
-    position: fixed;
-    background: #fff;
-    box-shadow: 0px 0px 20px #00000026;
-    a{
-      display: block;
-      img{
-      }
-    }
-    >div{
-      display: flex;
-      align-items: center;
-      width: 300px;
-      height: 49px;
-      padding-left: 5px;
-      border-top: 1px solid #aaa;
-      button.modalDayClose{
-        width: 220px;
-        height: 49px;
-        border-right: 1px solid #aaa;
-        outline: none;
-        padding: 0;
-        background: #fff;
-        font-size: 12px;
-        color: #555555;
-      }
-      button{
-        display: inline-block;
-        width: 79px;
-        height: 49px;
-        outline: none;
-        border: none;
-        padding: 0;
-        background: #fff;
-        font-size: 16px;
-        color: #555555;
-      }
-    }
-  }
 
   div.shadow {
-    position: fixed;
     display: none;
     left: 0;
     right: 0;
@@ -669,7 +628,7 @@ body {
               }
               div.banner-img {
                 width: 360px;
-                height: 220px;
+                height: auto;
                 overflow: hidden;
                 border-radius: 100px 0 0 0;
                 @media (min-width: $screen-size-pc) {
@@ -736,7 +695,7 @@ body {
         section.main-menu {
           margin-top: 50px;
           @media (min-width: $screen-size-pc) {
-            margin-top: 550px;
+            margin-top: 580px;
           }
           h3 {
             text-align: center;
@@ -856,7 +815,7 @@ body {
                   color: #333;
                   line-height: 0.8;
                   @media (min-width: $screen-size-pc) {
-                    margin-top: 40px;
+                    margin-top: 50px;
                     font-size: 19px;
                   }
                 }
@@ -975,7 +934,7 @@ body {
         margin-top: 65px;
         position: relative;
         @media (min-width: $screen-size-pc) {
-          margin-top: 120px;
+          margin-top: 150px;
         }
         div.container {
           padding: 0 5px;
