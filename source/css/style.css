@@ -5777,6 +5777,12 @@ body div#content.sub section.sub-board div.list ul.list li:hover {
   background: #fcf5f7;
 }
 
+body div#content.sub section.sub-board div.list ul.list li.null {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 18px;
+}
+
 body div#content.sub section.sub-board div.list ul.list li a {
   position: relative;
   display: block;

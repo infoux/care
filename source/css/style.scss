@@ -2379,6 +2379,11 @@ body {
               &:hover {
                 background: #fcf5f7;
               }
+              &.null{
+                text-align: center;
+                margin: 100px 0;
+                font-size: 18px;
+              }
               a {
                 position: relative;
                 display: block;
