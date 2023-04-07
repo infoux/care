@@ -101,7 +101,8 @@ input[type="password"] {
 	}
 }
 
-.sr-only {
+.sr-only,
+.sound_only {
 	position: absolute !important;
 	overflow: hidden !important;
 	width: 1px !important;
