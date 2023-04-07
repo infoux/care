@@ -186,6 +186,28 @@ body {
     text-decoration: none;
   }
 
+  div.bo_btn_top{
+    display: block;
+    width: 100%;
+    height: 50px;
+    a{
+      font-size: 17px;
+      display: inline-flex;
+      width: 90px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      &.btn_admin{
+        background: #c92d76;
+      }
+      &.btn_b01{
+        background: #222;
+      }
+    }
+  }
+
+
   /* header */
   header {
     position: relative;
@@ -2254,25 +2276,26 @@ body {
             background: #f1f3f4;
             border: 1px solid #e8eaeb;
             border-radius: 200px;
-            &::before {
-              content: '';
-              position: absolute;
-              left: 110px;
-              display: inline-block;
-              width: 1px;
-              height: 20px;
-              background: #aaa;
-              @media (min-width: $screen-size-pc) {
-                left: 105px;
-              }
-            }
+            // &::before {
+            //   content: '';
+            //   position: absolute;
+            //   left: 110px;
+            //   display: inline-block;
+            //   width: 1px;
+            //   height: 20px;
+            //   background: #aaa;
+            //   @media (min-width: $screen-size-pc) {
+            //     left: 105px;
+            //   }
+            // }
 
             @media (min-width: $screen-size-pc) {
-              width: 430px;
+              width: auto;
               height: 46px;
             }
             select {
-              min-width: 70px;
+              max-width: 110px;
+              width: 100%;
               background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7.41' viewBox='0 0 12 7.41'%3E%3Cpath id='패스_4975' data-name='패스 4975' d='M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z' transform='translate(-6 -8.59)' fill='%23333'/%3E%3C/svg%3E%0A")
                 no-repeat right center / 10px auto;
               border: none;
@@ -2280,11 +2303,12 @@ body {
               appearance: none;
               color: #555555;
               font-size: 15px;
-              margin-right: 10px;
+              margin-right: 20px;
 
               @media (min-width: $screen-size-pc) {
+                max-width: 140px;
+                width: 100%;
                 font-size: 17px;
-                width: 50px;
                 background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7.41' viewBox='0 0 12 7.41'%3E%3Cpath id='패스_4975' data-name='패스 4975' d='M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z' transform='translate(-6 -8.59)' fill='%23333'/%3E%3C/svg%3E%0A")
                   no-repeat right center / 13px auto;
               }
@@ -2303,7 +2327,7 @@ body {
                 outline: none;
               }
               @media (min-width: $screen-size-pc) {
-                width: 500px;
+                width: 300px;
                 height: 48px;
               }
             }
@@ -2316,7 +2340,7 @@ body {
               font-size: 0;
               @media (min-width: $screen-size-pc) {
                 width: 20px;
-                height: 17px;
+                height: 19px;
               }
             }
           }
@@ -2424,9 +2448,12 @@ body {
                         -webkit-box-orient: vertical;
                         @media (min-width: $screen-size-pc) {
                           font-size: 19px;
-                          white-space: nowrap;
+                          white-space: wrap;
                           overflow: hidden;
                           text-overflow: ellipsis;
+                          display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
                         }
                       }
                     }
