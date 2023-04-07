@@ -6384,27 +6384,9 @@ body div#content.sub section.sub-board div.view div.board-info ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 18px;
+  gap: 5px;
   padding: 0;
   margin: 0 0 19px 0;
-}
-
-body div#content.sub section.sub-board div.view div.board-info ul::after {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 15px;
-  background: #aaa;
-  position: absolute;
-  left: 42px;
-  bottom: 0;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-board div.view div.board-info ul::after {
-    left: 65px;
-    bottom: 4px;
-  }
 }
 
 @media (min-width: 1195px) {
@@ -6424,12 +6406,17 @@ body div#content.sub section.sub-board div.view div.board-info ul li {
   }
 }
 
-body div#content.sub section.sub-board div.view div.board-info ul li u {
-  text-decoration: none;
+body div#content.sub section.sub-board div.view div.board-info ul li.day::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background: #aaa;
+  margin-right: 15px;
 }
 
-body div#content.sub section.sub-board div.view div.board-info ul li span {
-  display: none;
+body div#content.sub section.sub-board div.view div.board-info ul li u {
+  text-decoration: none;
 }
 
 body div#content.sub section.sub-board div.view div.board-file {
