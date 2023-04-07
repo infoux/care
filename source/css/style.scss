@@ -901,7 +901,7 @@ body {
                 }
 
                 small {
-                  margin-top: 25px;
+                  margin-top: 34px;
                   font-size: 14px;
                   font-weight: 500;
                   color: #333;
@@ -3682,11 +3682,11 @@ body {
 
               >li {
                 width: 345px;
-                height: 270px;
+                // height: 270px;
 
                 @media (min-width: $screen-size-pc) {
                   width: 370px;
-                  height: 300px;
+                  // height: 300px;
                 }
 
                 a {

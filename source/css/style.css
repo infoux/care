@@ -3183,7 +3183,7 @@ body div#content.main div.container section.main-menu ul li a:hover div.hover {
   opacity: 1;
 }
 body div#content.main div.container section.main-menu ul li a small {
-  margin-top: 25px;
+  margin-top: 34px;
   font-size: 14px;
   font-weight: 500;
   color: #333;
@@ -5760,12 +5760,10 @@ body div#content.sub section.sub-board div.photo ul {
 }
 body div#content.sub section.sub-board div.photo ul.vlog > li {
   width: 345px;
-  height: 270px;
 }
 @media (min-width: 1195px) {
   body div#content.sub section.sub-board div.photo ul.vlog > li {
     width: 370px;
-    height: 300px;
   }
 }
 body div#content.sub section.sub-board div.photo ul.vlog > li a::before {
