@@ -1854,12 +1854,13 @@ body {
                 @media (min-width: $screen-size-pc) {
                   font-size: 19px;
                 }
-
-                img {
+                &::before{
+                  content: "";
+                  display: inline-block;
                   width: 34px;
                   height: 38px;
                   margin-right: 10px;
-
+                  background: url('../images/carelogo.svg') no-repeat center / cover;
                   @media (min-width: $screen-size-pc) {
                     width: 36px;
                     height: 41px;
@@ -2102,24 +2103,25 @@ body {
                   }
                 }
 
-                p.b-img {
-                  margin: 20px 0 0 0;
-                  font-size: 0;
-                  width: 290px;
-                  height: 208px;
-                  background: url('../images/ccimage01.svg') no-repeat center / 100%;
-
-                  @media (min-width: $screen-size-pc) {
-                    width: 410px;
-                    height: 280px;
-                  }
-                }
-
                 p.b-name {
                   font-size: 17px;
                   font-weight: 700;
                   color: #333333;
                   margin-bottom: 79px;
+                  &::before{
+                    content: "";
+                    display: block;
+                    margin: 20px 0 0 0;
+                    font-size: 0;
+                    width: 290px;
+                    height: 208px;
+                    background: url('../images/ccimage01.svg') no-repeat center / 100%;
+                    margin-bottom: 20px;
+                    @media (min-width: $screen-size-pc) {
+                      width: 410px;
+                      height: 280px;
+                    }
+                  }
 
                   @media (min-width: $screen-size-pc) {
                     margin: 22px 0 0 0;
