@@ -793,8 +793,9 @@ body {
             margin: 0 auto;
 
             @media (min-width: $screen-size-pc) {
-              gap: 50px 45px;
-              margin: 0;
+              gap: 50px 83px;
+              margin: 0 auto;
+              justify-content: center;
               width: 100%;
             }
 
@@ -843,16 +844,6 @@ body {
                 animation-delay: 1.1s;
               }
 
-              &.ani07 {
-                animation: text-in 0.5s ease-in forwards;
-                animation-delay: 1.3s;
-              }
-
-              &.ani08 {
-                animation: text-in 0.5s ease-in forwards;
-                animation-delay: 1.5s;
-              }
-
               @keyframes text-in {
                 from {
                   opacity: 0;
@@ -862,27 +853,6 @@ body {
                 to {
                   opacity: 1;
                   transform: translateY(0);
-                }
-              }
-
-              &.opacity {
-                background: #f6f6f6;
-
-                img {
-                  &.icon08 {
-                    opacity: 0.2;
-                    position: absolute;
-                    width: 96px;
-                    height: 110px;
-                    top: 60px;
-                    right: 0;
-
-                    @media (min-width: $screen-size-pc) {
-                      width: 150px;
-                      height: 155px;
-                      top: 110px;
-                    }
-                  }
                 }
               }
 
@@ -940,54 +910,30 @@ body {
                   }
 
                   &.icon02 {
-                    width: 84px;
-                    height: 84px;
-                    top: 75px;
+                    width: 110px;
+                    height: 64px;
+                    top: 84px;
 
                     @media (min-width: $screen-size-pc) {
-                      width: 154px;
-                      height: 154px;
-                      top: 95px;
-                    }
-                  }
-
-                  &.icon03 {
-                    width: 71px;
-                    height: 73px;
-                    top: 85px;
-
-                    @media (min-width: $screen-size-pc) {
-                      width: 122px;
-                      height: 125px;
-                      top: 110px;
-                    }
-                  }
-
-                  &.icon04 {
-                    width: 92px;
-                    height: 74px;
-                    top: 90px;
-
-                    @media (min-width: $screen-size-pc) {
-                      width: 152px;
-                      height: 122px;
+                      width: 184px;
+                      height: 110px;
                       top: 120px;
                     }
                   }
 
-                  &.icon05 {
-                    width: 96px;
-                    height: 96px;
-                    top: 70px;
+                  &.icon03 {
+                    width: 98px;
+                    height: 71px;
+                    top: 85px;
 
                     @media (min-width: $screen-size-pc) {
-                      width: 146px;
-                      height: 146px;
-                      top: 100px;
+                      width: 154px;
+                      height: 116px;
+                      top: 115px;
                     }
                   }
 
-                  &.icon06 {
+                  &.icon04 {
                     width: 164px;
                     height: 164px;
                     top: 85px;
@@ -999,7 +945,7 @@ body {
                     }
                   }
 
-                  &.icon07 {
+                  &.icon05 {
                     width: 232px;
                     height: 133px;
                     top: 45px;
@@ -1008,6 +954,18 @@ body {
                       width: 350px;
                       height: 200px;
                       top: 70px;
+                    }
+                  }
+
+                  &.icon06 {
+                    width: 96px;
+                    height: 96px;
+                    top: 70px;
+
+                    @media (min-width: $screen-size-pc) {
+                      width: 146px;
+                      height: 146px;
+                      top: 100px;
                     }
                   }
                 }
