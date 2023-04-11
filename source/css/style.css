@@ -4780,6 +4780,355 @@ body div#content.sub section.sub-content div.container div.b-content div.care-ti
   }
 }
 
+body div#content.sub section.sub-content div.container div.b-content div.care-title p span {
+  color: #B9236A;
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure {
+  text-align: center;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li {
+  position: relative;
+  border: 1px solid #DD488E;
+  border-radius: 100px;
+  width: 100%;
+  margin: 15px 0 30px;
+  padding: 15px 0;
+  font-size: 16px;
+  color: #333333;
+  background: #FFFFFF;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li {
+    width: 200px;
+    height: 104px;
+    border-radius: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 29px 0 35px;
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  right: 50%;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  width: 17px;
+  height: 10px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M10,3.62,8.483,2.1,0,10.6l8.483,8.5L10,17.58,3.033,10.6Z' transform='translate(-2.1 10) rotate(-90)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/100%;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li::after {
+    bottom: 50%;
+    -webkit-transform: translate(50%, 50%);
+            transform: translate(50%, 50%);
+    right: -35px;
+    width: 15px;
+    height: 26px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.324' height='26' viewBox='0 0 15.324 26'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M15.324,4.424,13,2.1,0,15.1l13,13,2.324-2.324L4.648,15.1Z' transform='translate(15.324 28.1) rotate(180)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/100%;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li:last-of-type {
+  margin: 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li:last-of-type {
+    margin: 29px 0 35px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li:last-of-type::after {
+  display: none;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main {
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main {
+    margin-top: 15px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main thead {
+  border: 1px solid #BF3E7B;
+  background: #DD488E;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main thead tr {
+  width: 100%;
+  height: 36px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main thead tr {
+    height: 44px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main thead tr th {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main thead tr th {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main thead tr th.th01 {
+  min-width: 120px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main thead tr th.th01 {
+    min-width: 200px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main thead tr th.th02 {
+  width: 100%;
+  border-left: 1px solid #cccccc;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr ul {
+  text-align: start;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr ul li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr ul li {
+    font-size: 17px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr ul li:last-of-type {
+  margin: 0;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr ul li > ul {
+  padding: 0 20px;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td {
+  border: 1px solid #ccc;
+  padding: 20px 16px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td {
+    padding: 25px 30px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0 0 5px 0;
+  text-align: start;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td > p {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td > p::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #111;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td > p.space {
+  margin-top: 20px;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td.td01 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+  padding: 0 15px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td.td01 {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td.td01 span {
+  display: block;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td.td01 span {
+    display: inline-block;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house {
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.house {
+    margin-top: 15px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house thead {
+  border: 1px solid #5F5F5F;
+  background: #6E6E6E;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house thead tr {
+  width: 100%;
+  height: 66px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.house thead tr {
+    height: 44px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house thead tr th {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  padding: 17px 11px;
+  border-right: 1px solid #ccc;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.house thead tr th {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house thead tr th > span {
+  display: block;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.house thead tr th > span {
+    display: inline-block;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house thead tr th.th01 {
+  min-width: 60px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.house thead tr th.th01 {
+    min-width: 100px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house thead tr th.th02 {
+  width: 24%;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house tbody tr {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > table.house tbody tr td {
+  border: 1px solid #ccc;
+  padding: 20px 16px;
+  font-size: 16px;
+  color: #555555;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > table.house tbody tr td {
+    padding: 25px 30px;
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content p.refer {
+  font-size: 15px;
+  color: #D62727;
+  margin: 20px 0 0 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content p.refer {
+    font-size: 17px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content p.refer2 {
+  font-size: 15px;
+  color: #DD488E;
+  margin: 9px 0 0 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content p.refer2 {
+    font-size: 17px;
+  }
+}
+
 body div#content.sub section.sub-content div.container div.b-content > ul {
   width: 100%;
   border: 1px solid #dddddd;
@@ -4904,6 +5253,9 @@ body div#content.sub section.sub-content div.container div.b-content > ul li.b-t
   font-size: 16px;
   font-weight: 400;
   color: #fff;
+  width: 10%;
+  border-right: 1px solid #ccc;
+  padding: 10px 0;
 }
 
 @media (min-width: 1195px) {
@@ -4912,19 +5264,18 @@ body div#content.sub section.sub-content div.container div.b-content > ul li.b-t
   }
 }
 
-body div#content.sub section.sub-content div.container div.b-content > ul li.b-table thead tr th.th01 {
-  min-width: 120px;
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table thead tr th span {
+  display: block;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table thead tr th.th01 {
-    min-width: 200px;
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table thead tr th span {
+    display: inline-block;
   }
 }
 
-body div#content.sub section.sub-content div.container div.b-content > ul li.b-table thead tr th.th02 {
-  width: 100%;
-  border-left: 1px solid #cccccc;
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table thead tr th.td03 {
+  min-width: 140px;
 }
 
 body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr {
@@ -4959,26 +5310,193 @@ body div#content.sub section.sub-content div.container div.b-content > ul li.b-t
   margin: 0;
 }
 
-body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.td01 {
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 22px 10px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.refer {
+  font-size: 15px;
+  color: #DD488E;
+  text-align: end;
+  background: #F9F9F9;
+  padding: 15px 10px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.refer {
+    font-size: 17px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.start {
+  text-align: start;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td span {
+  display: block;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td span {
+    display: inline-block;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td:last-of-type {
+  border-right: none;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.border {
+  border-right: 1px solid #ccc;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 {
+    margin-top: 15px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 thead {
+  border: 1px solid #5f5f5f;
+  background: #6e6e6e;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 thead tr {
+  width: 100%;
+  height: 36px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 thead tr {
+    height: 44px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 thead tr th {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 thead tr th {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 thead tr th.th01 {
+  min-width: 120px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 thead tr th.th01 {
+    min-width: 250px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 thead tr th.th02 {
+  width: 100%;
+  border-left: 1px solid #cccccc;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr ul li {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr ul li:last-of-type {
+  margin: 0;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td {
+  padding: 20px 16px;
+  text-align: start;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td {
+    padding: 25px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0 0 5px 0;
+  text-align: start;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td > p {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td > p::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #111;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td > p.space {
+  margin-top: 20px;
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td.td01 {
   font-size: 16px;
   font-weight: 700;
   color: #333333;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  text-align: center;
 }
 
-body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.td01 span {
+body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td.td01 span {
   display: block;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.td01 span {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td.td01 span {
     display: inline-block;
   }
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.td01 {
+  body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td.td01 {
     font-size: 18px;
   }
 }
@@ -5006,7 +5524,7 @@ body div#content.sub section.sub-content div.container div.b-content > ul li p.t
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-content div.container div.b-content > ul li p.thick {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 
@@ -5184,12 +5702,12 @@ body div#content.sub section.sub-content div.container div.b-content > ul li h5.
   }
 }
 
-body div#content.sub section.sub-content div.container div.b-content ul.procedure {
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 {
   text-align: center;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content ul.procedure {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5202,19 +5720,29 @@ body div#content.sub section.sub-content div.container div.b-content ul.procedur
   }
 }
 
-body div#content.sub section.sub-content div.container div.b-content ul.procedure li {
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li {
   position: relative;
-  border: 1px solid #dd488e;
-  border-radius: 100px;
-  width: 100%;
-  margin: 15px 0 30px;
-  padding: 15px 0;
+  border: 1px solid #DD488E;
+  background: #FBF1F5;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  margin: 15px auto 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content ul.procedure li {
-    width: 190px;
-    height: 190px;
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li {
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5233,42 +5761,13 @@ body div#content.sub section.sub-content div.container div.b-content ul.procedur
   }
 }
 
-body div#content.sub section.sub-content div.container div.b-content ul.procedure li h6 {
-  font-size: 15px;
-  font-weight: 700;
-  color: #333333;
-  margin: 0 0 5px 0;
-}
-
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content ul.procedure li h6 {
-    font-size: 17px;
-    margin: 0 0 10px 0;
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li.arrow-space::after {
+    right: -17px;
   }
 }
 
-body div#content.sub section.sub-content div.container div.b-content ul.procedure li p {
-  font-size: 15px;
-  color: #555555;
-  margin: 0;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content ul.procedure li p {
-    font-size: 17px;
-  }
-  body div#content.sub section.sub-content div.container div.b-content ul.procedure li p span {
-    display: block;
-  }
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content ul.procedure li.arrow-space::after {
-    right: -70px;
-  }
-}
-
-body div#content.sub section.sub-content div.container div.b-content ul.procedure li::after {
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li::after {
   content: '';
   display: block;
   position: absolute;
@@ -5276,13 +5775,13 @@ body div#content.sub section.sub-content div.container div.b-content ul.procedur
   right: 50%;
   -webkit-transform: translate(50%, 0);
           transform: translate(50%, 0);
-  width: 17px;
-  height: 10px;
+  width: 24px;
+  height: 13px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M10,3.62,8.483,2.1,0,10.6l8.483,8.5L10,17.58,3.033,10.6Z' transform='translate(-2.1 10) rotate(-90)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/100%;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content ul.procedure li::after {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li::after {
     bottom: 50%;
     -webkit-transform: translate(50%, 50%);
             transform: translate(50%, 50%);
@@ -5293,18 +5792,122 @@ body div#content.sub section.sub-content div.container div.b-content ul.procedur
   }
 }
 
-body div#content.sub section.sub-content div.container div.b-content ul.procedure li:last-of-type {
-  margin: 0;
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li:last-of-type {
+  margin: 0 auto;
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content ul.procedure li:last-of-type {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li:last-of-type {
     margin: 29px 0 35px;
   }
 }
 
-body div#content.sub section.sub-content div.container div.b-content ul.procedure li:last-of-type::after {
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li:last-of-type::after {
   display: none;
+}
+
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div {
+  width: 214px;
+  height: 214px;
+  border: 1px solid #DD488E;
+  background: #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p.p-img::before {
+  content: "";
+  display: block;
+  width: 43px;
+  height: 52px;
+  background: url("../images/sub3-img.svg") no-repeat center/cover;
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p.p-img::before {
+    width: 49px;
+    height: 59px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p.p-img2::before {
+  content: "";
+  display: block;
+  width: 37px;
+  height: 47px;
+  background: url("../images/sub3-img02.svg") no-repeat center/cover;
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p.p-img2::before {
+    width: 45px;
+    height: 56px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p.p-img3::before {
+  content: "";
+  display: block;
+  width: 49px;
+  height: 43px;
+  background: url("../images/sub3-img03.svg") no-repeat center/cover;
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p.p-img3::before {
+    width: 63px;
+    height: 55px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p.p-img4::before {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 46px;
+  background: url("../images/sub3-img04.svg") no-repeat center/cover;
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div p.p-img4::before {
+    width: 43px;
+    height: 58px;
+  }
 }
 
 body div#content.sub section.sub-content div.container div.b-content > ul.step {
@@ -5571,6 +6174,104 @@ body div#content.sub section.sub-content div.container div.b-content ul.border l
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-content div.container div.b-content ul.border li p {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.sub2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul {
+  width: 100%;
+  border: 1px solid #dddddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 37px 0;
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li.title {
+  display: block;
+  font-size: 16px;
+  color: #111111;
+  margin: 0 0 10px 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li.title {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li.title.img01::before {
+  content: "";
+  display: block;
+  width: 113px;
+  height: 80px;
+  background: url("../images/sub2-img.svg") no-repeat center/cover;
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li.title.img01::before {
+    width: 172px;
+    height: 122px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li.title.img02::before {
+  content: "";
+  display: block;
+  width: 98px;
+  height: 85px;
+  background: url("../images/sub2-img02.svg") no-repeat center/cover;
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li.title.img02::before {
+    width: 152px;
+    height: 131px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li.title.img03::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 87px;
+  background: url("../images/sub2-img03.svg") no-repeat center/cover;
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li.title.img03::before {
+    width: 178px;
+    height: 129px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li p {
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  color: #555555;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.sub2 > ul > li p {
     font-size: 17px;
   }
 }
