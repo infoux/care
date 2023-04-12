@@ -4713,11 +4713,13 @@ body div#content.sub section.sub-content div.container div.b-title > div.c-msg p
   font-size: 18px;
   color: #333333;
   margin: 0;
+  text-align: start;
 }
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-content div.container div.b-title > div.c-msg p {
     font-size: 20px;
+    text-align: center;
   }
 }
 
