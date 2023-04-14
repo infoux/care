@@ -534,7 +534,7 @@ body {
               top: 75px;
               left: 70%;
               width: 185px;
-              height: 370px;
+              height: 310px;
               transform: translateX(-50%);
               max-height: 0;
               overflow: hidden;
@@ -573,7 +573,7 @@ body {
 
       &.on {
         max-height: 1000px;
-        height: 370px;
+        height: 310px;
         background: #fff;
 
         @include drop-shadow($x: 0, $y: 12px, $blur: 12px, $spread: 0, $alpha: 0.25);

@@ -120,7 +120,7 @@ $(window).on("resize", function(){
 function menu() {
 
   $(document).on("mousemove", function(e){
-      if (windowW > 1200 && e.pageY > 480) {
+      if (windowW > 1200 && e.pageY > 410) {
           $("nav#main-menu").removeClass("on");
           $("#header").removeClass("on");
           $("a.main-menu").removeClass("on");
