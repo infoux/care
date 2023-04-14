@@ -131,7 +131,7 @@ function menu() {
 
   
 
-  $("a.main-menu").on("click", function () {
+  $("div.tools a.main-menu").on("click", function () {
       $("nav#main-menu").addClass("on");
       $("#header").addClass("on");
       $("a.main-menu").addClass("on");
@@ -165,14 +165,11 @@ function menu() {
       }
   });
 
-  $("nav#main-menu div.menus").on("mouseenter", function(){
-      $(this).parent().addClass("on");
+  $("nav#main-menu h3 ").on("mouseenter", function(){
+      $("#main-menu").addClass("on");
       $("#header").addClass("on");
       $("a.main-menu").addClass("on");
       $("nav#main-menu a.close").addClass("on");
-  });
-  $("div#content").on("mouseenter", function(){
-      $("nav#main-menu a.close").removeClass("on");
   });
 
 
