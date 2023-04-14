@@ -171,6 +171,9 @@ function menu() {
       $("a.main-menu").addClass("on");
       $("nav#main-menu a.close").addClass("on");
   });
+  $("div#content").on("mouseover", function(){
+      $("nav#main-menu a.close").removeClass("on");
+  });
 
 
   var subToggle = "0";
