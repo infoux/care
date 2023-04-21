@@ -3061,10 +3061,6 @@ body header .container h1 a {
   }
 }
 
-body.sub header div.tools {
-  position: absolute;
-}
-
 @media (max-width: 1194px) {
   body nav#main-menu {
     font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
@@ -3097,7 +3093,7 @@ body.sub header div.tools {
   body nav#main-menu div.tools {
     text-align: center;
   }
-  body nav#main-menu div.tools a.close {
+  body nav#main-menu div.tools button.close {
     font-size: 0;
     position: absolute;
     right: 15px;
@@ -3205,7 +3201,7 @@ body.sub header div.tools {
     margin-left: 560px;
     text-align: center;
   }
-  body nav#main-menu div.tools a.close {
+  body nav#main-menu div.tools button.close {
     z-index: 999999;
     display: none;
     font-size: 0;
@@ -3217,7 +3213,7 @@ body.sub header div.tools {
     height: 40px;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 46 46'%3E%3Cg id='그룹_12752' data-name='그룹 12752' transform='translate(-889 157)'%3E%3Cpath id='패스_4662' data-name='패스 4662' d='M0,0H46V46H0Z' transform='translate(889 -157)' fill='%23fff'/%3E%3Cpath id='패스_4663' data-name='패스 4663' d='M31.833,7.7,29.131,5,18.417,15.714,7.7,5,5,7.7,15.714,18.417,5,29.131l2.7,2.7L18.417,21.119,29.131,31.833l2.7-2.7L21.119,18.417Z' transform='translate(893.583 -152.417)'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/40px auto;
   }
-  body nav#main-menu div.tools a.close.on {
+  body nav#main-menu div.tools button.close.on {
     display: block;
   }
   body nav#main-menu div.menus {
@@ -3307,7 +3303,7 @@ body.sub header div.tools {
     -webkit-box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.25);
   }
-  body nav#main-menu.on div.tools a {
+  body nav#main-menu.on div.tools button {
     color: #555;
   }
   body nav#main-menu.on div.menus > ul > li h3 a {

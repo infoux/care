@@ -216,7 +216,7 @@ function menu() {
           $("nav#main-menu").removeClass("on");
           $("#header").removeClass("on");
           $("button.main-menu").removeClass("on");
-          $("nav#main-menu a.close").removeClass("on");
+          $("nav#main-menu button.close").removeClass("on");
           $("div.shadow").removeClass("on");
       }
   });
@@ -227,15 +227,15 @@ function menu() {
       $("nav#main-menu").addClass("on");
       $("#header").addClass("on");
       $("button.main-menu").addClass("on");
-      $("nav#main-menu a.close").addClass("on");
+      $("nav#main-menu button.close").addClass("on");
       $("div.shadow").addClass("on");
   });
 
-  $("nav#main-menu a.close").on("click", function () {
+  $("nav#main-menu button.close").on("click", function () {
       $("nav#main-menu").removeClass("on");
       $("#header").removeClass("on");
       $("button.main-menu").removeClass("on");
-      $("nav#main-menu a.close").removeClass("on");
+      $("nav#main-menu button.close").removeClass("on");
       $("div.shadow").removeClass("on");
   });
 
@@ -261,10 +261,10 @@ function menu() {
       $("#main-menu").addClass("on");
       $("#header").addClass("on");
       $("button.main-menu").addClass("on");
-      $("nav#main-menu a.close").addClass("on");
+      $("nav#main-menu button.close").addClass("on");
   });
   $("div#content").on("mouseover", function(){
-      $("nav#main-menu a.close").removeClass("on");
+      $("nav#main-menu button.close").removeClass("on");
   });
 
   //focus
@@ -272,14 +272,14 @@ function menu() {
     $("nav#main-menu").addClass("on");
       $("#header").addClass("on");
       $("button.main-menu").addClass("on");
-      $("nav#main-menu a.close").addClass("on");
+      $("nav#main-menu button.close").addClass("on");
       $("div.shadow").addClass("on");
   })
   $(".focus-out").on("blur",function(){
     $("nav#main-menu").removeClass("on");
       $("#header").removeClass("on");
       $("button.main-menu").removeClass("on");
-      $("nav#main-menu a.close").removeClass("on");
+      $("nav#main-menu button.close").removeClass("on");
       $("div.shadow").removeClass("on");
   })
 
