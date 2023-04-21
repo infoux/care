@@ -63,6 +63,30 @@ body {
     z-index: 999999999;
   }
 
+  table caption{
+    position: absolute;
+    width:0px;
+    height: 0px;
+    overflow: hidden;
+  }
+
+    thead.thead-hidden{
+      position: absolute;
+      width:0;
+      height: 0;
+      overflow: hidden;
+    }
+    thead.thead-hidden ~ tbody th{
+        background-color: #ccc;
+    }
+    thead.thead-hidden ~ tbody th:not(:last-child){
+        border-bottom: 1px solid #fff;
+    }
+    thead.thead-hidden ~ tbody tr:last-child td, thead.thead-hidden ~ tbody tr:last-child th{
+        border-bottom: 0px;
+
+    }
+
   .container {
     @include container(100%);
     text-align: left;

@@ -2791,6 +2791,32 @@ body .sr-only-focusable:focus {
   z-index: 999999999;
 }
 
+body table caption {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+body thead.thead-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+body thead.thead-hidden ~ tbody th {
+  background-color: #ccc;
+}
+
+body thead.thead-hidden ~ tbody th:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+
+body thead.thead-hidden ~ tbody tr:last-child td, body thead.thead-hidden ~ tbody tr:last-child th {
+  border-bottom: 0px;
+}
+
 body .container {
   position: relative;
   display: inline-block;
