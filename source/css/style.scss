@@ -29,6 +29,7 @@ body {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   min-height: -webkit-fill-available;
 
@@ -267,33 +268,7 @@ body {
         }
       }
 
-      div.tools {
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        display: flex;
-        gap: 15px;
-
-        @media (min-width: $screen-size-pc) {
-          position: absolute;
-          right: 0;
-          top: 35px;
-        }
-
-        a {
-          width: 30px;
-          height: 40px;
-          font-size: 0;
-          border: none;
-          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='24.744' viewBox='0 0 30 24.744'%3E%3Cpath id='패스_281' data-name='패스 281' d='M3,30.744H33V26.62H3Zm0-10.31H26.077V16.31H3ZM3,6v4.124H33V6Z' transform='translate(-3 -6)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat center / 25px auto;
-
-          @media (min-width: $screen-size-pc) {
-            &.on {
-              display: none;
-            }
-          }
-        }
-      }
+      
     }
   }
 
@@ -472,6 +447,7 @@ body {
         text-align: center;
 
         a.close {
+          z-index: 999999;
           display: none;
           font-size: 0;
           font-weight: 700;
@@ -608,6 +584,35 @@ body {
     }
   }
 
+  div.tools-open {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    display: flex;
+    gap: 15px;
+    z-index: 99999;
+    @media (min-width: $screen-size-pc) {
+      position: absolute;
+      top: 35px;
+        left: 50%;
+        margin-left: 565px;
+    }
+
+    button {
+      width: 30px;
+      height: 40px;
+      font-size: 0;
+      border: none;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='24.744' viewBox='0 0 30 24.744'%3E%3Cpath id='패스_281' data-name='패스 281' d='M3,30.744H33V26.62H3Zm0-10.31H26.077V16.31H3ZM3,6v4.124H33V6Z' transform='translate(-3 -6)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat center / 25px auto;
+      opacity: 1;
+        &.on {
+          // display: none;
+          opacity: 0;
+          // pointer-events: none;
+        }
+      
+    }
+  }
   div#content {
 
     /* MAIN */
@@ -647,7 +652,11 @@ body {
                 display: flex;
                 justify-content: flex-start;
               }
-
+              &.swiper-slide-active{
+                &:focus{
+                  border: 2px solid #111;
+                }
+              }
               .banner-title {
                 @media (min-width: $screen-size-pc) {
                   width: 356px;
@@ -722,7 +731,6 @@ body {
           button {
             padding: 0;
             font-size: 30px;
-            outline: none;
             border: none;
             background: transparent;
 
@@ -732,6 +740,9 @@ body {
 
             &.on {
               display: none;
+            }
+            &.swiper-button-disabled{
+              opacity: 0.4;
             }
           }
 
@@ -814,6 +825,10 @@ body {
                 border-radius: 90px;
               }
 
+              &.focus{
+                border: 3px solid #000;
+              }
+
               &.ani01 {
                 animation: text-in 0.5s ease-in forwards;
                 animation-delay: 0.1s;
@@ -869,6 +884,8 @@ body {
                     opacity: 1;
                   }
                 }
+
+                
 
                 small {
                   margin-top: 34px;
