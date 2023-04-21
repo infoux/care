@@ -6669,6 +6669,7 @@ body div#content.sub section.sub-content div.container div.c-content ul.sub9 {
 body div#content.sub section.sub-content div.container div.c-content ul.sub9::before {
   content: "";
   display: block;
+  font-size: 0;
   margin: 40px auto 20px;
   width: 290px;
   height: 790px;
