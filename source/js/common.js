@@ -7,7 +7,7 @@ $(function(){
   anifocus();
 
 
-
+  $(".menus-focus").attr('id','menus-focus');
   
   
   $("section.sub-content #sub-menu li.on a").on("click", function(e){
