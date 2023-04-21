@@ -4,7 +4,7 @@ $(function(){
   menu();
   maintab();
   outlink();
-  anifocus()
+  anifocus();
 
 
 
