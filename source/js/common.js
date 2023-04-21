@@ -7,7 +7,7 @@ $(function(){
   anifocus();
 
 
-  $(".menus-focus").attr('id','menus-focus');
+  $("nav#main-menu .menus ul li:first-child a").attr('id','menus-focus');
   
   
   $("section.sub-content #sub-menu li.on a").on("click", function(e){
@@ -268,14 +268,14 @@ function menu() {
   });
 
   //focus
-  $(".menus-focus").on("focus",function(){
+  $("nav#main-menu .menus ul li:first-child a").on("focus",function(){
     $("nav#main-menu").addClass("on");
       $("#header").addClass("on");
       $("button.main-menu").addClass("on");
       $("nav#main-menu button.close").addClass("on");
       $("div.shadow").addClass("on");
   })
-  $(".focus-out").on("blur",function(){
+  $("nav#main-menu button.close").on("blur",function(){
     $("nav#main-menu").removeClass("on");
       $("#header").removeClass("on");
       $("button.main-menu").removeClass("on");
