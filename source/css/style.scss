@@ -1527,12 +1527,9 @@ body {
                 display: flex;
                 justify-content: center;
 
-                a {
+                a, span {
                   margin: 0 10px;
 
-                  &:hover {
-                    color: #c92d76;
-                  }
 
                   &.depth1-home {
                     display: inline-block;

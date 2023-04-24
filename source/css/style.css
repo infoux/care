@@ -4410,15 +4410,11 @@ body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li
           justify-content: center;
 }
 
-body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a {
+body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a, body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li span {
   margin: 0 10px;
 }
 
-body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a:hover {
-  color: #c92d76;
-}
-
-body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a.depth1-home {
+body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a.depth1-home, body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li span.depth1-home {
   display: inline-block;
   font-size: 0;
   width: 25px;
