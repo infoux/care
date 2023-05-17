@@ -6418,7 +6418,120 @@ body div#content.sub section.sub-content div.container div.b-red {
   }
 }
 
-body div#content.sub section.sub-content div.container div.c-content h4 {
+body div#content.sub section.sub-content div.container div.c-content div.greeting .greeting-title {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background-color: #FEF8FA;
+  padding-top: 46px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.c-content div.greeting .greeting-title {
+    height: 280px;
+    padding: 70px 51px 91px;
+    margin-bottom: 60px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.c-content div.greeting .greeting-title > h4 {
+  margin: 0;
+  text-align: center;
+  font-size: 27px;
+  color: #000;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.c-content div.greeting .greeting-title > h4 {
+    font-size: 45px;
+    text-align: start;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.c-content div.greeting .greeting-title > h4 span {
+  display: block;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.c-content div.greeting .greeting-title > h4 span.pc {
+    display: inline-block;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.c-content div.greeting .greeting-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  background: url(../images/greeting-img.svg) no-repeat center/100%;
+  width: 246px;
+  height: 240px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.c-content div.greeting .greeting-title::after {
+    right: 50px;
+    bottom: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 425px;
+    height: 241px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.c-content div.greeting > p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 30px 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.c-content div.greeting > p {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.c-content div.greeting div.greeting-footer {
+  margin-top: 34px;
+  text-align: end;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.c-content div.greeting div.greeting-footer {
+    margin-top: 84px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.c-content div.greeting div.greeting-footer h5 {
+  font-size: 17px;
+  color: #555555;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.c-content div.greeting div.greeting-footer h5 {
+    font-size: 19px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.c-content div.greeting div.greeting-footer p {
+  font-size: 17px;
+  color: #555555;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.c-content div.greeting div.greeting-footer p {
+    font-size: 19px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.c-content > h4 {
   font-size: 18px;
   color: #111111;
   display: -webkit-box;
@@ -6431,13 +6544,13 @@ body div#content.sub section.sub-content div.container div.c-content h4 {
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.c-content h4 {
+  body div#content.sub section.sub-content div.container div.c-content > h4 {
     font-size: 20px;
     margin: 50px 0 15px;
   }
 }
 
-body div#content.sub section.sub-content div.container div.c-content h4::before {
+body div#content.sub section.sub-content div.container div.c-content > h4::before {
   content: "";
   width: 15px;
   height: 15px;
@@ -6448,7 +6561,7 @@ body div#content.sub section.sub-content div.container div.c-content h4::before 
 }
 
 @media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.c-content h4::before {
+  body div#content.sub section.sub-content div.container div.c-content > h4::before {
     width: 17px;
     height: 17px;
   }
