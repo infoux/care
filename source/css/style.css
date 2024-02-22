@@ -4171,8 +4171,9 @@ body div#content.main section.main-vlog div.container ul.vlog-box li {
   body div#content.main section.main-vlog div.container ul.vlog-box li {
     display: inline-block;
     width: 220px;
-    height: 150px;
+    height: 225px;
     margin: 0 20px 0 0;
+    vertical-align: top;
   }
   body div#content.main section.main-vlog div.container ul.vlog-box li:last-of-type {
     margin: 0;
@@ -4224,6 +4225,11 @@ body div#content.main section.main-vlog div.container ul.vlog-box li a p {
   font-size: 16px;
   color: #333;
   padding: 0 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 @media (min-width: 1195px) {
