@@ -527,7 +527,7 @@ body {
               top: 75px;
               left: 70%;
               width: 185px;
-              height: 310px;
+              height: 350px;
               transform: translateX(-50%);
               max-height: 0;
               overflow: hidden;
@@ -566,7 +566,7 @@ body {
 
       &.on {
         max-height: 1000px;
-        height: 310px;
+        height: 350px;
         background: #fff;
 
         @include drop-shadow($x: 0, $y: 12px, $blur: 12px, $spread: 0, $alpha: 0.25);
@@ -956,14 +956,14 @@ body {
                   }
 
                   &.icon03 {
-                    width: 98px;
-                    height: 71px;
-                    top: 85px;
+                    width: 147px;
+                    height: 126px;
+                    top: 38px;
 
                     @media (min-width: $screen-size-pc) {
-                      width: 154px;
-                      height: 116px;
-                      top: 115px;
+                      width: 260px;
+                      height: 254px;
+                      top: 0px;
                     }
                   }
 

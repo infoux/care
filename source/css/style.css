@@ -3263,7 +3263,7 @@ body header .container h1 a {
     top: 75px;
     left: 70%;
     width: 185px;
-    height: 310px;
+    height: 350px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     max-height: 0;
@@ -3298,7 +3298,7 @@ body header .container h1 a {
   }
   body nav#main-menu.on {
     max-height: 1000px;
-    height: 310px;
+    height: 350px;
     background: #fff;
     -webkit-box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.25);
@@ -3760,16 +3760,16 @@ body div#content.main div.container section.main-menu ul li a img.icon02 {
 }
 
 body div#content.main div.container section.main-menu ul li a img.icon03 {
-  width: 98px;
-  height: 71px;
-  top: 85px;
+  width: 147px;
+  height: 126px;
+  top: 38px;
 }
 
 @media (min-width: 1195px) {
   body div#content.main div.container section.main-menu ul li a img.icon03 {
-    width: 154px;
-    height: 116px;
-    top: 115px;
+    width: 260px;
+    height: 254px;
+    top: 0px;
   }
 }
 
