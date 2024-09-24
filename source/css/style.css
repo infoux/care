@@ -3724,7 +3724,7 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
 }
 
 body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text {
-  margin-top: 25px;
+  margin-top: 10px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
@@ -4779,7 +4779,7 @@ body div#content.sub section.sub-head div.container div.depth2 div ul li a {
 
 @media (min-width: 1195px) {
   body div#content.sub section.sub-head div.container div.depth2 div ul li a {
-    font-size: 18px;
+    font-size: 17px;
     color: #555;
     -webkit-transition: all 0.1s ease;
     transition: all 0.1s ease;
