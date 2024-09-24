@@ -856,7 +856,7 @@ body {
               div.calender{
                 margin-top: 24px;
                 width: 260px;
-                table{
+                div.cal-table{
                   width: 100%;
                   text-align: center;
                   vertical-align: center;
@@ -864,40 +864,58 @@ body {
                   color: #333333;
                   font-weight: normal;
                   border-collapse: separate;
-                  border-spacing: 5px 10px;
+                  border-spacing: 5px 5px;
                   .red{
                     color: #DF4C4C;
                   }
-                  th{
-                    width: 32px;
-                    margin: 10px 20px;
-                  }
-                  td{
-                    width: 32px;
-                    height: 32px;
-                    background: #EFEFEF;
-                    border-radius: 50%;
-                    &.schedule{
-                      background: #FBCFE3;
-                      cursor: pointer;
+                  .list-head{
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                    span{
+                      display: table-cell;
+                      vertical-align: middle;
+                      width: 31.42px;
                     }
-                    &.today{
-                      border: 1px solid #DD488E;
-                      background: #fff;
-                      position: relative;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      &::before{
-                        content: "";
-                        background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12.296' viewBox='0 0 16 12.296'%3E%3Cpath id='패스_4706' data-name='패스 4706' d='M54.957,50.892,48.8,44.736l2.452-2.452,3.687,3.687L62.313,38.6,64.8,41.049Z' transform='translate(-48.8 -38.597)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/ 100%;
-                        width: 20px;
-                        height: 20px;
-                        position: absolute;
-                        opacity: 0.9;
+                  }
+                  ul.list-body{
+                    li.list-item{
+                      display: table;
+                      width: 100%;
+                      >div{
+                        display: table-cell;
+                        vertical-align: middle;
+                        width: 32px;
+                        height: 32px;
+                        background: #EFEFEF;
+                        border-radius: 50%;
+                        &.schedule{
+                          background: #FBCFE3;
+                          cursor: pointer;
+                        }
+                        &.today{
+                          border: 1px solid #DD488E;
+                          background: #fff;
+                          position: relative;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          &::before{
+                            content: "";
+                            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12.296' viewBox='0 0 16 12.296'%3E%3Cpath id='패스_4706' data-name='패스 4706' d='M54.957,50.892,48.8,44.736l2.452-2.452,3.687,3.687L62.313,38.6,64.8,41.049Z' transform='translate(-48.8 -38.597)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/ 100%;
+                            width: 20px;
+                            height: 20px;
+                            position: absolute;
+                            opacity: 0.9;
+                          }
+                        }
+                        div.do-list{
+                          display: none;
+                        }
                       }
                     }
                   }
+                  
                 }
               }
 

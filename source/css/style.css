@@ -3649,7 +3649,7 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
   width: 260px;
 }
 
-body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table {
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table {
   width: 100%;
   text-align: center;
   vertical-align: center;
@@ -3657,31 +3657,45 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
   color: #333333;
   font-weight: normal;
   border-collapse: separate;
-  border-spacing: 5px 10px;
+  border-spacing: 5px 5px;
 }
 
-body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table .red {
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table .red {
   color: #DF4C4C;
 }
 
-body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table th {
-  width: 32px;
-  margin: 10px 20px;
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table .list-head {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
-body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table td {
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table .list-head span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 31.42px;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table ul.list-body li.list-item {
+  display: table;
+  width: 100%;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table ul.list-body li.list-item > div {
+  display: table-cell;
+  vertical-align: middle;
   width: 32px;
   height: 32px;
   background: #EFEFEF;
   border-radius: 50%;
 }
 
-body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table td.schedule {
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table ul.list-body li.list-item > div.schedule {
   background: #FBCFE3;
   cursor: pointer;
 }
 
-body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table td.today {
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table ul.list-body li.list-item > div.today {
   border: 1px solid #DD488E;
   background: #fff;
   position: relative;
@@ -3696,13 +3710,17 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
           justify-content: center;
 }
 
-body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table td.today::before {
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table ul.list-body li.list-item > div.today::before {
   content: "";
   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12.296' viewBox='0 0 16 12.296'%3E%3Cpath id='패스_4706' data-name='패스 4706' d='M54.957,50.892,48.8,44.736l2.452-2.452,3.687,3.687L62.313,38.6,64.8,41.049Z' transform='translate(-48.8 -38.597)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/100%;
   width: 20px;
   height: 20px;
   position: absolute;
   opacity: 0.9;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table ul.list-body li.list-item > div div.do-list {
+  display: none;
 }
 
 body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text {
