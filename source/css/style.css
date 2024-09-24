@@ -3793,6 +3793,7 @@ body div#content.main div.container section.main-menu div.main-info h3 {
   body div#content.main div.container section.main-menu div.main-info h3 {
     margin: 0 0 50px 0;
     font-size: 30px;
+    text-align: start;
   }
 }
 
