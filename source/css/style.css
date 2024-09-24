@@ -3540,15 +3540,230 @@ body div#content.main div.container {
 
 body div#content.main div.container section.main-menu {
   margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 1195px) {
   body div#content.main div.container section.main-menu {
     margin-top: 580px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
-body div#content.main div.container section.main-menu h3 {
+body div#content.main div.container section.main-menu div.main-calender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 340px;
+  height: 628px;
+  -webkit-box-shadow: 2px 4px 30px #00000026;
+          box-shadow: 2px 4px 30px #00000026;
+  border-radius: 0px 20px 20px 20px;
+  background: #fff;
+  padding: 24px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.main div.container section.main-menu div.main-calender div.calenderbox {
+    width: 290px;
+    height: 628px;
+  }
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox > h3, body div#content.main div.container section.main-menu div.main-calender div.calenderbox > a {
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 170px;
+  height: 56px;
+  background-color: #DD488E;
+  border-radius: 0px 100px 100px 0px;
+  -webkit-box-shadow: 2px 4px 30px #00000027;
+          box-shadow: 2px 4px 30px #00000027;
+  color: #fff;
+  font-size: 22px;
+  font-weight: normal;
+  margin: 0;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender-day {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender-day > a {
+  font-size: 28px;
+  color: #555555;
+  margin: 0 5px 0 5px;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender-day span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender {
+  margin-top: 24px;
+  width: 260px;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table {
+  width: 100%;
+  text-align: center;
+  vertical-align: center;
+  font-size: 16px;
+  color: #333333;
+  font-weight: normal;
+  border-collapse: separate;
+  border-spacing: 5px 10px;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table .red {
+  color: #DF4C4C;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table th {
+  width: 32px;
+  margin: 10px 20px;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table td {
+  width: 32px;
+  height: 32px;
+  background: #EFEFEF;
+  border-radius: 50%;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table td.schedule {
+  background: #FBCFE3;
+  cursor: pointer;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table td.today {
+  border: 1px solid #DD488E;
+  background: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender table td.today::before {
+  content: "";
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12.296' viewBox='0 0 16 12.296'%3E%3Cpath id='패스_4706' data-name='패스 4706' d='M54.957,50.892,48.8,44.736l2.452-2.452,3.687,3.687L62.313,38.6,64.8,41.049Z' transform='translate(-48.8 -38.597)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/100%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  opacity: 0.9;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text {
+  margin-top: 25px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text h4 {
+  margin: 0 0 9px 0;
+  display: block;
+  font-size: 18px;
+  color: #DD488E;
+  font-weight: bold;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text ul li {
+  margin: 0 0 19px 0;
+  color: #333333;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text ul li h5 {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+  width: 240px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text ul li h5::before {
+  content: "-";
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text ul li p {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+}
+
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox .calender-text ul li p::before {
+  content: "·";
+  font-size: 15px;
+  margin: 0 5px 0 10px;
+}
+
+body div#content.main div.container section.main-menu div.main-info {
+  margin-top: 50px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.main div.container section.main-menu div.main-info {
+    margin-top: 0;
+    margin-left: 61px;
+  }
+}
+
+body div#content.main div.container section.main-menu div.main-info h3 {
   text-align: center;
   font-size: 22px;
   font-weight: 700;
@@ -3557,13 +3772,13 @@ body div#content.main div.container section.main-menu h3 {
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu h3 {
+  body div#content.main div.container section.main-menu div.main-info h3 {
     margin: 0 0 50px 0;
     font-size: 30px;
   }
 }
 
-body div#content.main div.container section.main-menu ul {
+body div#content.main div.container section.main-menu div.main-info ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3578,8 +3793,8 @@ body div#content.main div.container section.main-menu ul {
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul {
-    gap: 50px 83px;
+  body div#content.main div.container section.main-menu div.main-info ul {
+    gap: 26px 32px;
     margin: 0 auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -3588,7 +3803,7 @@ body div#content.main div.container section.main-menu ul {
   }
 }
 
-body div#content.main div.container section.main-menu ul li {
+body div#content.main div.container section.main-menu div.main-info ul li {
   position: relative;
   width: 164px;
   height: 164px;
@@ -3600,53 +3815,53 @@ body div#content.main div.container section.main-menu ul li {
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li {
+  body div#content.main div.container section.main-menu div.main-info ul li {
     width: 260px;
     height: 254px;
     border-radius: 90px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li.focus {
+body div#content.main div.container section.main-menu div.main-info ul li.focus {
   border: 3px solid #000;
 }
 
-body div#content.main div.container section.main-menu ul li.ani01 {
+body div#content.main div.container section.main-menu div.main-info ul li.ani01 {
   -webkit-animation: text-in 0.5s ease-in forwards;
           animation: text-in 0.5s ease-in forwards;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
-body div#content.main div.container section.main-menu ul li.ani02 {
+body div#content.main div.container section.main-menu div.main-info ul li.ani02 {
   -webkit-animation: text-in 0.5s ease-in forwards;
           animation: text-in 0.5s ease-in forwards;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-body div#content.main div.container section.main-menu ul li.ani03 {
+body div#content.main div.container section.main-menu div.main-info ul li.ani03 {
   -webkit-animation: text-in 0.5s ease-in forwards;
           animation: text-in 0.5s ease-in forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-body div#content.main div.container section.main-menu ul li.ani04 {
+body div#content.main div.container section.main-menu div.main-info ul li.ani04 {
   -webkit-animation: text-in 0.5s ease-in forwards;
           animation: text-in 0.5s ease-in forwards;
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
 
-body div#content.main div.container section.main-menu ul li.ani05 {
+body div#content.main div.container section.main-menu div.main-info ul li.ani05 {
   -webkit-animation: text-in 0.5s ease-in forwards;
           animation: text-in 0.5s ease-in forwards;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-body div#content.main div.container section.main-menu ul li.ani06 {
+body div#content.main div.container section.main-menu div.main-info ul li.ani06 {
   -webkit-animation: text-in 0.5s ease-in forwards;
           animation: text-in 0.5s ease-in forwards;
   -webkit-animation-delay: 1.1s;
@@ -3679,7 +3894,7 @@ body div#content.main div.container section.main-menu ul li.ani06 {
   }
 }
 
-body div#content.main div.container section.main-menu ul li a {
+body div#content.main div.container section.main-menu div.main-info ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3694,12 +3909,12 @@ body div#content.main div.container section.main-menu ul li a {
   height: 100%;
 }
 
-body div#content.main div.container section.main-menu ul li a:hover div.hover {
+body div#content.main div.container section.main-menu div.main-info ul li a:hover div.hover {
   bottom: 0;
   opacity: 1;
 }
 
-body div#content.main div.container section.main-menu ul li a small {
+body div#content.main div.container section.main-menu div.main-info ul li a small {
   margin-top: 34px;
   font-size: 14px;
   font-weight: 500;
@@ -3708,13 +3923,13 @@ body div#content.main div.container section.main-menu ul li a small {
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a small {
+  body div#content.main div.container section.main-menu div.main-info ul li a small {
     margin-top: 50px;
     font-size: 19px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li a h5 {
+body div#content.main div.container section.main-menu div.main-info ul li a h5 {
   margin: 0;
   font-size: 19px;
   font-weight: 700;
@@ -3722,105 +3937,105 @@ body div#content.main div.container section.main-menu ul li a h5 {
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a h5 {
+  body div#content.main div.container section.main-menu div.main-info ul li a h5 {
     font-size: 24px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li a img {
+body div#content.main div.container section.main-menu div.main-info ul li a img {
   position: absolute;
 }
 
-body div#content.main div.container section.main-menu ul li a img.icon01 {
+body div#content.main div.container section.main-menu div.main-info ul li a img.icon01 {
   width: 91px;
   height: 92px;
   top: 70px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a img.icon01 {
+  body div#content.main div.container section.main-menu div.main-info ul li a img.icon01 {
     width: 154px;
     height: 154px;
     top: 90px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li a img.icon02 {
+body div#content.main div.container section.main-menu div.main-info ul li a img.icon02 {
   width: 110px;
   height: 64px;
   top: 84px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a img.icon02 {
+  body div#content.main div.container section.main-menu div.main-info ul li a img.icon02 {
     width: 184px;
     height: 110px;
     top: 120px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li a img.icon03 {
+body div#content.main div.container section.main-menu div.main-info ul li a img.icon03 {
   width: 147px;
   height: 126px;
   top: 38px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a img.icon03 {
+  body div#content.main div.container section.main-menu div.main-info ul li a img.icon03 {
     width: 260px;
     height: 254px;
     top: 0px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li a img.icon04 {
+body div#content.main div.container section.main-menu div.main-info ul li a img.icon04 {
   width: 164px;
   height: 164px;
   top: 85px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a img.icon04 {
+  body div#content.main div.container section.main-menu div.main-info ul li a img.icon04 {
     width: 291px;
     height: 290px;
     top: 120px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li a img.icon05 {
+body div#content.main div.container section.main-menu div.main-info ul li a img.icon05 {
   width: 232px;
   height: 133px;
   top: 45px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a img.icon05 {
+  body div#content.main div.container section.main-menu div.main-info ul li a img.icon05 {
     width: 350px;
     height: 200px;
     top: 70px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li a img.icon06 {
+body div#content.main div.container section.main-menu div.main-info ul li a img.icon06 {
   width: 96px;
   height: 96px;
   top: 70px;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a img.icon06 {
+  body div#content.main div.container section.main-menu div.main-info ul li a img.icon06 {
     width: 146px;
     height: 146px;
     top: 100px;
   }
 }
 
-body div#content.main div.container section.main-menu ul li a div.hover {
+body div#content.main div.container section.main-menu div.main-info ul li a div.hover {
   display: none;
 }
 
 @media (min-width: 1195px) {
-  body div#content.main div.container section.main-menu ul li a div.hover {
+  body div#content.main div.container section.main-menu div.main-info ul li a div.hover {
     position: absolute;
     bottom: -280px;
     right: 0;
@@ -3843,12 +4058,12 @@ body div#content.main div.container section.main-menu ul li a div.hover {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  body div#content.main div.container section.main-menu ul li a div.hover p {
+  body div#content.main div.container section.main-menu div.main-info ul li a div.hover p {
     font-size: 17px;
     color: #555;
     margin: 0;
   }
-  body div#content.main div.container section.main-menu ul li a div.hover p.view {
+  body div#content.main div.container section.main-menu div.main-info ul li a div.hover p.view {
     margin-top: 15px;
     font-size: 16px;
     color: #dd488e;
