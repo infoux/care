@@ -810,14 +810,14 @@ body {
               align-items: center;
               flex-direction: column;
               width: 340px;
-              height: 628px;
+              min-height: 628px;
               box-shadow: 2px 4px 30px #00000026;
               border-radius: 0px 20px 20px 20px;
               background: #fff;
               padding: 24px;
               @media (min-width: $screen-size-pc) {
                 width: 290px;
-                height: 628px;
+                min-height: 628px;
               }
               >h3,&>a{
                 display: block;

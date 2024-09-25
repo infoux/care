@@ -3581,7 +3581,7 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
       -ms-flex-direction: column;
           flex-direction: column;
   width: 340px;
-  height: 628px;
+  min-height: 628px;
   -webkit-box-shadow: 2px 4px 30px #00000026;
           box-shadow: 2px 4px 30px #00000026;
   border-radius: 0px 20px 20px 20px;
@@ -3592,7 +3592,7 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
 @media (min-width: 1195px) {
   body div#content.main div.container section.main-menu div.main-calender div.calenderbox {
     width: 290px;
-    height: 628px;
+    min-height: 628px;
   }
 }
 
