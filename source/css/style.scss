@@ -1485,7 +1485,7 @@ body {
                 display: inline-block;
                 width: 220px;
                 height: 225px;
-                margin: 0 20px 0 0;
+                margin: 0 19px 0 0;
                 vertical-align: top;
                 &:last-of-type {
                   margin: 0;
@@ -5195,6 +5195,37 @@ body {
         @media (min-width: $screen-size-pc) {
           display: none;
         }
+      }
+
+      div.qr{
+        @media (max-width: $screen-size-pc) {
+          display: none;
+        }
+        position: absolute;
+        top: 0;
+        right: 215px;
+        ul{
+          display: flex;
+          gap: 0 10px;
+          li{
+            text-align: center;
+            width: 106px;
+            height: 138px;
+            border: 1px solid #BBBBBB;
+            border-radius: 10px;
+            p{
+              margin: 12px 0 8px;
+              font-size: 15px;
+              font-weight: bold;
+              color: #333333;
+            }
+            img{
+              width: 80.52px;
+              height: 79.54px;
+            }
+          }
+        }
+        
       }
 
       div.agency {

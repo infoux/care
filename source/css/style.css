@@ -4406,7 +4406,7 @@ body div#content.main section.main-vlog div.container ul.vlog-box li {
     display: inline-block;
     width: 220px;
     height: 225px;
-    margin: 0 20px 0 0;
+    margin: 0 19px 0 0;
     vertical-align: top;
   }
   body div#content.main section.main-vlog div.container ul.vlog-box li:last-of-type {
@@ -8797,6 +8797,45 @@ body footer#footer div.container div.pc a {
   body footer#footer div.container div.pc {
     display: none;
   }
+}
+
+body footer#footer div.container div.qr {
+  position: absolute;
+  top: 0;
+  right: 215px;
+}
+
+@media (max-width: 1195px) {
+  body footer#footer div.container div.qr {
+    display: none;
+  }
+}
+
+body footer#footer div.container div.qr ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 10px;
+}
+
+body footer#footer div.container div.qr ul li {
+  text-align: center;
+  width: 106px;
+  height: 138px;
+  border: 1px solid #BBBBBB;
+  border-radius: 10px;
+}
+
+body footer#footer div.container div.qr ul li p {
+  margin: 12px 0 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+}
+
+body footer#footer div.container div.qr ul li img {
+  width: 80.52px;
+  height: 79.54px;
 }
 
 body footer#footer div.container div.agency {
