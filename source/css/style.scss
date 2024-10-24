@@ -5204,27 +5204,26 @@ body {
         position: absolute;
         top: 0;
         right: 215px;
-        ul{
-          display: flex;
-          gap: 0 10px;
-          li{
+        display: flex;
+        gap: 0 10px;
+          a{
             text-align: center;
             width: 106px;
             height: 138px;
             border: 1px solid #BBBBBB;
             border-radius: 10px;
-            p{
-              margin: 12px 0 8px;
-              font-size: 15px;
-              font-weight: bold;
-              color: #333333;
-            }
-            img{
-              width: 80.52px;
-              height: 79.54px;
-            }
+              p{
+                margin: 12px 0 8px;
+                font-size: 15px;
+                font-weight: bold;
+                color: #333333;
+              }
+              img{
+                width: 80.52px;
+                height: 79.54px;
+              }
           }
-        }
+        
         
       }
 

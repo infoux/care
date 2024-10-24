@@ -8803,6 +8803,10 @@ body footer#footer div.container div.qr {
   position: absolute;
   top: 0;
   right: 215px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 10px;
 }
 
 @media (max-width: 1195px) {
@@ -8811,14 +8815,7 @@ body footer#footer div.container div.qr {
   }
 }
 
-body footer#footer div.container div.qr ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0 10px;
-}
-
-body footer#footer div.container div.qr ul li {
+body footer#footer div.container div.qr a {
   text-align: center;
   width: 106px;
   height: 138px;
@@ -8826,14 +8823,14 @@ body footer#footer div.container div.qr ul li {
   border-radius: 10px;
 }
 
-body footer#footer div.container div.qr ul li p {
+body footer#footer div.container div.qr a p {
   margin: 12px 0 8px;
   font-size: 15px;
   font-weight: bold;
   color: #333333;
 }
 
-body footer#footer div.container div.qr ul li img {
+body footer#footer div.container div.qr a img {
   width: 80.52px;
   height: 79.54px;
 }
