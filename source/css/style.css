@@ -2813,7 +2813,8 @@ body thead.thead-hidden ~ tbody th:not(:last-child) {
   border-bottom: 1px solid #fff;
 }
 
-body thead.thead-hidden ~ tbody tr:last-child td, body thead.thead-hidden ~ tbody tr:last-child th {
+body thead.thead-hidden ~ tbody tr:last-child td,
+body thead.thead-hidden ~ tbody tr:last-child th {
   border-bottom: 0px;
 }
 
@@ -3130,7 +3131,7 @@ body header .container h1 a {
     border-bottom: 1px solid #dddddd;
   }
   body nav#main-menu div.menus > ul > li h3 > a::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     right: 20px;
@@ -3168,7 +3169,7 @@ body header .container h1 a {
     background: #f8f8f8;
   }
   body nav#main-menu div.menus > ul > li ul li a::before {
-    content: '·';
+    content: "·";
     margin-right: 5px;
   }
   body nav#main-menu div.menus > ul > li ul li:last-child {
@@ -3591,7 +3592,8 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
   }
 }
 
-body div#content.main div.container section.main-menu div.main-calender div.calenderbox > h3, body div#content.main div.container section.main-menu div.main-calender div.calenderbox > a {
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox > h3,
+body div#content.main div.container section.main-menu div.main-calender div.calenderbox > a {
   display: block;
   position: absolute;
   top: -15px;
@@ -3607,7 +3609,7 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
           justify-content: center;
   width: 170px;
   height: 56px;
-  background-color: #DD488E;
+  background-color: #dd488e;
   border-radius: 0px 100px 100px 0px;
   -webkit-box-shadow: 2px 4px 30px #00000027;
           box-shadow: 2px 4px 30px #00000027;
@@ -3656,7 +3658,7 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
 }
 
 body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table .red {
-  color: #DF4C4C;
+  color: #df4c4c;
 }
 
 body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table .list-head {
@@ -3681,17 +3683,17 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
   vertical-align: middle;
   width: 32px;
   height: 32px;
-  background: #EFEFEF;
+  background: #efefef;
   border-radius: 50%;
 }
 
 body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table ul.list-body li.list-item > div.schedule {
-  background: #FBCFE3;
+  background: #fbcfe3;
   cursor: pointer;
 }
 
 body div#content.main div.container section.main-menu div.main-calender div.calenderbox div.calender div.cal-table ul.list-body li.list-item > div.today {
-  border: 1px solid #DD488E;
+  border: 1px solid #dd488e;
   background: #fff;
   position: relative;
   display: -webkit-box;
@@ -3728,7 +3730,7 @@ body div#content.main div.container section.main-menu div.main-calender div.cale
   margin: 0 0 9px 0;
   display: block;
   font-size: 18px;
-  color: #DD488E;
+  color: #dd488e;
   font-weight: bold;
 }
 
@@ -4162,7 +4164,7 @@ body div#content.main section.main-notice div.container div.notice-box ul.notice
 }
 
 body div#content.main section.main-notice div.container div.notice-box ul.notice li a h4::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 9px;
   height: 15px;
@@ -4297,7 +4299,7 @@ body div#content.main section.main-notice div.container div.notice-box div.cm di
 }
 
 body div#content.main section.main-notice div.container div.notice-box div.cm div a::before {
-  content: '';
+  content: "";
   margin-right: 10px;
   margin-bottom: 5px;
   display: inline-block;
@@ -4369,7 +4371,7 @@ body div#content.main section.main-vlog div.container h3 {
 }
 
 body div#content.main section.main-vlog div.container h3::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 9px;
   height: 15px;
@@ -4416,7 +4418,7 @@ body div#content.main section.main-vlog div.container ul.vlog-box li a {
 }
 
 body div#content.main section.main-vlog div.container ul.vlog-box li a::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 55px;
   height: 45px;
@@ -4475,7 +4477,7 @@ body div#content.main section.main-vlog div.vlog-bg {
   position: absolute;
   top: 0;
   left: 0;
-  background: #F5F5F6;
+  background: #f5f5f6;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -4588,7 +4590,7 @@ body div#content.sub section.sub-head div.container div.nodepth ul li a.on span 
 }
 
 body div#content.sub section.sub-head div.container div.nodepth ul li a::before {
-  content: '· ';
+  content: "· ";
 }
 
 body div#content.sub section.sub-head div.container div.nodepth.on {
@@ -4645,11 +4647,13 @@ body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li
           justify-content: center;
 }
 
-body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a, body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li span {
+body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a,
+body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li span {
   margin: 0 10px;
 }
 
-body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a.depth1-home, body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li span.depth1-home {
+body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li a.depth1-home,
+body div#content.sub section.sub-head div.container div.depth1 ul.depth1-link li span.depth1-home {
   display: inline-block;
   font-size: 0;
   width: 25px;
@@ -4694,7 +4698,7 @@ body div#content.sub section.sub-head div.container div.depth2 a.depth2-link {
 }
 
 body div#content.sub section.sub-head div.container div.depth2 a.depth2-link::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   right: 16px;
@@ -4866,7 +4870,7 @@ body div#content.sub section.sub-content div.container div.b-title h3.space span
 }
 
 body div#content.sub section.sub-content div.container div.b-title h3::before {
-  content: '';
+  content: "";
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -5013,9 +5017,9 @@ body div#content.sub section.sub-content div.container div.b-title > div.c-msg p
 
 body div#content.sub section.sub-content div.container div.b-title > div.c-name {
   margin-top: 50px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   border-radius: 10px;
-  background: #F8F8F8;
+  background: #f8f8f8;
   padding: 20px 0;
   line-height: 1.6;
 }
@@ -5076,7 +5080,7 @@ body div#content.sub section.sub-content div.container div.b-content h4 {
 }
 
 body div#content.sub section.sub-content div.container div.b-content h4::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -5158,7 +5162,7 @@ body div#content.sub section.sub-content div.container div.b-content > div.talk-
   position: relative;
   width: 154px;
   height: 240px;
-  border: 1px solid #D26D8E;
+  border: 1px solid #d26d8e;
   border-radius: 15px;
 }
 
@@ -5196,7 +5200,7 @@ body div#content.sub section.sub-content div.container div.b-content > div.talk-
 body div#content.sub section.sub-content div.container div.b-content > div.talk-guide > ul > li h5 {
   width: 154px;
   height: 68px;
-  background: #D26D8E;
+  background: #d26d8e;
   color: #fff;
   font-size: 17px;
   font-weight: 400;
@@ -5269,8 +5273,8 @@ body div#content.sub section.sub-content div.container div.b-content div.talk-wr
 }
 
 body div#content.sub section.sub-content div.container div.b-content div.talk-write > ul > li {
-  border: 1px solid #DDDDDD;
-  background: #FEF8FA;
+  border: 1px solid #dddddd;
+  background: #fef8fa;
   padding: 15px;
 }
 
@@ -5284,7 +5288,7 @@ body div#content.sub section.sub-content div.container div.b-content div.talk-wr
 
 body div#content.sub section.sub-content div.container div.b-content div.talk-write > ul > li h5 {
   font-size: 16px;
-  color: #BC5A7A;
+  color: #bc5a7a;
   margin: 0 0 10px 0;
 }
 
@@ -5321,9 +5325,9 @@ body div#content.sub section.sub-content div.container div.b-content div.talk-wr
           align-items: center;
   width: 182px;
   height: 40px;
-  border: 1px solid #AC2665;
-  background: #D24387;
-  color: #FFFFFF;
+  border: 1px solid #ac2665;
+  background: #d24387;
+  color: #ffffff;
   font-size: 17px;
   margin: 32px auto 33px;
 }
@@ -5414,7 +5418,7 @@ body div#content.sub section.sub-content div.container div.b-content div.care-ti
 }
 
 body div#content.sub section.sub-content div.container div.b-content div.care-title p span {
-  color: #B9236A;
+  color: #b9236a;
 }
 
 body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure {
@@ -5437,14 +5441,14 @@ body div#content.sub section.sub-content div.container div.b-content div.care-ti
 
 body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li {
   position: relative;
-  border: 1px solid #DD488E;
+  border: 1px solid #dd488e;
   border-radius: 100px;
   width: 100%;
   margin: 15px 0 30px;
   padding: 15px 0;
   font-size: 16px;
   color: #333333;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 @media (min-width: 1195px) {
@@ -5471,7 +5475,7 @@ body div#content.sub section.sub-content div.container div.b-content div.care-ti
 }
 
 body div#content.sub section.sub-content div.container div.b-content div.care-title ul.procedure li::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: -20px;
@@ -5521,8 +5525,8 @@ body div#content.sub section.sub-content div.container div.b-content > table.mai
 }
 
 body div#content.sub section.sub-content div.container div.b-content > table.main thead {
-  border: 1px solid #BF3E7B;
-  background: #DD488E;
+  border: 1px solid #bf3e7b;
+  background: #dd488e;
 }
 
 body div#content.sub section.sub-content div.container div.b-content > table.main thead tr {
@@ -5618,7 +5622,7 @@ body div#content.sub section.sub-content div.container div.b-content > table.mai
 }
 
 body div#content.sub section.sub-content div.container div.b-content > table.main tbody tr td > p::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -5666,8 +5670,8 @@ body div#content.sub section.sub-content div.container div.b-content > table.hou
 }
 
 body div#content.sub section.sub-content div.container div.b-content > table.house thead {
-  border: 1px solid #5F5F5F;
-  background: #6E6E6E;
+  border: 1px solid #5f5f5f;
+  background: #6e6e6e;
 }
 
 body div#content.sub section.sub-content div.container div.b-content > table.house thead tr {
@@ -5740,7 +5744,7 @@ body div#content.sub section.sub-content div.container div.b-content > table.hou
 
 body div#content.sub section.sub-content div.container div.b-content p.refer {
   font-size: 15px;
-  color: #D62727;
+  color: #d62727;
   margin: 20px 0 0 0;
 }
 
@@ -5752,7 +5756,7 @@ body div#content.sub section.sub-content div.container div.b-content p.refer {
 
 body div#content.sub section.sub-content div.container div.b-content p.refer2 {
   font-size: 15px;
-  color: #DD488E;
+  color: #dd488e;
   margin: 9px 0 0 0;
 }
 
@@ -5770,8 +5774,8 @@ body div#content.sub section.sub-content div.container div.b-content > ul {
 
 body div#content.sub section.sub-content div.container div.b-content > ul.con-2 {
   border-radius: 10px;
-  border: 1px solid #EBEBEB;
-  background: #F6F6F6;
+  border: 1px solid #ebebeb;
+  background: #f6f6f6;
 }
 
 @media (min-width: 1195px) {
@@ -5970,9 +5974,9 @@ body div#content.sub section.sub-content div.container div.b-content > ul li.b-t
 
 body div#content.sub section.sub-content div.container div.b-content > ul li.b-table tbody tr td.refer {
   font-size: 15px;
-  color: #DD488E;
+  color: #dd488e;
   text-align: end;
-  background: #F9F9F9;
+  background: #f9f9f9;
   padding: 15px 10px;
 }
 
@@ -6105,7 +6109,7 @@ body div#content.sub section.sub-content div.container div.b-content > ul li.b-t
 }
 
 body div#content.sub section.sub-content div.container div.b-content > ul li.b-table2 tbody tr td > p::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -6237,7 +6241,7 @@ body div#content.sub section.sub-content div.container div.b-content > ul li p.b
 }
 
 body div#content.sub section.sub-content div.container div.b-content > ul li p.b-name::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: 15px;
@@ -6364,8 +6368,8 @@ body div#content.sub section.sub-content div.container div.b-content ul.procedur
 
 body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li {
   position: relative;
-  border: 1px solid #DD488E;
-  background: #FBF1F5;
+  border: 1px solid #dd488e;
+  background: #fbf1f5;
   border-radius: 50%;
   width: 230px;
   height: 230px;
@@ -6410,7 +6414,7 @@ body div#content.sub section.sub-content div.container div.b-content ul.procedur
 }
 
 body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: -20px;
@@ -6451,7 +6455,7 @@ body div#content.sub section.sub-content div.container div.b-content ul.procedur
 body div#content.sub section.sub-content div.container div.b-content ul.procedure2 li div {
   width: 214px;
   height: 214px;
-  border: 1px solid #DD488E;
+  border: 1px solid #dd488e;
   background: #fff;
   border-radius: 50%;
   display: -webkit-box;
@@ -6699,7 +6703,7 @@ body div#content.sub section.sub-content div.container div.b-content > ul.step >
 }
 
 body div#content.sub section.sub-content div.container div.b-content > ul.step > li div ul::before {
-  content: '';
+  content: "";
   display: block;
   width: 90%;
   height: 1px;
@@ -6934,7 +6938,7 @@ body div#content.sub section.sub-content div.container div.c-content div.greetin
   position: relative;
   width: 100%;
   height: 320px;
-  background-color: #FEF8FA;
+  background-color: #fef8fa;
   padding-top: 46px;
   margin-bottom: 30px;
 }
@@ -7086,7 +7090,7 @@ body div#content.sub section.sub-content div.container div.c-content ul.sub8 {
 body div#content.sub section.sub-content div.container div.c-content ul.sub8 li {
   position: relative;
   width: 100%;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   border-radius: 10px;
   margin: 0 auto 10px;
   padding: 25px 25px 160px 25px;
@@ -7305,7 +7309,7 @@ body div#content.sub section.sub-content div.container div.c-content ul.sub9::be
 body div#content.sub section.sub-content div.container div.c-content ul.sub9 li {
   width: 100%;
   height: 100px;
-  background: #EFEFEF;
+  background: #efefef;
   border-radius: 40px;
   font-size: 17px;
   color: #333333;
@@ -7362,7 +7366,7 @@ body div#content.sub section.sub-content div.container div.c-content table.sub10
 
 body div#content.sub section.sub-content div.container div.c-content table.sub10-table tr .td1 {
   min-width: 91px;
-  background: #F6F6F6;
+  background: #f6f6f6;
   text-align: center;
 }
 
@@ -7392,10 +7396,10 @@ body div#content.sub section.sub-content div.container div.c-content ul.sub10-da
 
 body div#content.sub section.sub-content div.container div.c-content ul.sub10-day li {
   padding: 20px 21px;
-  border: 1px solid #DBE9F4;
+  border: 1px solid #dbe9f4;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 4px 1px #1E75B829;
-          box-shadow: 0px 4px 1px #1E75B829;
+  -webkit-box-shadow: 0px 4px 1px #1e75b829;
+          box-shadow: 0px 4px 1px #1e75b829;
   margin-bottom: 10px;
 }
 
@@ -7534,8 +7538,8 @@ body div#content.sub section.sub-content div.container div.c-content div.map-add
 
 body div#content.sub section.sub-content div.container div.c-content div.map-move {
   margin-top: 15px;
-  border-top: 1px dashed #AAAAAA;
-  border-bottom: 1px dashed #AAAAAA;
+  border-top: 1px dashed #aaaaaa;
+  border-bottom: 1px dashed #aaaaaa;
   padding: 15px 0;
 }
 
@@ -7693,7 +7697,7 @@ body div#content.sub section.sub-board div.list ul.list {
     border-top: none;
   }
   body div#content.sub section.sub-board div.list ul.list::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -7809,6 +7813,7 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.text {
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div.text h5 {
+  position: relative;
   margin: 0;
   font-size: 17px;
   color: #333333;
@@ -7832,6 +7837,23 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.text h5
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.text h5:has(u) {
+  padding-left: 34px;
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.text h5:has(u) u {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  background: url("data:image/svg+xml,%3Csvg id='그룹_13254' data-name='그룹 13254' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='패스_9505' data-name='패스 9505' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='패스_9506' data-name='패스 9506' d='M18,8H17V6A5,5,0,0,0,7,6V8H6a2.006,2.006,0,0,0-2,2V20a2.006,2.006,0,0,0,2,2H18a2.006,2.006,0,0,0,2-2V10A2.006,2.006,0,0,0,18,8Zm-6,9a2,2,0,1,1,2-2A2.006,2.006,0,0,1,12,17Zm3.1-9H8.9V6a3.1,3.1,0,0,1,6.2,0Z' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/100% auto;
 }
 
 @media (min-width: 1195px) {
@@ -8097,7 +8119,7 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.file sp
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div.file span::before {
-  content: '';
+  content: "";
   background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M17.295,9.4H13.782V3H8.513V9.4H5l6.147,7.47ZM5,19.008v2.134H17.295V19.008Z' transform='translate(0.853 0.512)' fill='%233a9a8f'/%3E%3C/svg%3E%0A") no-repeat center/cover;
   display: block;
   margin-left: 3px;
@@ -8122,6 +8144,14 @@ body div#content.sub section.sub-board div.list ul.list li a div.box div.view {
     color: #555555;
     padding: 0 10px;
   }
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.view u {
+  color: #5176b7;
+}
+
+body div#content.sub section.sub-board div.list ul.list li a div.box div.view u.ok {
+  color: #b2305a;
 }
 
 body div#content.sub section.sub-board div.list ul.list li a div.box div.img img {
@@ -8195,7 +8225,7 @@ body div#content.sub section.sub-board div.list ul.faqList li h5 {
 }
 
 body div#content.sub section.sub-board div.list ul.faqList li h5::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 10px;
@@ -8218,7 +8248,7 @@ body div#content.sub section.sub-board div.list ul.faqList li h5::before {
 }
 
 body div#content.sub section.sub-board div.list ul.faqList li h5::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   right: 10px;
@@ -8288,7 +8318,8 @@ body div#content.sub section.sub-board div.write div.bo_w_tit {
   margin: 0 0 20px;
 }
 
-body div#content.sub section.sub-board div.write div.bo_w_tit input[type=text] {
+body div#content.sub section.sub-board div.write div.bo_w_tit input[type="text"],
+body div#content.sub section.sub-board div.write div.bo_w_tit input[type="password"] {
   width: 100%;
   border: 1px solid #ccc;
   padding: 10px;
@@ -8297,8 +8328,13 @@ body div#content.sub section.sub-board div.write div.bo_w_tit input[type=text] {
   color: #222;
 }
 
-body div#content.sub section.sub-board div.write div.bo_w_tit input[type=text]#wr_1 {
+body div#content.sub section.sub-board div.write div.bo_w_tit input[type="text"]#wr_1,
+body div#content.sub section.sub-board div.write div.bo_w_tit input[type="password"]#wr_1 {
   margin-top: 10px;
+}
+
+body div#content.sub section.sub-board div.write div.chk_box {
+  margin: 0 0 20px;
 }
 
 body div#content.sub section.sub-board div.write div.cke_sc {
@@ -8319,20 +8355,20 @@ body div#content.sub section.sub-board div.write div.bo_w_flie input {
   font-size: 14px;
 }
 
-body div#content.sub section.sub-board div.write div.bo_w_link input[type=text],
-body div#content.sub section.sub-board div.write div.bo_w_link input[type=file],
-body div#content.sub section.sub-board div.write div.bo_w_flie input[type=text],
-body div#content.sub section.sub-board div.write div.bo_w_flie input[type=file] {
+body div#content.sub section.sub-board div.write div.bo_w_link input[type="text"],
+body div#content.sub section.sub-board div.write div.bo_w_link input[type="file"],
+body div#content.sub section.sub-board div.write div.bo_w_flie input[type="text"],
+body div#content.sub section.sub-board div.write div.bo_w_flie input[type="file"] {
   border: 1px solid #ccc;
   vertical-align: top;
   width: calc(100%);
   height: 42px;
 }
 
-body div#content.sub section.sub-board div.write div.bo_w_link input[type=text][type=file],
-body div#content.sub section.sub-board div.write div.bo_w_link input[type=file][type=file],
-body div#content.sub section.sub-board div.write div.bo_w_flie input[type=text][type=file],
-body div#content.sub section.sub-board div.write div.bo_w_flie input[type=file][type=file] {
+body div#content.sub section.sub-board div.write div.bo_w_link input[type="text"][type="file"],
+body div#content.sub section.sub-board div.write div.bo_w_link input[type="file"][type="file"],
+body div#content.sub section.sub-board div.write div.bo_w_flie input[type="text"][type="file"],
+body div#content.sub section.sub-board div.write div.bo_w_flie input[type="file"][type="file"] {
   border: none;
 }
 
@@ -8465,7 +8501,7 @@ body div#content.sub section.sub-board div.view div.board-info ul li {
 }
 
 body div#content.sub section.sub-board div.view div.board-info ul li.day::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1px;
   height: 15px;
@@ -8522,7 +8558,7 @@ body div#content.sub section.sub-board div.view div.board-file a:last-of-type {
 }
 
 body div#content.sub section.sub-board div.view div.board-file a::before {
-  content: '';
+  content: "";
   display: inline-block;
   background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='21.333' height='21.333' viewBox='0 0 21.333 21.333'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H21.333V21.333H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M16.851,8.187H13.465V3H8.386V8.187H5l5.926,6.051ZM5,15.967V17.7H16.851V15.967Z' transform='translate(-0.259 -0.156)' fill='%235a83b4'/%3E%3C/svg%3E%0A") no-repeat center/cover;
   width: 20px;
@@ -8582,7 +8618,7 @@ body div#content.sub section.sub-board div.view div.board-link a:last-of-type {
 }
 
 body div#content.sub section.sub-board div.view div.board-link a::before {
-  content: '';
+  content: "";
   display: inline-block;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.198' height='21.142' viewBox='0 0 25.198 21.142'%3E%3Cpath id='link_FILL0_wght500_GRAD0_opsz48' d='M84.366,381.2H79.729a5.71,5.71,0,1,1,0-11.42h4.637v1.894H79.732a3.819,3.819,0,1,0,0,7.639h4.634Zm-3.5-4.836v-1.742H89.68v1.742Zm5.311,4.836v-1.888h4.634a3.82,3.82,0,0,0,0-7.639H86.174v-1.894h4.637a5.71,5.71,0,0,1,0,11.42Z' transform='translate(-248.992 -271.979) rotate(-30)' fill='%2354699d'/%3E%3C/svg%3E%0A") no-repeat center/cover;
   width: 20px;
@@ -8676,7 +8712,7 @@ body div#content.sub section.sub-board div.view div.board-navi div.navi p {
 }
 
 body div#content.sub section.sub-board div.view div.board-navi div.navi p.left::before {
-  content: '';
+  content: "";
   display: inline-block;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='5' viewBox='0 0 10 5'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16' data-name='사각형 16' width='5' height='10' fill='%23111'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_1735' data-name='그룹 1735' transform='translate(0 5) rotate(-90)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M.536,10a.528.528,0,0,1-.358-.14.553.553,0,0,1-.041-.771L3.743,5,.137.911A.553.553,0,0,1,.178.14.53.53,0,0,1,.936.181L4.863,4.634a.554.554,0,0,1,0,.729L.936,9.819a.53.53,0,0,1-.4.181' transform='translate(0 0)' fill='%23111'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/cover;
   width: 10px;
@@ -8685,7 +8721,7 @@ body div#content.sub section.sub-board div.view div.board-navi div.navi p.left::
 }
 
 body div#content.sub section.sub-board div.view div.board-navi div.navi p.right::before {
-  content: '';
+  content: "";
   display: inline-block;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='5' viewBox='0 0 10 5'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16' data-name='사각형 16' width='5' height='10' fill='%23111'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_1736' data-name='그룹 1736' transform='translate(10) rotate(90)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M.536,10a.528.528,0,0,1-.358-.14.553.553,0,0,1-.041-.771L3.743,5,.137.911A.553.553,0,0,1,.178.14.53.53,0,0,1,.936.181L4.863,4.634a.554.554,0,0,1,0,.729L.936,9.819a.53.53,0,0,1-.4.181' transform='translate(0 0)' fill='%23111'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/cover;
   width: 10px;
@@ -8714,8 +8750,8 @@ body div#content.sub section.sub-board div.photo div.vlog-title {
   position: relative;
   width: 100%;
   height: 140px;
-  background: #EFEFF8;
-  border: 1px solid #F5F5F6;
+  background: #efeff8;
+  border: 1px solid #f5f5f6;
   padding: 25px 0 24px 24px;
   margin-bottom: 40px;
 }
@@ -8806,7 +8842,7 @@ body div#content.sub section.sub-board div.photo ul.vlog > li {
 }
 
 body div#content.sub section.sub-board div.photo ul.vlog > li a::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 70px;
   height: 70px;
@@ -8913,6 +8949,62 @@ body div#content.sub section.sub-board div.photo ul li a h4 {
   body div#content.sub section.sub-board div.photo ul li a h4 {
     font-size: 21px;
   }
+}
+
+body div#content.sub section.sub-board #bo_vc {
+  margin: 40px 0 20px;
+}
+
+body div#content.sub section.sub-board #bo_vc article {
+  display: block;
+  background: #f4f4f4;
+  padding: 20px;
+  margin: 0 0 20px;
+}
+
+body div#content.sub section.sub-board #bo_vc article header {
+  background: transparent;
+  text-align: left;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 10px;
+  margin: 0 0 10px;
+}
+
+body div#content.sub section.sub-board #bo_vc article header h2 {
+  font-size: 16px;
+  color: #222;
+  margin: 0;
+}
+
+body div#content.sub section.sub-board #bo_vc article .bo_vl_opt {
+  margin: 20px 0 0;
+}
+
+body div#content.sub section.sub-board #bo_vc article .bo_vl_opt a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: underline;
+}
+
+body div#content.sub section.sub-board #bo_vc_w textarea {
+  width: 100%;
+  background: #fefefe;
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 140px;
+}
+
+body div#content.sub section.sub-board .reply_submit {
+  display: block;
+  width: 100%;
+  background: #333333;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 46px;
+  padding: 0 30px;
+  margin: 0 2px;
 }
 
 body div#content section.ready {

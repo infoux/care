@@ -1,9 +1,9 @@
 // out: ./styl.css, compress: true, sourceMap: true
-@import 'normalize', 'rem', 'font', 'color', 'mixin', 'default';
+@import "normalize", "rem", "font", "color", "mixin", "default";
 
 /* basic */
 $min-width: 320px;
-$img-url: '../images';
+$img-url: "../images";
 $screen-size-pc: 1195px;
 $screen-size-mobile: max($screen-size-pc);
 
@@ -20,7 +20,7 @@ html {
 
 html,
 body {
-  font-family: $myfont, 'Malgun Gothic', 'apple sd gothic neo', sans-serif;
+  font-family: $myfont, "Malgun Gothic", "apple sd gothic neo", sans-serif;
 
   &.lock {
     height: 100vh;
@@ -63,29 +63,29 @@ body {
     z-index: 999999999;
   }
 
-  table caption{
+  table caption {
     position: absolute;
-    width:0px;
+    width: 0px;
     height: 0px;
     overflow: hidden;
   }
 
-    thead.thead-hidden{
-      position: absolute;
-      width:0;
-      height: 0;
-      overflow: hidden;
-    }
-    thead.thead-hidden ~ tbody th{
-        background-color: #ccc;
-    }
-    thead.thead-hidden ~ tbody th:not(:last-child){
-        border-bottom: 1px solid #fff;
-    }
-    thead.thead-hidden ~ tbody tr:last-child td, thead.thead-hidden ~ tbody tr:last-child th{
-        border-bottom: 0px;
-
-    }
+  thead.thead-hidden {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  thead.thead-hidden ~ tbody th {
+    background-color: #ccc;
+  }
+  thead.thead-hidden ~ tbody th:not(:last-child) {
+    border-bottom: 1px solid #fff;
+  }
+  thead.thead-hidden ~ tbody tr:last-child td,
+  thead.thead-hidden ~ tbody tr:last-child th {
+    border-bottom: 0px;
+  }
 
   .container {
     @include container(100%);
@@ -98,7 +98,6 @@ body {
       padding: 0;
     }
   }
-
 
   div.shadow {
     position: fixed;
@@ -250,7 +249,6 @@ body {
     }
   }
 
-
   /* header */
   header {
     position: relative;
@@ -291,15 +289,12 @@ body {
           }
         }
       }
-
-      
     }
   }
 
-
   @media (max-width: ($screen-size-pc - 1)) {
     nav#main-menu {
-      font-family: $myfont, 'Malgun Gothic', 'apple sd gothic neo', sans-serif;
+      font-family: $myfont, "Malgun Gothic", "apple sd gothic neo", sans-serif;
       position: fixed;
       z-index: 100000;
       right: -100%;
@@ -342,24 +337,25 @@ body {
           margin: 0;
           width: 40px;
           height: 40px;
-          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 46 46'%3E%3Cg id='그룹_12752' data-name='그룹 12752' transform='translate(-889 157)'%3E%3Cpath id='패스_4662' data-name='패스 4662' d='M0,0H46V46H0Z' transform='translate(889 -157)' fill='%23fff'/%3E%3Cpath id='패스_4663' data-name='패스 4663' d='M31.833,7.7,29.131,5,18.417,15.714,7.7,5,5,7.7,15.714,18.417,5,29.131l2.7,2.7L18.417,21.119,29.131,31.833l2.7-2.7L21.119,18.417Z' transform='translate(893.583 -152.417)'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 35px auto;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 46 46'%3E%3Cg id='그룹_12752' data-name='그룹 12752' transform='translate(-889 157)'%3E%3Cpath id='패스_4662' data-name='패스 4662' d='M0,0H46V46H0Z' transform='translate(889 -157)' fill='%23fff'/%3E%3Cpath id='패스_4663' data-name='패스 4663' d='M31.833,7.7,29.131,5,18.417,15.714,7.7,5,5,7.7,15.714,18.417,5,29.131l2.7,2.7L18.417,21.119,29.131,31.833l2.7-2.7L21.119,18.417Z' transform='translate(893.583 -152.417)'/%3E%3C/g%3E%3C/svg%3E%0A")
+            no-repeat center / 35px auto;
         }
       }
 
       div.menus {
         margin: 30px 0 55px;
 
-        &>ul {
+        & > ul {
           margin: 0;
           padding: 0;
           list-style: none;
           font-size: 0;
 
-          &>li {
+          & > li {
             h3 {
               margin: 0;
 
-              >a {
+              > a {
                 display: block;
                 position: relative;
                 font-size: 17px;
@@ -371,7 +367,7 @@ body {
                 border-bottom: 1px solid #dddddd;
 
                 &::after {
-                  content: '';
+                  content: "";
                   display: block;
                   position: absolute;
                   right: 20px;
@@ -379,7 +375,8 @@ body {
                   transform: translateY(-50%);
                   width: 11px;
                   height: 12px;
-                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cg id='그룹_370' data-name='그룹 370' transform='translate(238.893 -434.161) rotate(90)'%3E%3Cpath id='패스_437' data-name='패스 437' d='M435.135,238.893a.97.97,0,0,1-.688-1.656l4.363-4.344-4.363-4.345a.966.966,0,0,1,0-1.371.977.977,0,0,1,1.378,0l5.052,5.031a.966.966,0,0,1,0,1.371l-5.052,5.029A.974.974,0,0,1,435.135,238.893Z' transform='translate(0)' fill='%232b2b2b'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cg id='그룹_370' data-name='그룹 370' transform='translate(238.893 -434.161) rotate(90)'%3E%3Cpath id='패스_437' data-name='패스 437' d='M435.135,238.893a.97.97,0,0,1-.688-1.656l4.363-4.344-4.363-4.345a.966.966,0,0,1,0-1.371.977.977,0,0,1,1.378,0l5.052,5.031a.966.966,0,0,1,0,1.371l-5.052,5.029A.974.974,0,0,1,435.135,238.893Z' transform='translate(0)' fill='%232b2b2b'/%3E%3C/g%3E%3C/svg%3E%0A")
+                    no-repeat center / 100% auto;
                 }
               }
 
@@ -421,7 +418,7 @@ body {
                   background: #f8f8f8;
 
                   &::before {
-                    content: '·';
+                    content: "·";
                     margin-right: 5px;
                   }
                 }
@@ -432,7 +429,7 @@ body {
               }
             }
 
-            h3.on+ul {
+            h3.on + ul {
               max-height: 1000px;
             }
           }
@@ -473,7 +470,8 @@ body {
           margin: 0;
           width: 40px;
           height: 40px;
-          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 46 46'%3E%3Cg id='그룹_12752' data-name='그룹 12752' transform='translate(-889 157)'%3E%3Cpath id='패스_4662' data-name='패스 4662' d='M0,0H46V46H0Z' transform='translate(889 -157)' fill='%23fff'/%3E%3Cpath id='패스_4663' data-name='패스 4663' d='M31.833,7.7,29.131,5,18.417,15.714,7.7,5,5,7.7,15.714,18.417,5,29.131l2.7,2.7L18.417,21.119,29.131,31.833l2.7-2.7L21.119,18.417Z' transform='translate(893.583 -152.417)'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 40px auto;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 46 46'%3E%3Cg id='그룹_12752' data-name='그룹 12752' transform='translate(-889 157)'%3E%3Cpath id='패스_4662' data-name='패스 4662' d='M0,0H46V46H0Z' transform='translate(889 -157)' fill='%23fff'/%3E%3Cpath id='패스_4663' data-name='패스 4663' d='M31.833,7.7,29.131,5,18.417,15.714,7.7,5,5,7.7,15.714,18.417,5,29.131l2.7,2.7L18.417,21.119,29.131,31.833l2.7-2.7L21.119,18.417Z' transform='translate(893.583 -152.417)'/%3E%3C/g%3E%3C/svg%3E%0A")
+            no-repeat center / 40px auto;
 
           &.on {
             display: block;
@@ -488,19 +486,18 @@ body {
         margin-right: -510px;
         width: 850px;
 
-        &>ul {
+        & > ul {
           list-style: none;
           margin: 0;
           padding: 0;
           text-align: center;
           display: flex;
 
-          &>li {
+          & > li {
             display: inline-block;
             vertical-align: top;
             position: relative;
             width: 170px;
-            
 
             h3 {
               margin: 0;
@@ -566,7 +563,13 @@ body {
         height: 350px;
         background: #fff;
 
-        @include drop-shadow($x: 0, $y: 12px, $blur: 12px, $spread: 0, $alpha: 0.25);
+        @include drop-shadow(
+          $x: 0,
+          $y: 12px,
+          $blur: 12px,
+          $spread: 0,
+          $alpha: 0.25
+        );
 
         div.tools {
           button {
@@ -575,8 +578,8 @@ body {
         }
 
         div.menus {
-          &>ul {
-            &>li {
+          & > ul {
+            & > li {
               h3 {
                 a {
                   color: #111111;
@@ -608,8 +611,8 @@ body {
     @media (min-width: $screen-size-pc) {
       position: absolute;
       top: 35px;
-        left: 50%;
-        margin-left: 565px;
+      left: 50%;
+      margin-left: 565px;
     }
 
     button {
@@ -617,18 +620,17 @@ body {
       height: 40px;
       font-size: 0;
       border: none;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='24.744' viewBox='0 0 30 24.744'%3E%3Cpath id='패스_281' data-name='패스 281' d='M3,30.744H33V26.62H3Zm0-10.31H26.077V16.31H3ZM3,6v4.124H33V6Z' transform='translate(-3 -6)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat center / 25px auto;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='24.744' viewBox='0 0 30 24.744'%3E%3Cpath id='패스_281' data-name='패스 281' d='M3,30.744H33V26.62H3Zm0-10.31H26.077V16.31H3ZM3,6v4.124H33V6Z' transform='translate(-3 -6)' fill='%23333'/%3E%3C/svg%3E%0A")
+        no-repeat center / 25px auto;
       opacity: 1;
-        &.on {
-          // display: none;
-          opacity: 0;
-          // pointer-events: none;
-        }
-      
+      &.on {
+        // display: none;
+        opacity: 0;
+        // pointer-events: none;
+      }
     }
   }
   div#content {
-
     /* MAIN */
     &.main {
       text-align: center;
@@ -666,8 +668,8 @@ body {
                 display: flex;
                 justify-content: flex-start;
               }
-              &.swiper-slide-active{
-                &:focus{
+              &.swiper-slide-active {
+                &:focus {
                   border: 2px solid #111;
                 }
               }
@@ -685,7 +687,6 @@ body {
                   @media (min-width: $screen-size-pc) {
                     font-size: 25px;
                     display: block;
-
                   }
                 }
 
@@ -755,7 +756,7 @@ body {
             &.on {
               display: none;
             }
-            &.swiper-button-disabled{
+            &.swiper-button-disabled {
               opacity: 0.4;
             }
           }
@@ -787,8 +788,6 @@ body {
           padding: 0;
         }
 
-
-
         section.main-menu {
           margin-top: 50px;
           display: flex;
@@ -798,10 +797,10 @@ body {
             flex-direction: row;
           }
 
-          div.main-calender{
+          div.main-calender {
             display: flex;
             justify-content: center;
-            div.calenderbox{
+            div.calenderbox {
               position: relative;
               display: flex;
               align-items: center;
@@ -816,7 +815,8 @@ body {
                 width: 290px;
                 min-height: 628px;
               }
-              >h3,&>a{
+              > h3,
+              & > a {
                 display: block;
                 position: absolute;
                 top: -15px;
@@ -826,7 +826,7 @@ body {
                 justify-content: center;
                 width: 170px;
                 height: 56px;
-                background-color: #DD488E;
+                background-color: #dd488e;
                 border-radius: 0px 100px 100px 0px;
                 box-shadow: 2px 4px 30px #00000027;
                 color: #fff;
@@ -835,25 +835,25 @@ body {
                 margin: 0;
               }
 
-              div.calender-day{
+              div.calender-day {
                 margin-top: 48px;
                 display: flex;
                 justify-content: center;
-                >a{
+                > a {
                   font-size: 28px;
                   color: #555555;
                   margin: 0 5px 0 5px;
                 }
-                span{
+                span {
                   font-size: 24px;
                   font-weight: bold;
                   color: #111;
                 }
               }
-              div.calender{
+              div.calender {
                 margin-top: 24px;
                 width: 260px;
-                div.cal-table{
+                div.cal-table {
                   width: 100%;
                   text-align: center;
                   vertical-align: center;
@@ -862,75 +862,76 @@ body {
                   font-weight: normal;
                   border-collapse: separate;
                   border-spacing: 5px 5px;
-                  .red{
-                    color: #DF4C4C;
+                  .red {
+                    color: #df4c4c;
                   }
-                  .list-head{
+                  .list-head {
                     display: table;
                     width: 100%;
                     table-layout: fixed;
-                    span{
+                    span {
                       display: table-cell;
                       vertical-align: middle;
                       width: 31.42px;
                     }
                   }
-                  ul.list-body{
-                    li.list-item{
+                  ul.list-body {
+                    li.list-item {
                       display: table;
                       width: 100%;
-                      >div{
+                      > div {
                         display: table-cell;
                         vertical-align: middle;
                         width: 32px;
                         height: 32px;
-                        background: #EFEFEF;
+                        background: #efefef;
                         border-radius: 50%;
-                        &.schedule{
-                          background: #FBCFE3;
+                        &.schedule {
+                          background: #fbcfe3;
                           cursor: pointer;
                         }
-                        &.today{
-                          border: 1px solid #DD488E;
+                        &.today {
+                          border: 1px solid #dd488e;
                           background: #fff;
                           position: relative;
                           display: flex;
                           align-items: center;
                           justify-content: center;
-                          &::before{
+                          &::before {
                             content: "";
-                            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12.296' viewBox='0 0 16 12.296'%3E%3Cpath id='패스_4706' data-name='패스 4706' d='M54.957,50.892,48.8,44.736l2.452-2.452,3.687,3.687L62.313,38.6,64.8,41.049Z' transform='translate(-48.8 -38.597)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/ 100%;
+                            background: #fff
+                              url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12.296' viewBox='0 0 16 12.296'%3E%3Cpath id='패스_4706' data-name='패스 4706' d='M54.957,50.892,48.8,44.736l2.452-2.452,3.687,3.687L62.313,38.6,64.8,41.049Z' transform='translate(-48.8 -38.597)' fill='%23dd488e'/%3E%3C/svg%3E%0A")
+                              no-repeat center/ 100%;
                             width: 20px;
                             height: 20px;
                             position: absolute;
                             opacity: 0.9;
                           }
                         }
-                        div.do-list{
+                        div.do-list {
                           display: none;
                         }
                       }
                     }
                   }
-                  
                 }
               }
 
-              .calender-text{
+              .calender-text {
                 margin-top: 10px;
                 align-self: flex-start;
-                h4{
+                h4 {
                   margin: 0 0 9px 0;
                   display: block;
                   font-size: 18px;
-                  color: #DD488E;
+                  color: #dd488e;
                   font-weight: bold;
                 }
-                ul{
-                  li{
+                ul {
+                  li {
                     margin: 0 0 19px 0;
                     color: #333333;
-                    h5{
+                    h5 {
                       font-size: 15px;
                       font-weight: normal;
                       margin: 0;
@@ -938,21 +939,20 @@ body {
                       text-overflow: ellipsis;
                       white-space: nowrap;
                       overflow: hidden;
-                      &::before{
+                      &::before {
                         content: "-";
                         font-size: 15px;
                         margin-right: 5px;
                       }
                     }
-                    p{
+                    p {
                       font-size: 15px;
                       font-weight: normal;
                       margin: 0;
-                      &::before{
+                      &::before {
                         content: "·";
                         font-size: 15px;
-                        margin:0 5px 0 10px;
-                        
+                        margin: 0 5px 0 10px;
                       }
                     }
                   }
@@ -961,7 +961,7 @@ body {
             }
           }
 
-          div.main-info{
+          div.main-info {
             margin-top: 50px;
             @media (min-width: $screen-size-pc) {
               margin-top: 0;
@@ -973,14 +973,14 @@ body {
               font-weight: 700;
               color: #111111;
               margin: 0 0 25px 0;
-  
+
               @media (min-width: $screen-size-pc) {
                 margin: 0 0 50px 0;
                 font-size: 30px;
                 text-align: start;
               }
             }
-  
+
             ul {
               display: flex;
               flex-wrap: wrap;
@@ -988,14 +988,14 @@ body {
               gap: 20px 10px;
               width: 350px;
               margin: 0 auto;
-  
+
               @media (min-width: $screen-size-pc) {
                 gap: 26px 32px;
                 margin: 0 auto;
                 justify-content: center;
                 width: 100%;
               }
-  
+
               li {
                 position: relative;
                 width: 164px;
@@ -1004,167 +1004,165 @@ body {
                 box-shadow: 4px 0px 20px #2b354a26;
                 overflow: hidden;
                 opacity: 0;
-  
+
                 @media (min-width: $screen-size-pc) {
                   width: 260px;
                   height: 254px;
                   border-radius: 90px;
                 }
-  
-                &.focus{
+
+                &.focus {
                   border: 3px solid #000;
                 }
-  
+
                 &.ani01 {
                   animation: text-in 0.5s ease-in forwards;
                   animation-delay: 0.1s;
                 }
-  
+
                 &.ani02 {
                   animation: text-in 0.5s ease-in forwards;
                   animation-delay: 0.3s;
                 }
-  
+
                 &.ani03 {
                   animation: text-in 0.5s ease-in forwards;
                   animation-delay: 0.5s;
                 }
-  
+
                 &.ani04 {
                   animation: text-in 0.5s ease-in forwards;
                   animation-delay: 0.7s;
                 }
-  
+
                 &.ani05 {
                   animation: text-in 0.5s ease-in forwards;
                   animation-delay: 0.9s;
                 }
-  
+
                 &.ani06 {
                   animation: text-in 0.5s ease-in forwards;
                   animation-delay: 1.1s;
                 }
-  
+
                 @keyframes text-in {
                   from {
                     opacity: 0;
                     transform: translateY(30px);
                   }
-  
+
                   to {
                     opacity: 1;
                     transform: translateY(0);
                   }
                 }
-  
+
                 a {
                   display: flex;
                   flex-direction: column;
                   align-items: center;
                   width: 100%;
                   height: 100%;
-  
+
                   &:hover {
                     div.hover {
                       bottom: 0;
                       opacity: 1;
                     }
                   }
-  
-                  
-  
+
                   small {
                     margin-top: 34px;
                     font-size: 14px;
                     font-weight: 500;
                     color: #333;
                     line-height: 0.8;
-  
+
                     @media (min-width: $screen-size-pc) {
                       margin-top: 50px;
                       font-size: 19px;
                     }
                   }
-  
+
                   h5 {
                     margin: 0;
                     font-size: 19px;
                     font-weight: 700;
                     color: #111111;
-  
+
                     @media (min-width: $screen-size-pc) {
                       font-size: 24px;
                     }
                   }
-  
+
                   img {
                     position: absolute;
-  
+
                     &.icon01 {
                       width: 91px;
                       height: 92px;
                       top: 70px;
-  
+
                       @media (min-width: $screen-size-pc) {
                         width: 154px;
                         height: 154px;
                         top: 90px;
                       }
                     }
-  
+
                     &.icon02 {
                       width: 110px;
                       height: 64px;
                       top: 84px;
-  
+
                       @media (min-width: $screen-size-pc) {
                         width: 184px;
                         height: 110px;
                         top: 120px;
                       }
                     }
-  
+
                     &.icon03 {
                       width: 147px;
                       height: 126px;
                       top: 38px;
-  
+
                       @media (min-width: $screen-size-pc) {
                         width: 260px;
                         height: 254px;
                         top: 0px;
                       }
                     }
-  
+
                     &.icon04 {
                       width: 164px;
                       height: 164px;
                       top: 85px;
-  
+
                       @media (min-width: $screen-size-pc) {
                         width: 291px;
                         height: 290px;
                         top: 120px;
                       }
                     }
-  
+
                     &.icon05 {
                       width: 232px;
                       height: 133px;
                       top: 45px;
-  
+
                       @media (min-width: $screen-size-pc) {
                         width: 350px;
                         height: 200px;
                         top: 70px;
                       }
                     }
-  
+
                     &.icon06 {
                       width: 96px;
                       height: 96px;
                       top: 70px;
-  
+
                       @media (min-width: $screen-size-pc) {
                         width: 146px;
                         height: 146px;
@@ -1172,10 +1170,10 @@ body {
                       }
                     }
                   }
-  
+
                   div.hover {
                     display: none;
-  
+
                     @media (min-width: $screen-size-pc) {
                       position: absolute;
                       bottom: -280px;
@@ -1188,12 +1186,12 @@ body {
                       align-items: center;
                       justify-content: center;
                       transition: all 0.3s ease-in-out;
-  
+
                       p {
                         font-size: 17px;
                         color: #555;
                         margin: 0;
-  
+
                         &.view {
                           margin-top: 15px;
                           font-size: 16px;
@@ -1201,14 +1199,11 @@ body {
                         }
                       }
                     }
-  
                   }
                 }
               }
             }
           }
-
-          
         }
       }
 
@@ -1268,12 +1263,13 @@ body {
                     }
 
                     &::after {
-                      content: '';
+                      content: "";
                       display: inline-block;
                       width: 9px;
                       height: 15px;
                       margin-left: 10px;
-                      background: url("data:image/svg+xml,%3Csvg id='arrow_forward_ios_black_24dp_2_' data-name='arrow_forward_ios_black_24dp (2)' xmlns='http://www.w3.org/2000/svg' width='18.921' height='18.921' viewBox='0 0 18.921 18.921'%3E%3Cg id='그룹_8235' data-name='그룹 8235'%3E%3Cpath id='패스_2729' data-name='패스 2729' d='M0,0H18.921V18.921H0Z' fill='none'/%3E%3C/g%3E%3Cg id='그룹_8236' data-name='그룹 8236' transform='translate(4.833 1.603)'%3E%3Cpath id='패스_2730' data-name='패스 2730' d='M6.23,16.324l1.419,1.391,8.015-7.857L7.649,2,6.23,3.391l6.6,6.467Z' transform='translate(-6.23 -2)' fill='%23ffb831'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/ cover;
+                      background: url("data:image/svg+xml,%3Csvg id='arrow_forward_ios_black_24dp_2_' data-name='arrow_forward_ios_black_24dp (2)' xmlns='http://www.w3.org/2000/svg' width='18.921' height='18.921' viewBox='0 0 18.921 18.921'%3E%3Cg id='그룹_8235' data-name='그룹 8235'%3E%3Cpath id='패스_2729' data-name='패스 2729' d='M0,0H18.921V18.921H0Z' fill='none'/%3E%3C/g%3E%3Cg id='그룹_8236' data-name='그룹 8236' transform='translate(4.833 1.603)'%3E%3Cpath id='패스_2730' data-name='패스 2730' d='M6.23,16.324l1.419,1.391,8.015-7.857L7.649,2,6.23,3.391l6.6,6.467Z' transform='translate(-6.23 -2)' fill='%23ffb831'/%3E%3C/g%3E%3C/svg%3E%0A")
+                        no-repeat center/ cover;
                     }
                   }
                 }
@@ -1299,7 +1295,7 @@ body {
                           -webkit-box-orient: vertical;
                           @media (min-width: $screen-size-pc) {
                             -webkit-line-clamp: 3;
-                          -webkit-box-orient: vertical;
+                            -webkit-box-orient: vertical;
                           }
                         }
 
@@ -1308,7 +1304,7 @@ body {
                           -webkit-box-orient: vertical;
                           @media (min-width: $screen-size-pc) {
                             -webkit-line-clamp: 2;
-                          -webkit-box-orient: vertical;
+                            -webkit-box-orient: vertical;
                           }
                         }
 
@@ -1320,7 +1316,6 @@ body {
                           color: #dd488e;
                           text-decoration: underline;
                         }
-
                       }
 
                       span {
@@ -1385,7 +1380,7 @@ body {
                   }
 
                   &::before {
-                    content: '';
+                    content: "";
                     margin-right: 10px;
                     margin-bottom: 5px;
                     display: inline-block;
@@ -1399,7 +1394,6 @@ body {
                     font-size: 18px;
                     margin: 0 0 10px 0;
                   }
-
                 }
               }
 
@@ -1454,12 +1448,13 @@ body {
             margin: 0;
 
             &::after {
-              content: '';
+              content: "";
               display: inline-block;
               width: 9px;
               height: 15px;
               margin-left: 10px;
-              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.681' height='16.127' viewBox='0 0 9.681 16.127'%3E%3Cpath id='패스_2730' data-name='패스 2730' d='M6.23,16.7l1.456,1.427,8.225-8.064L7.686,2,6.23,3.427,13,10.064Z' transform='translate(-6.23 -2)' fill='%232b2b2b'/%3E%3C/svg%3E%0A") no-repeat center/ cover;
+              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.681' height='16.127' viewBox='0 0 9.681 16.127'%3E%3Cpath id='패스_2730' data-name='패스 2730' d='M6.23,16.7l1.456,1.427,8.225-8.064L7.686,2,6.23,3.427,13,10.064Z' transform='translate(-6.23 -2)' fill='%232b2b2b'/%3E%3C/svg%3E%0A")
+                no-repeat center/ cover;
             }
 
             @media (min-width: $screen-size-pc) {
@@ -1495,11 +1490,12 @@ body {
                 height: 100%;
 
                 &::before {
-                  content: '';
+                  content: "";
                   position: absolute;
                   width: 55px;
                   height: 45px;
-                  background: url('../images/playlogo.svg') no-repeat center/ cover;
+                  background: url("../images/playlogo.svg") no-repeat center/
+                    cover;
                   top: 75px;
                   left: 110px;
                   transition: all 0.2s ease-in-out;
@@ -1534,7 +1530,6 @@ body {
                   -webkit-line-clamp: 2;
                   @media (min-width: $screen-size-pc) {
                     font-size: 17px;
-                    
                   }
                 }
 
@@ -1552,7 +1547,7 @@ body {
           position: absolute;
           top: 0;
           left: 0;
-          background: #F5F5F6;
+          background: #f5f5f6;
           width: 100%;
           height: 100%;
           z-index: -1;
@@ -1604,7 +1599,7 @@ body {
             @include ani();
             font-size: 0;
 
-            &>a {
+            & > a {
               display: none;
               position: absolute;
               left: 15px;
@@ -1612,7 +1607,8 @@ body {
               vertical-align: top;
               width: 38px;
               height: 60px;
-              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.296' height='19.83' viewBox='0 0 19.296 19.83'%3E%3Cpath id='패스_1260' data-name='패스 1260' d='M328.951,180.594,320.3,186.4v12.195h6.315V192.2h4.666v6.392H337.6V186.4Z' transform='translate(-319.303 -179.763)' fill='none' stroke='%23000' stroke-linejoin='bevel' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat left center / auto 18px;
+              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.296' height='19.83' viewBox='0 0 19.296 19.83'%3E%3Cpath id='패스_1260' data-name='패스 1260' d='M328.951,180.594,320.3,186.4v12.195h6.315V192.2h4.666v6.392H337.6V186.4Z' transform='translate(-319.303 -179.763)' fill='none' stroke='%23000' stroke-linejoin='bevel' stroke-width='2'/%3E%3C/svg%3E%0A")
+                no-repeat left center / auto 18px;
             }
 
             strong {
@@ -1653,7 +1649,7 @@ body {
                   }
 
                   &::before {
-                    content: '· ';
+                    content: "· ";
                   }
                 }
               }
@@ -1678,7 +1674,7 @@ body {
           div.depth1 {
             text-align: center;
 
-            >h2 {
+            > h2 {
               margin-top: 30px;
               font-size: 30px;
               font-weight: 900;
@@ -1704,16 +1700,17 @@ body {
                 display: flex;
                 justify-content: center;
 
-                a, span {
+                a,
+                span {
                   margin: 0 10px;
-
 
                   &.depth1-home {
                     display: inline-block;
                     font-size: 0;
                     width: 25px;
                     height: 20px;
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18' height='16.764' viewBox='0 0 18 16.764'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_4790' data-name='사각형 4790' width='18' height='16.764' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_12759' data-name='그룹 12759' transform='translate(0 0)'%3E%3Cpath id='패스_4664' data-name='패스 4664' d='M3.41,6.7v9.8h5V11.363h3.7V16.5h5V6.7L10.262.562Z' transform='translate(-1.263 -0.208)' fill='%23fff'/%3E%3Cg id='그룹_12756' data-name='그룹 12756' transform='translate(0 0)'%3E%3Cg id='그룹_12755' data-name='그룹 12755' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_4665' data-name='패스 4665' d='M10.378.562,3.41,6.718v9.826H8.5V11.393h3.759v5.151h5.089V6.718Z' transform='translate(-1.378 -0.227)' fill='none' stroke='%23000' stroke-linejoin='bevel' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3Crect id='사각형_4791' data-name='사각형 4791' width='3.974' height='5.444' transform='translate(7.013 10.848)' fill='%23fff'/%3E%3Cg id='그룹_12758' data-name='그룹 12758' transform='translate(0 0)'%3E%3Cg id='그룹_12757' data-name='그룹 12757' clip-path='url(%23clip-path)'%3E%3Crect id='사각형_4792' data-name='사각형 4792' width='3.76' height='5.151' transform='translate(7.12 11.166)' fill='none' stroke='%23000' stroke-linejoin='bevel' stroke-width='1'/%3E%3Cpath id='패스_4666' data-name='패스 4666' d='M17.9,8.251,9.2.562.5,8.251' transform='translate(-0.201 -0.227)' fill='none' stroke='%23000' stroke-linejoin='bevel' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / auto;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18' height='16.764' viewBox='0 0 18 16.764'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_4790' data-name='사각형 4790' width='18' height='16.764' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_12759' data-name='그룹 12759' transform='translate(0 0)'%3E%3Cpath id='패스_4664' data-name='패스 4664' d='M3.41,6.7v9.8h5V11.363h3.7V16.5h5V6.7L10.262.562Z' transform='translate(-1.263 -0.208)' fill='%23fff'/%3E%3Cg id='그룹_12756' data-name='그룹 12756' transform='translate(0 0)'%3E%3Cg id='그룹_12755' data-name='그룹 12755' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_4665' data-name='패스 4665' d='M10.378.562,3.41,6.718v9.826H8.5V11.393h3.759v5.151h5.089V6.718Z' transform='translate(-1.378 -0.227)' fill='none' stroke='%23000' stroke-linejoin='bevel' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3Crect id='사각형_4791' data-name='사각형 4791' width='3.974' height='5.444' transform='translate(7.013 10.848)' fill='%23fff'/%3E%3Cg id='그룹_12758' data-name='그룹 12758' transform='translate(0 0)'%3E%3Cg id='그룹_12757' data-name='그룹 12757' clip-path='url(%23clip-path)'%3E%3Crect id='사각형_4792' data-name='사각형 4792' width='3.76' height='5.151' transform='translate(7.12 11.166)' fill='none' stroke='%23000' stroke-linejoin='bevel' stroke-width='1'/%3E%3Cpath id='패스_4666' data-name='패스 4666' d='M17.9,8.251,9.2.562.5,8.251' transform='translate(-0.201 -0.227)' fill='none' stroke='%23000' stroke-linejoin='bevel' stroke-width='1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+                      no-repeat center / auto;
                   }
                 }
               }
@@ -1750,7 +1747,7 @@ body {
               }
 
               &::after {
-                content: '';
+                content: "";
                 display: block;
                 position: absolute;
                 right: 16px;
@@ -1758,7 +1755,8 @@ body {
                 margin-left: 12px;
                 width: 10px;
                 height: 10px;
-                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath id='패스_4671' data-name='패스 4671' d='M7,10l6,8,6-8Z' transform='translate(-7 -10)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath id='패스_4671' data-name='패스 4671' d='M7,10l6,8,6-8Z' transform='translate(-7 -10)' fill='%23dd488e'/%3E%3C/svg%3E%0A")
+                  no-repeat center / 100% auto;
                 @include ani();
               }
             }
@@ -1793,7 +1791,13 @@ body {
                 background: #fff;
                 border: 1px solid #d9d9d9;
                 text-align: center;
-                @include inner-shadow($x: 0, $y: 3px, $blur: 6px, $spread: 0, $alpha: 0.16);
+                @include inner-shadow(
+                  $x: 0,
+                  $y: 3px,
+                  $blur: 6px,
+                  $spread: 0,
+                  $alpha: 0.16
+                );
 
                 @media (min-width: $screen-size-pc) {
                   height: 100%;
@@ -1850,7 +1854,13 @@ body {
               }
 
               div {
-                @include drop-shadow($x: 0, $y: 1px, $blur: 10px, $spread: 0, $alpha: 0.1);
+                @include drop-shadow(
+                  $x: 0,
+                  $y: 1px,
+                  $blur: 10px,
+                  $spread: 0,
+                  $alpha: 0.1
+                );
                 z-index: 1000000;
                 max-height: 1000px;
                 opacity: 1;
@@ -1900,13 +1910,14 @@ body {
               }
 
               &::before {
-                content: '';
+                content: "";
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 width: 26px;
                 height: 26px;
-                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cpath id='패스_4669' data-name='패스 4669' d='M13,0A13,13,0,1,0,26,13,13,13,0,0,0,13,0Zm0,17.55L7.15,11.7,9,9.867l4,4,4-4L18.85,11.7Z' transform='translate(0 26) rotate(-90)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center/ 100%;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cpath id='패스_4669' data-name='패스 4669' d='M13,0A13,13,0,1,0,26,13,13,13,0,0,0,13,0Zm0,17.55L7.15,11.7,9,9.867l4,4,4-4L18.85,11.7Z' transform='translate(0 26) rotate(-90)' fill='%23dd488e'/%3E%3C/svg%3E%0A")
+                  no-repeat center/ 100%;
                 border-radius: 50%;
                 color: #fff;
                 font-size: 20px;
@@ -1919,7 +1930,7 @@ body {
               }
             }
 
-            >h4 {
+            > h4 {
               font-size: 21px;
               font-weight: 700;
               color: #111111;
@@ -1977,9 +1988,9 @@ body {
               }
             }
 
-            >div.c-msg{
+            > div.c-msg {
               text-align: center;
-              h4{
+              h4 {
                 font-size: 32px;
                 font-weight: 700;
                 color: #111111;
@@ -1988,14 +1999,14 @@ body {
                   font-size: 50px;
                   margin: 46px 0 39px;
                 }
-                span{
+                span {
                   display: block;
                   @media (min-width: $screen-size-pc) {
                     display: inline-block;
                   }
                 }
               }
-              p{
+              p {
                 font-size: 18px;
                 color: #333333;
                 margin: 0;
@@ -2004,7 +2015,7 @@ body {
                   font-size: 20px;
                   text-align: center;
                 }
-                span{
+                span {
                   @media (min-width: $screen-size-pc) {
                     display: block;
                     font-size: 19px;
@@ -2013,11 +2024,11 @@ body {
               }
             }
 
-            >div.c-name{
+            > div.c-name {
               margin-top: 50px;
-              border: 1px solid #EBEBEB;
+              border: 1px solid #ebebeb;
               border-radius: 10px;
-              background: #F8F8F8;
+              background: #f8f8f8;
               padding: 20px 0;
               line-height: 1.6;
               @media (min-width: $screen-size-pc) {
@@ -2025,7 +2036,7 @@ body {
                 justify-content: center;
                 padding: 27px 0;
               }
-              p{
+              p {
                 margin: 0 auto;
                 font-size: 15px;
                 color: #555555;
@@ -2058,7 +2069,7 @@ body {
               }
 
               &::before {
-                content: '';
+                content: "";
                 display: inline-block;
                 width: 15px;
                 height: 15px;
@@ -2068,18 +2079,19 @@ body {
               }
             }
 
-            &>p{
+            & > p {
               font-size: 17px;
               color: #333;
               margin: 0;
               line-height: 27px;
-              &.talk{
-                &::before{
+              &.talk {
+                &::before {
                   content: "";
                   display: inline-block;
                   width: 15px;
                   height: 15px;
-                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14' height='11' viewBox='0 0 14 11'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_5586' data-name='사각형 5586' width='14' height='11' transform='translate(0 -0.234)' fill='%23d26d8e'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_13222' data-name='그룹 13222' transform='translate(0 0.234)'%3E%3Cg id='그룹_13221' data-name='그룹 13221' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_9405' data-name='패스 9405' d='M5.008,10.852a1.486,1.486,0,0,1-1.049-.431L.435,6.926a1.462,1.462,0,0,1,0-2.081,1.492,1.492,0,0,1,2.1,0L5.008,7.3,11.935.432a1.492,1.492,0,0,1,2.1,0,1.462,1.462,0,0,1,0,2.081L6.057,10.421a1.486,1.486,0,0,1-1.049.431' transform='translate(0 0)' fill='%23d26d8e'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/ 100%;
+                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14' height='11' viewBox='0 0 14 11'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_5586' data-name='사각형 5586' width='14' height='11' transform='translate(0 -0.234)' fill='%23d26d8e'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_13222' data-name='그룹 13222' transform='translate(0 0.234)'%3E%3Cg id='그룹_13221' data-name='그룹 13221' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_9405' data-name='패스 9405' d='M5.008,10.852a1.486,1.486,0,0,1-1.049-.431L.435,6.926a1.462,1.462,0,0,1,0-2.081,1.492,1.492,0,0,1,2.1,0L5.008,7.3,11.935.432a1.492,1.492,0,0,1,2.1,0,1.462,1.462,0,0,1,0,2.081L6.057,10.421a1.486,1.486,0,0,1-1.049.431' transform='translate(0 0)' fill='%23d26d8e'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+                    no-repeat center/ 100%;
                   margin-right: 5px;
                   @media (min-width: $screen-size-pc) {
                     width: 18px;
@@ -2109,28 +2121,28 @@ body {
               }
             }
 
-            &>div.talk-guide{
-              &>ul{
+            & > div.talk-guide {
+              & > ul {
                 width: 345px;
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 10px 20px;
                 @media (min-width: $screen-size-pc) {
-                      width: 100%;
-                      gap: 0 53px;
-                    }
-                &>li{
+                  width: 100%;
+                  gap: 0 53px;
+                }
+                & > li {
                   position: relative;
                   width: 154px;
                   height: 240px;
-                  border: 1px solid #D26D8E;
+                  border: 1px solid #d26d8e;
                   border-radius: 15px;
                   @media (min-width: $screen-size-pc) {
-                      width: 260px;
-                      height: 240px;
-                    }
-                  &::after{
+                    width: 260px;
+                    height: 240px;
+                  }
+                  &::after {
                     position: absolute;
                     top: 115px;
                     right: -15px;
@@ -2138,8 +2150,9 @@ body {
                     display: inline-block;
                     width: 12px;
                     height: 12px;
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='20' viewBox='0 0 12 20'%3E%3Cg id='그룹_13236' data-name='그룹 13236' transform='translate(-6.23 -2)'%3E%3Cpath id='패스_9502' data-name='패스 9502' d='M6.23,20.23,8.035,22l10.2-10L8.035,2,6.23,3.77,14.621,12Z' transform='translate(0)' fill='%23d26d8e'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/ 100%;
-                    
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='20' viewBox='0 0 12 20'%3E%3Cg id='그룹_13236' data-name='그룹 13236' transform='translate(-6.23 -2)'%3E%3Cpath id='패스_9502' data-name='패스 9502' d='M6.23,20.23,8.035,22l10.2-10L8.035,2,6.23,3.77,14.621,12Z' transform='translate(0)' fill='%23d26d8e'/%3E%3C/g%3E%3C/svg%3E%0A")
+                      no-repeat center/ 100%;
+
                     @media (min-width: $screen-size-pc) {
                       width: 20px;
                       height: 20px;
@@ -2152,10 +2165,10 @@ body {
                       display: none;
                     }
                   }
-                  h5{
+                  h5 {
                     width: 154px;
                     height: 68px;
-                    background: #D26D8E;
+                    background: #d26d8e;
                     color: #fff;
                     font-size: 17px;
                     font-weight: 400;
@@ -2168,23 +2181,22 @@ body {
                       font-size: 19px;
                     }
                   }
-                  ul{
+                  ul {
                     padding: 9px 13px;
                     @media (min-width: $screen-size-pc) {
                       padding: 15px 20px;
-                      }
-                    li{
+                    }
+                    li {
                       font-size: 16px;
                       color: #333333;
                       text-indent: -10px;
                       margin-left: 5px;
                       @media (min-width: $screen-size-pc) {
-                      font-size: 18px;
-                      margin-top: 5px;
+                        font-size: 18px;
+                        margin-top: 5px;
                       }
                     }
                   }
-                  
                 }
               }
             }
@@ -2194,7 +2206,7 @@ body {
               @media (min-width: $screen-size-pc) {
                   margin-top: 40px;
                 }
-              &>ul{
+              & > ul {
                 display: flex;
                 flex-direction: column;
                 gap: 10px 0;
@@ -2202,34 +2214,34 @@ body {
                   flex-direction: row;
                   gap: 0 20px;
                 }
-                &>li{
-                  border: 1px solid #DDDDDD;
-                  background: #FEF8FA;
+                & > li {
+                  border: 1px solid #dddddd;
+                  background: #fef8fa;
                   padding: 15px;
                   @media (min-width: $screen-size-pc) {
                     width: 590px;
                     height: 266px;
                     padding: 25px;
                   }
-                  h5{
+                  h5 {
                     font-size: 16px;
-                    color: #BC5A7A;
+                    color: #bc5a7a;
                     margin: 0 0 10px 0;
                     @media (min-width: $screen-size-pc) {
-                      font-size: 18px;;
+                      font-size: 18px;
                     }
                   }
-                  &>ul{
-                    &>li{
+                  & > ul {
+                    & > li {
                       font-size: 15px;
                       color: #333333;
                       text-indent: -10px;
                       margin-left: 5px;
                       line-height: 25px;
                       @media (min-width: $screen-size-pc) {
-                      font-size: 17px;
-                      line-height: 30px;
-                    }
+                        font-size: 17px;
+                        line-height: 30px;
+                      }
                     }
                   }
                 }
@@ -2240,28 +2252,29 @@ body {
                 align-items: center;
                 width: 182px;
                 height: 40px;
-                border: 1px solid #AC2665;
-                background: #D24387;
-                color: #FFFFFF;
+                border: 1px solid #ac2665;
+                background: #d24387;
+                color: #ffffff;
                 font-size: 17px;
                 margin: 32px auto 33px;
                 @media (min-width: $screen-size-pc) {
-                      width: 200px;
-                      height: 44px;
-                      font-size: 19px;
-                      margin: 50px auto 40px;
-                    }
-                &::before{
+                  width: 200px;
+                  height: 44px;
+                  font-size: 19px;
+                  margin: 50px auto 40px;
+                }
+                &::before {
                   content: "";
                   display: inline-block;
                   width: 23px;
                   height: 23px;
-                  background: url("data:image/svg+xml,%3Csvg id='그룹_13245' data-name='그룹 13245' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='그룹_13240' data-name='그룹 13240'%3E%3Crect id='사각형_5592' data-name='사각형 5592' width='24' height='24' fill='none'/%3E%3C/g%3E%3Cg id='그룹_13244' data-name='그룹 13244'%3E%3Cg id='그룹_13243' data-name='그룹 13243'%3E%3Cg id='그룹_13241' data-name='그룹 13241'%3E%3Cpath id='패스_9503' data-name='패스 9503' d='M3,17.25V21H6.75L17.81,9.94,14.06,6.19Z' fill='%23fbddeb'/%3E%3C/g%3E%3Cg id='그룹_13242' data-name='그룹 13242'%3E%3Cpath id='패스_9504' data-name='패스 9504' d='M20.71,5.63,18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75,1.83-1.83A1,1,0,0,0,20.71,5.63Z' fill='%23fbddeb'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/ 100%;
+                  background: url("data:image/svg+xml,%3Csvg id='그룹_13245' data-name='그룹 13245' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='그룹_13240' data-name='그룹 13240'%3E%3Crect id='사각형_5592' data-name='사각형 5592' width='24' height='24' fill='none'/%3E%3C/g%3E%3Cg id='그룹_13244' data-name='그룹 13244'%3E%3Cg id='그룹_13243' data-name='그룹 13243'%3E%3Cg id='그룹_13241' data-name='그룹 13241'%3E%3Cpath id='패스_9503' data-name='패스 9503' d='M3,17.25V21H6.75L17.81,9.94,14.06,6.19Z' fill='%23fbddeb'/%3E%3C/g%3E%3Cg id='그룹_13242' data-name='그룹 13242'%3E%3Cpath id='패스_9504' data-name='패스 9504' d='M20.71,5.63,18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75,1.83-1.83A1,1,0,0,0,20.71,5.63Z' fill='%23fbddeb'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+                    no-repeat center/ 100%;
                   margin: 4px 4px 0 0;
                   @media (min-width: $screen-size-pc) {
-                      width: 26px;
-                      height: 26px;
-                    }
+                    width: 26px;
+                    height: 26px;
+                  }
                 }
               }
             }
@@ -2287,13 +2300,14 @@ body {
                 @media (min-width: $screen-size-pc) {
                   font-size: 19px;
                 }
-                &::before{
+                &::before {
                   content: "";
                   display: inline-block;
                   width: 34px;
                   height: 38px;
                   margin-right: 10px;
-                  background: url('../images/carelogo.svg') no-repeat center / cover;
+                  background: url("../images/carelogo.svg") no-repeat center /
+                    cover;
                   @media (min-width: $screen-size-pc) {
                     width: 36px;
                     height: 41px;
@@ -2308,29 +2322,29 @@ body {
                 @media (min-width: $screen-size-pc) {
                   font-size: 18px;
                 }
-                span{
-                  color: #B9236A;
+                span {
+                  color: #b9236a;
                 }
               }
               ul.procedure {
                 text-align: center;
-  
+
                 @media (min-width: $screen-size-pc) {
                   display: flex;
                   align-items: center;
                   justify-content: space-evenly;
                 }
-  
+
                 li {
                   position: relative;
-                  border: 1px solid #DD488E;
+                  border: 1px solid #dd488e;
                   border-radius: 100px;
                   width: 100%;
                   margin: 15px 0 30px;
                   padding: 15px 0;
                   font-size: 16px;
                   color: #333333;
-                  background: #FFFFFF;
+                  background: #ffffff;
                   @media (min-width: $screen-size-pc) {
                     width: 200px;
                     height: 104px;
@@ -2342,9 +2356,9 @@ body {
                     margin: 29px 0 35px;
                     font-size: 18px;
                   }
-  
+
                   &::after {
-                    content: '';
+                    content: "";
                     display: block;
                     position: absolute;
                     bottom: -20px;
@@ -2352,34 +2366,36 @@ body {
                     transform: translate(50%, 0);
                     width: 17px;
                     height: 10px;
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M10,3.62,8.483,2.1,0,10.6l8.483,8.5L10,17.58,3.033,10.6Z' transform='translate(-2.1 10) rotate(-90)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center / 100%;
-  
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M10,3.62,8.483,2.1,0,10.6l8.483,8.5L10,17.58,3.033,10.6Z' transform='translate(-2.1 10) rotate(-90)' fill='%23dd488e'/%3E%3C/svg%3E%0A")
+                      no-repeat center / 100%;
+
                     @media (min-width: $screen-size-pc) {
                       bottom: 50%;
                       transform: translate(50%, 50%);
                       right: -35px;
                       width: 15px;
                       height: 26px;
-                      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.324' height='26' viewBox='0 0 15.324 26'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M15.324,4.424,13,2.1,0,15.1l13,13,2.324-2.324L4.648,15.1Z' transform='translate(15.324 28.1) rotate(180)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center / 100%;
+                      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.324' height='26' viewBox='0 0 15.324 26'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M15.324,4.424,13,2.1,0,15.1l13,13,2.324-2.324L4.648,15.1Z' transform='translate(15.324 28.1) rotate(180)' fill='%23dd488e'/%3E%3C/svg%3E%0A")
+                        no-repeat center / 100%;
                     }
                   }
-  
+
                   &:last-of-type {
                     margin: 0;
-  
+
                     @media (min-width: $screen-size-pc) {
                       margin: 29px 0 35px;
                     }
-  
+
                     &::after {
                       display: none;
                     }
                   }
                 }
               }
-            } 
+            }
 
-            >table.main {
+            > table.main {
               text-align: center;
               margin-top: 10px;
 
@@ -2388,8 +2404,8 @@ body {
               }
 
               thead {
-                border: 1px solid #BF3E7B;
-                background: #DD488E;
+                border: 1px solid #bf3e7b;
+                background: #dd488e;
 
                 tr {
                   width: 100%;
@@ -2428,7 +2444,7 @@ body {
                 tr {
                   width: 100%;
                   border-bottom: 1px solid #ccc;
-                  
+
                   ul {
                     text-align: start;
 
@@ -2442,7 +2458,7 @@ body {
                       &:last-of-type {
                         margin: 0;
                       }
-                      >ul{
+                      > ul {
                         padding: 0 20px;
                       }
                     }
@@ -2454,7 +2470,7 @@ body {
                     @media (min-width: $screen-size-pc) {
                       padding: 25px 30px;
                     }
-                    >p {
+                    > p {
                       font-size: 16px;
                       font-weight: 400;
                       color: #333333;
@@ -2464,7 +2480,7 @@ body {
                         font-size: 18px;
                       }
                       &::before {
-                        content: '';
+                        content: "";
                         display: inline-block;
                         width: 12px;
                         height: 12px;
@@ -2472,7 +2488,7 @@ body {
                         border-radius: 50%;
                         margin-right: 5px;
                       }
-                      &.space{
+                      &.space {
                         margin-top: 20px;
                       }
                     }
@@ -2497,10 +2513,7 @@ body {
               }
             }
 
-
-
-
-            >table.house {
+            > table.house {
               text-align: center;
               margin-top: 10px;
 
@@ -2509,8 +2522,8 @@ body {
               }
 
               thead {
-                border: 1px solid #5F5F5F;
-                background: #6E6E6E;
+                border: 1px solid #5f5f5f;
+                background: #6e6e6e;
 
                 tr {
                   width: 100%;
@@ -2529,7 +2542,7 @@ body {
                     @media (min-width: $screen-size-pc) {
                       font-size: 18px;
                     }
-                    >span {
+                    > span {
                       display: block;
 
                       @media (min-width: $screen-size-pc) {
@@ -2570,34 +2583,34 @@ body {
               }
             }
 
-            p.refer{
+            p.refer {
               font-size: 15px;
-              color: #D62727;
+              color: #d62727;
               margin: 20px 0 0 0;
               @media (min-width: $screen-size-pc) {
                 font-size: 17px;
               }
             }
 
-            p.refer2{
+            p.refer2 {
               font-size: 15px;
-              color: #DD488E;
+              color: #dd488e;
               margin: 9px 0 0 0;
               @media (min-width: $screen-size-pc) {
                 font-size: 17px;
               }
             }
 
-            >ul {
+            > ul {
               width: 100%;
               border: 1px solid #dddddd;
               padding: 0 20px 20px 20px;
 
               &.con-2 {
-                  border-radius: 10px;
-                  border: 1px solid #EBEBEB;
-                  background: #F6F6F6;
-                }
+                border-radius: 10px;
+                border: 1px solid #ebebeb;
+                background: #f6f6f6;
+              }
 
               @media (min-width: $screen-size-pc) {
                 padding: 15px 30px 30px 30px;
@@ -2637,7 +2650,8 @@ body {
                     min-width: 15px;
                     margin-top: 5px;
                     margin-right: 5px;
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z'%3E%3C/path%3E%3C/svg%3E") no-repeat center / cover;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z'%3E%3C/path%3E%3C/svg%3E")
+                      no-repeat center / cover;
 
                     @media (min-width: $screen-size-pc) {
                       width: 20px;
@@ -2646,7 +2660,7 @@ body {
                     }
                   }
 
-                  >p {
+                  > p {
                     font-size: 16px;
                     color: #333;
                     margin: 0;
@@ -2664,7 +2678,6 @@ body {
                       font-size: 18px;
                     }
                   }
-
                 }
 
                 &.b-table {
@@ -2697,13 +2710,13 @@ body {
                         @media (min-width: $screen-size-pc) {
                           font-size: 18px;
                         }
-                        span{
+                        span {
                           display: block;
                           @media (min-width: $screen-size-pc) {
                             display: inline-block;
                           }
                         }
-                        &.td03{
+                        &.td03 {
                           min-width: 140px;
                         }
                       }
@@ -2740,40 +2753,40 @@ body {
 
                       td {
                         font-size: 16px;
-                          font-weight: 400;
-                          color: #555555;
-                          border-right: 1px solid #ccc;
-                          border-bottom: 1px solid #ccc;
-                          padding: 22px 10px;
+                        font-weight: 400;
+                        color: #555555;
+                        border-right: 1px solid #ccc;
+                        border-bottom: 1px solid #ccc;
+                        padding: 22px 10px;
+                        @media (min-width: $screen-size-pc) {
+                          font-size: 18px;
+                          padding: 10px 20px;
+                        }
+                        &.refer {
+                          font-size: 15px;
+                          color: #dd488e;
+                          text-align: end;
+                          background: #f9f9f9;
+                          padding: 15px 10px;
                           @media (min-width: $screen-size-pc) {
-                            font-size: 18px;
-                            padding: 10px 20px;
+                            font-size: 17px;
                           }
-                          &.refer{
-                            font-size: 15px;
-                            color: #DD488E;
-                            text-align: end;
-                            background: #F9F9F9;
-                            padding: 15px 10px;
-                            @media (min-width: $screen-size-pc) {
-                              font-size: 17px;
-                            }
+                        }
+                        &.start {
+                          text-align: start;
+                        }
+                        span {
+                          display: block;
+                          @media (min-width: $screen-size-pc) {
+                            display: inline-block;
                           }
-                          &.start{
-                            text-align: start;
-                          }
-                          span{
-                            display: block;
-                            @media (min-width: $screen-size-pc) {
-                              display: inline-block;
-                            }
-                          }
-                          &:last-of-type{
-                            border-right: none;
-                          }
-                          &.border{
-                            border-right: 1px solid #ccc;
-                          }
+                        }
+                        &:last-of-type {
+                          border-right: none;
+                        }
+                        &.border {
+                          border-right: 1px solid #ccc;
+                        }
                       }
                     }
                   }
@@ -2828,10 +2841,8 @@ body {
                     tr {
                       width: 100%;
                       border-bottom: 1px solid #ccc;
-                      
-                      ul {
-                        
 
+                      ul {
                         li {
                           font-size: 16px;
                           color: #555;
@@ -2854,7 +2865,7 @@ body {
                         @media (min-width: $screen-size-pc) {
                           padding: 25px;
                         }
-                        >p {
+                        > p {
                           font-size: 16px;
                           font-weight: 400;
                           color: #333333;
@@ -2864,7 +2875,7 @@ body {
                             font-size: 18px;
                           }
                           &::before {
-                            content: '';
+                            content: "";
                             display: inline-block;
                             width: 12px;
                             height: 12px;
@@ -2872,7 +2883,7 @@ body {
                             border-radius: 50%;
                             margin-right: 5px;
                           }
-                          &.space{
+                          &.space {
                             margin-top: 20px;
                           }
                         }
@@ -2959,14 +2970,15 @@ body {
                   font-weight: 700;
                   color: #333333;
                   margin-bottom: 79px;
-                  &::before{
+                  &::before {
                     content: "";
                     display: block;
                     margin: 20px 0 0 0;
                     font-size: 0;
                     width: 290px;
                     height: 208px;
-                    background: url('../images/ccimage01.svg') no-repeat center / 100%;
+                    background: url("../images/ccimage01.svg") no-repeat center /
+                      100%;
                     margin-bottom: 20px;
                     @media (min-width: $screen-size-pc) {
                       width: 410px;
@@ -2980,7 +2992,7 @@ body {
                   }
 
                   &::after {
-                    content: '';
+                    content: "";
                     display: block;
                     position: absolute;
                     bottom: 15px;
@@ -2988,7 +3000,8 @@ body {
                     transform: rotate(90deg);
                     width: 36px;
                     height: 36px;
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36.667' height='36.667' viewBox='0 0 36.667 36.667'%3E%3Cpath id='패스_4833' data-name='패스 4833' d='M22.333,4,19.1,7.231,31.89,20.042H4v4.583H31.89L19.1,37.435l3.231,3.231L40.667,22.333Z' transform='translate(-4 -4)' fill='%23949494'/%3E%3C/svg%3E%0A") no-repeat center / 100%;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36.667' height='36.667' viewBox='0 0 36.667 36.667'%3E%3Cpath id='패스_4833' data-name='패스 4833' d='M22.333,4,19.1,7.231,31.89,20.042H4v4.583H31.89L19.1,37.435l3.231,3.231L40.667,22.333Z' transform='translate(-4 -4)' fill='%23949494'/%3E%3C/svg%3E%0A")
+                      no-repeat center / 100%;
 
                     @media (min-width: $screen-size-pc) {
                       bottom: 135px;
@@ -3006,12 +3019,14 @@ body {
                   width: 290px;
                   height: 333px;
                   object-fit: cover;
-                  background: url('../images/mb-house.svg') no-repeat center center / cover;
+                  background: url("../images/mb-house.svg") no-repeat center
+                    center / cover;
 
                   @media (min-width: $screen-size-pc) {
                     width: 510px;
                     height: 350px;
-                    background: url('../images/pc-house.svg') no-repeat center center / cover;
+                    background: url("../images/pc-house.svg") no-repeat center
+                      center / cover;
                   }
                 }
 
@@ -3035,12 +3050,14 @@ body {
                   font-size: 0;
                   width: 305px;
                   height: 200px;
-                  background: url('../images/ccimage02.svg') no-repeat center center / cover;
+                  background: url("../images/ccimage02.svg") no-repeat center
+                    center / cover;
 
                   @media (min-width: $screen-size-pc) {
                     width: 982px;
                     height: 160px;
-                    background: url('../images/ccimage02-pc.svg') no-repeat center center / cover;
+                    background: url("../images/ccimage02-pc.svg") no-repeat
+                      center center / cover;
                   }
                 }
 
@@ -3049,12 +3066,14 @@ body {
                   font-size: 0;
                   width: 305px;
                   height: 1274px;
-                  background: url('../images/ccimage03-m.png') no-repeat center center / cover;
+                  background: url("../images/ccimage03-m.png") no-repeat center
+                    center / cover;
 
                   @media (min-width: $screen-size-pc) {
                     width: 1139px;
                     height: 719px;
-                    background: url('../images/ccimage03-pc.png') no-repeat center center / cover;
+                    background: url("../images/ccimage03-pc.png") no-repeat
+                      center center / cover;
                   }
                 }
 
@@ -3063,17 +3082,18 @@ body {
                   font-size: 0;
                   width: 320px;
                   height: 472px;
-                  background: url('../images/ccimage04-m.png') no-repeat center center / cover;
+                  background: url("../images/ccimage04-m.png") no-repeat center
+                    center / cover;
 
                   @media (min-width: $screen-size-pc) {
                     width: 873px;
                     height: 703px;
-                    background: url('../images/ccimage04-pc.png') no-repeat center center / cover;
+                    background: url("../images/ccimage04-pc.png") no-repeat
+                      center center / cover;
                   }
                 }
               }
             }
-
 
             ul.procedure2 {
               text-align: center;
@@ -3086,8 +3106,8 @@ body {
 
               li {
                 position: relative;
-                border: 1px solid #DD488E;
-                background: #FBF1F5;
+                border: 1px solid #dd488e;
+                background: #fbf1f5;
                 border-radius: 50%;
                 width: 230px;
                 height: 230px;
@@ -3115,7 +3135,7 @@ body {
                 }
 
                 &::after {
-                  content: '';
+                  content: "";
                   display: block;
                   position: absolute;
                   bottom: -20px;
@@ -3123,7 +3143,8 @@ body {
                   transform: translate(50%, 0);
                   width: 24px;
                   height: 13px;
-                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M10,3.62,8.483,2.1,0,10.6l8.483,8.5L10,17.58,3.033,10.6Z' transform='translate(-2.1 10) rotate(-90)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center / 100%;
+                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' viewBox='0 0 17 10'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M10,3.62,8.483,2.1,0,10.6l8.483,8.5L10,17.58,3.033,10.6Z' transform='translate(-2.1 10) rotate(-90)' fill='%23dd488e'/%3E%3C/svg%3E%0A")
+                    no-repeat center / 100%;
 
                   @media (min-width: $screen-size-pc) {
                     bottom: 50%;
@@ -3131,7 +3152,8 @@ body {
                     right: -27px;
                     width: 15px;
                     height: 26px;
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.324' height='26' viewBox='0 0 15.324 26'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M15.324,4.424,13,2.1,0,15.1l13,13,2.324-2.324L4.648,15.1Z' transform='translate(15.324 28.1) rotate(180)' fill='%23dd488e'/%3E%3C/svg%3E%0A") no-repeat center / 100%;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.324' height='26' viewBox='0 0 15.324 26'%3E%3Cpath id='패스_4673' data-name='패스 4673' d='M15.324,4.424,13,2.1,0,15.1l13,13,2.324-2.324L4.648,15.1Z' transform='translate(15.324 28.1) rotate(180)' fill='%23dd488e'/%3E%3C/svg%3E%0A")
+                      no-repeat center / 100%;
                   }
                 }
 
@@ -3147,10 +3169,10 @@ body {
                   }
                 }
 
-                div{
+                div {
                   width: 214px;
                   height: 214px;
-                  border: 1px solid #DD488E;
+                  border: 1px solid #dd488e;
                   background: #fff;
                   border-radius: 50%;
                   display: flex;
@@ -3168,13 +3190,14 @@ body {
                     @media (min-width: $screen-size-pc) {
                       font-size: 18px;
                     }
-                    &.p-img{
-                      &::before{
+                    &.p-img {
+                      &::before {
                         content: "";
                         display: block;
                         width: 43px;
                         height: 52px;
-                        background: url("../images/sub3-img.svg") no-repeat center/ cover;
+                        background: url("../images/sub3-img.svg") no-repeat
+                          center/ cover;
                         margin: 0 auto 20px;
                         @media (min-width: $screen-size-pc) {
                           width: 49px;
@@ -3182,13 +3205,14 @@ body {
                         }
                       }
                     }
-                    &.p-img2{
-                      &::before{
+                    &.p-img2 {
+                      &::before {
                         content: "";
                         display: block;
                         width: 37px;
                         height: 47px;
-                        background: url("../images/sub3-img02.svg") no-repeat center/ cover;
+                        background: url("../images/sub3-img02.svg") no-repeat
+                          center/ cover;
                         margin: 0 auto 20px;
                         @media (min-width: $screen-size-pc) {
                           width: 45px;
@@ -3196,13 +3220,14 @@ body {
                         }
                       }
                     }
-                    &.p-img3{
-                      &::before{
+                    &.p-img3 {
+                      &::before {
                         content: "";
                         display: block;
                         width: 49px;
                         height: 43px;
-                        background: url("../images/sub3-img03.svg") no-repeat center/ cover;
+                        background: url("../images/sub3-img03.svg") no-repeat
+                          center/ cover;
                         margin: 0 auto 20px;
                         @media (min-width: $screen-size-pc) {
                           width: 63px;
@@ -3210,13 +3235,14 @@ body {
                         }
                       }
                     }
-                    &.p-img4{
-                      &::before{
+                    &.p-img4 {
+                      &::before {
                         content: "";
                         display: block;
                         width: 34px;
                         height: 46px;
-                        background: url("../images/sub3-img04.svg") no-repeat center/ cover;
+                        background: url("../images/sub3-img04.svg") no-repeat
+                          center/ cover;
                         margin: 0 auto 20px;
                         @media (min-width: $screen-size-pc) {
                           width: 43px;
@@ -3229,7 +3255,7 @@ body {
               }
             }
 
-            >ul.step {
+            > ul.step {
               border: none;
               padding: 0;
               display: flex;
@@ -3241,7 +3267,7 @@ body {
                 margin-top: 15px;
               }
 
-              >li {
+              > li {
                 width: 50%;
 
                 @media (min-width: $screen-size-pc) {
@@ -3348,7 +3374,7 @@ body {
                     margin-top: 16px;
 
                     &::before {
-                      content: '';
+                      content: "";
                       display: block;
                       width: 90%;
                       height: 1px;
@@ -3453,20 +3479,20 @@ body {
               }
             }
 
-            div.sub2{
+            div.sub2 {
               @media (min-width: $screen-size-pc) {
                 display: flex;
               }
-              >ul{
+              > ul {
                 width: 100%;
                 border: 1px solid #dddddd;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 37px 0;
-                
-                >li{
-                  &.title{
+
+                > li {
+                  &.title {
                     display: block;
                     font-size: 16px;
                     color: #111111;
@@ -3474,13 +3500,14 @@ body {
                     @media (min-width: $screen-size-pc) {
                       font-size: 18px;
                     }
-                    &.img01{
-                      &::before{
+                    &.img01 {
+                      &::before {
                         content: "";
                         display: block;
                         width: 113px;
                         height: 80px;
-                        background: url("../images/sub2-img.svg") no-repeat center/ cover;
+                        background: url("../images/sub2-img.svg") no-repeat
+                          center/ cover;
                         margin: 0 auto 20px;
                         @media (min-width: $screen-size-pc) {
                           width: 172px;
@@ -3488,13 +3515,14 @@ body {
                         }
                       }
                     }
-                    &.img02{
-                      &::before{
+                    &.img02 {
+                      &::before {
                         content: "";
                         display: block;
                         width: 98px;
                         height: 85px;
-                        background: url("../images/sub2-img02.svg") no-repeat center/ cover;
+                        background: url("../images/sub2-img02.svg") no-repeat
+                          center/ cover;
                         margin: 0 auto 20px;
                         @media (min-width: $screen-size-pc) {
                           width: 152px;
@@ -3502,13 +3530,14 @@ body {
                         }
                       }
                     }
-                    &.img03{
-                      &::before{
+                    &.img03 {
+                      &::before {
                         content: "";
                         display: block;
                         width: 120px;
                         height: 87px;
-                        background: url("../images/sub2-img03.svg") no-repeat center/ cover;
+                        background: url("../images/sub2-img03.svg") no-repeat
+                          center/ cover;
                         margin: 0 auto 20px;
                         @media (min-width: $screen-size-pc) {
                           width: 178px;
@@ -3517,7 +3546,7 @@ body {
                       }
                     }
                   }
-                  p{
+                  p {
                     margin: 0;
                     text-align: center;
                     font-size: 15px;
@@ -3529,7 +3558,6 @@ body {
                 }
               }
             }
-            
           }
 
           div.b-red {
@@ -3542,14 +3570,13 @@ body {
             }
           }
 
-
-          div.c-content{
-            div.greeting{
-              .greeting-title{
+          div.c-content {
+            div.greeting {
+              .greeting-title {
                 position: relative;
                 width: 100%;
                 height: 320px;
-                background-color: #FEF8FA;
+                background-color: #fef8fa;
                 padding-top: 46px;
                 margin-bottom: 30px;
                 @media (min-width: $screen-size-pc) {
@@ -3557,7 +3584,7 @@ body {
                   padding: 70px 51px 91px;
                   margin-bottom: 60px;
                 }
-                >h4{
+                > h4 {
                   margin: 0;
                   text-align: center;
                   font-size: 27px;
@@ -3566,23 +3593,24 @@ body {
                     font-size: 45px;
                     text-align: start;
                   }
-                  span{
+                  span {
                     display: block;
                     @media (min-width: $screen-size-pc) {
-                      &.pc{
+                      &.pc {
                         display: inline-block;
                       }
                     }
                   }
                 }
-                &::after{
+                &::after {
                   content: "";
                   display: block;
                   position: absolute;
                   bottom: -50px;
                   right: 50%;
                   transform: translateX(50%);
-                  background: url(../images/greeting-img.svg) no-repeat center/ 100%;
+                  background: url(../images/greeting-img.svg) no-repeat center/
+                    100%;
                   width: 246px;
                   height: 240px;
                   @media (min-width: $screen-size-pc) {
@@ -3594,7 +3622,7 @@ body {
                   }
                 }
               }
-              >p{
+              > p {
                 font-size: 16px;
                 color: #555555;
                 line-height: 1.6;
@@ -3603,31 +3631,31 @@ body {
                   font-size: 18px;
                 }
               }
-              div.greeting-footer{
+              div.greeting-footer {
                 margin-top: 34px;
                 text-align: end;
                 @media (min-width: $screen-size-pc) {
                   margin-top: 84px;
                 }
-                  h5{
-                    font-size: 17px;
-                    color: #555555;
-                    font-weight: 700;
-                    margin: 0;
-                    @media (min-width: $screen-size-pc) {
-                      font-size: 19px;
-                    }
+                h5 {
+                  font-size: 17px;
+                  color: #555555;
+                  font-weight: 700;
+                  margin: 0;
+                  @media (min-width: $screen-size-pc) {
+                    font-size: 19px;
                   }
-                  p{
-                    font-size: 17px;
-                    color: #555555;
-                    @media (min-width: $screen-size-pc) {
-                      font-size: 19px;
-                    }
+                }
+                p {
+                  font-size: 17px;
+                  color: #555555;
+                  @media (min-width: $screen-size-pc) {
+                    font-size: 19px;
                   }
+                }
               }
             }
-            >h4{
+            > h4 {
               font-size: 18px;
               color: #111111;
               display: flex;
@@ -3637,7 +3665,7 @@ body {
                 font-size: 20px;
                 margin: 50px 0 15px;
               }
-              &::before{
+              &::before {
                 content: "";
                 width: 15px;
                 height: 15px;
@@ -3647,16 +3675,16 @@ body {
                 margin-right: 5px;
                 @media (min-width: $screen-size-pc) {
                   width: 17px;
-                  height: 17px
+                  height: 17px;
                 }
               }
             }
-            ul.sub8{
+            ul.sub8 {
               margin: 9px 0 0 0;
-              li{
+              li {
                 position: relative;
                 width: 100%;
-                border: 1px solid #DDDDDD;
+                border: 1px solid #dddddd;
                 border-radius: 10px;
                 margin: 0 auto 10px;
                 padding: 25px 25px 160px 25px;
@@ -3664,12 +3692,13 @@ body {
                   width: 100%;
                   padding: 60px 300px 60px 60px;
                 }
-                &:nth-child(1){
-                  &::after{
+                &:nth-child(1) {
+                  &::after {
                     content: "";
                     width: 160px;
                     height: 170px;
-                    background: url("../images/sub8-img.png") no-repeat center / cover;
+                    background: url("../images/sub8-img.png") no-repeat center /
+                      cover;
                     position: absolute;
                     right: 10px;
                     bottom: 0;
@@ -3680,12 +3709,13 @@ body {
                     }
                   }
                 }
-                &:nth-child(2){
-                  &::after{
+                &:nth-child(2) {
+                  &::after {
                     content: "";
                     width: 160px;
                     height: 170px;
-                    background: url("../images/sub8-img2.png") no-repeat center / cover;
+                    background: url("../images/sub8-img2.png") no-repeat center /
+                      cover;
                     position: absolute;
                     right: 10px;
                     bottom: 0;
@@ -3696,12 +3726,13 @@ body {
                     }
                   }
                 }
-                &:nth-child(3){
-                  &::after{
+                &:nth-child(3) {
+                  &::after {
                     content: "";
                     width: 160px;
                     height: 170px;
-                    background: url("../images/sub8-img3.png") no-repeat center / cover;
+                    background: url("../images/sub8-img3.png") no-repeat center /
+                      cover;
                     position: absolute;
                     right: 10px;
                     bottom: 0;
@@ -3712,12 +3743,13 @@ body {
                     }
                   }
                 }
-                &:nth-child(4){
-                  &::after{
+                &:nth-child(4) {
+                  &::after {
                     content: "";
                     width: 160px;
                     height: 170px;
-                    background: url("../images/sub8-img4.png") no-repeat center / cover;
+                    background: url("../images/sub8-img4.png") no-repeat center /
+                      cover;
                     position: absolute;
                     right: 10px;
                     bottom: 0;
@@ -3728,12 +3760,13 @@ body {
                     }
                   }
                 }
-                &:nth-child(5){
-                  &::after{
+                &:nth-child(5) {
+                  &::after {
                     content: "";
                     width: 160px;
                     height: 170px;
-                    background: url("../images/sub8-img5.png") no-repeat center / cover;
+                    background: url("../images/sub8-img5.png") no-repeat center /
+                      cover;
                     position: absolute;
                     right: 10px;
                     bottom: 0;
@@ -3744,12 +3777,13 @@ body {
                     }
                   }
                 }
-                &:nth-child(6){
-                  &::after{
+                &:nth-child(6) {
+                  &::after {
                     content: "";
                     width: 170px;
                     height: 170px;
-                    background: url("../images/sub8-img6.png") no-repeat center / cover;
+                    background: url("../images/sub8-img6.png") no-repeat center /
+                      cover;
                     position: absolute;
                     right: 10px;
                     bottom: 0;
@@ -3760,12 +3794,13 @@ body {
                     }
                   }
                 }
-                &:nth-child(7){
-                  &::after{
+                &:nth-child(7) {
+                  &::after {
                     content: "";
                     width: 160px;
                     height: 170px;
-                    background: url("../images/sub8-img7.png") no-repeat center / cover;
+                    background: url("../images/sub8-img7.png") no-repeat center /
+                      cover;
                     position: absolute;
                     right: 10px;
                     bottom: 0;
@@ -3776,12 +3811,13 @@ body {
                     }
                   }
                 }
-                &:nth-child(8){
-                  &::after{
+                &:nth-child(8) {
+                  &::after {
                     content: "";
                     width: 210px;
                     height: 170px;
-                    background: url("../images/sub8-img8.svg") no-repeat center / cover;
+                    background: url("../images/sub8-img8.svg") no-repeat center /
+                      cover;
                     position: absolute;
                     right: 10px;
                     bottom: 0;
@@ -3792,7 +3828,7 @@ body {
                     }
                   }
                 }
-                h5{
+                h5 {
                   font-size: 19px;
                   font-weight: 700;
                   color: #111111;
@@ -3801,13 +3837,13 @@ body {
                     font-size: 24px;
                   }
                 }
-                p{
+                p {
                   font-size: 16px;
                   color: #555555;
                   @media (min-width: $screen-size-pc) {
                     font-size: 18px;
                   }
-                  span{
+                  span {
                     display: block;
                     font-size: 17px;
                     margin-bottom: 5px;
@@ -3819,28 +3855,30 @@ body {
               }
             }
 
-            ul.sub9{
+            ul.sub9 {
               margin: 20px 0 0 0;
-              
-              &::before{
+
+              &::before {
                 content: "";
                 display: block;
                 font-size: 0;
                 margin: 40px auto 20px;
                 width: 290px;
                 height: 790px;
-                background: url("../images/sub9-img.svg") no-repeat center / cover;
+                background: url("../images/sub9-img.svg") no-repeat center /
+                  cover;
                 @media (min-width: $screen-size-pc) {
                   width: 747px;
                   height: 697px;
-                  background: url("../images/sub9-img2.svg") no-repeat center / cover;
+                  background: url("../images/sub9-img2.svg") no-repeat center /
+                    cover;
                   margin: 70px auto 30px;
                 }
               }
-              li{
+              li {
                 width: 100%;
                 height: 100px;
-                background: #EFEFEF;
+                background: #efefef;
                 border-radius: 40px;
                 font-size: 17px;
                 color: #333333;
@@ -3855,13 +3893,13 @@ body {
                   padding: 52px 0;
                   border-radius: 80px;
                   margin-right: 23px;
-                  &:last-of-type{
+                  &:last-of-type {
                     margin-right: 0;
                   }
                 }
-                span{
+                span {
                   display: block;
-                  &.pc{
+                  &.pc {
                     display: inline-block;
                     @media (min-width: $screen-size-pc) {
                       display: block;
@@ -3871,10 +3909,10 @@ body {
               }
             }
 
-            table.sub10-table{
-              tr{
+            table.sub10-table {
+              tr {
                 width: 100%;
-                td{
+                td {
                   border: 1px solid #ccc;
                   font-size: 15px;
                   color: #333333;
@@ -3883,17 +3921,17 @@ body {
                     font-size: 17px;
                   }
                 }
-                .td1{
+                .td1 {
                   min-width: 91px;
-                  background: #F6F6F6;
+                  background: #f6f6f6;
                   text-align: center;
                   @media (min-width: $screen-size-pc) {
                     min-width: 160px;
                   }
                 }
-                .td2{
+                .td2 {
                   width: 100%;
-                  span{
+                  span {
                     display: block;
                     @media (min-width: $screen-size-pc) {
                       display: inline-block;
@@ -3903,20 +3941,20 @@ body {
               }
             }
 
-            ul.sub10-day{
+            ul.sub10-day {
               width: 100%;
-              li{
+              li {
                 padding: 20px 21px;
-                border: 1px solid #DBE9F4;
+                border: 1px solid #dbe9f4;
                 border-radius: 10px;
-                box-shadow: 0px 4px 1px #1E75B829;
+                box-shadow: 0px 4px 1px #1e75b829;
                 margin-bottom: 10px;
                 @media (min-width: $screen-size-pc) {
                   display: flex;
                   align-items: center;
                   padding: 23px 28px;
                 }
-                strong{
+                strong {
                   font-size: 14px;
                   font-weight: 700;
                   color: #111111;
@@ -3926,7 +3964,7 @@ body {
                     font-size: 16px;
                   }
                 }
-                p{
+                p {
                   font-size: 16px;
                   color: #555555;
                   margin: 10px 0 0 0;
@@ -3938,21 +3976,23 @@ body {
               }
             }
 
-            div.org{
+            div.org {
               font-size: 0;
               margin: 0 auto;
               width: 345px;
               height: 840px;
-              background: url("../images/sub10-img.svg") no-repeat center / cover;
+              background: url("../images/sub10-img.svg") no-repeat center /
+                cover;
               display: block;
               @media (min-width: $screen-size-pc) {
                 width: 1200px;
                 height: 720px;
-                background: url("../images/sub10-img2.svg") no-repeat center / cover;
+                background: url("../images/sub10-img2.svg") no-repeat center /
+                  cover;
               }
             }
 
-            div.map{
+            div.map {
               width: 100%;
               height: 440px;
               background: #e7e7e7;
@@ -3961,18 +4001,19 @@ body {
               }
             }
 
-            div.map-address{
+            div.map-address {
               margin-top: 20px;
               @media (min-width: $screen-size-pc) {
                 display: flex;
                 margin-top: 46px;
               }
-              &::before{
+              &::before {
                 content: "";
                 display: block;
                 width: 43px;
                 height: 48px;
-                background: url("../images/carelogo.svg") no-repeat center /cover;
+                background: url("../images/carelogo.svg") no-repeat center /
+                  cover;
                 margin-bottom: 6px;
                 @media (min-width: $screen-size-pc) {
                   width: 56px;
@@ -3980,7 +4021,7 @@ body {
                   margin: 0 14px 0 0;
                 }
               }
-              h5{
+              h5 {
                 font-size: 19px;
                 font-weight: 700;
                 color: #111111;
@@ -3989,14 +4030,14 @@ body {
                   font-size: 22px;
                 }
               }
-              p{
+              p {
                 font-size: 16px;
                 color: #111111;
                 margin: 0;
                 @media (min-width: $screen-size-pc) {
                   font-size: 18px;
                 }
-                span{
+                span {
                   display: block;
                   @media (min-width: $screen-size-pc) {
                     display: inline-block;
@@ -4005,16 +4046,16 @@ body {
               }
             }
 
-            div.map-move{
+            div.map-move {
               margin-top: 15px;
-              border-top: 1px dashed #AAAAAA;
-              border-bottom: 1px dashed #AAAAAA;
+              border-top: 1px dashed #aaaaaa;
+              border-bottom: 1px dashed #aaaaaa;
               padding: 15px 0;
               @media (min-width: $screen-size-pc) {
                 padding: 26px 0;
                 margin-top: 25px;
               }
-              p{
+              p {
                 font-size: 15px;
                 color: #555555;
                 margin: 0;
@@ -4024,11 +4065,7 @@ body {
               }
             }
           }
-
-
         }
-
-
       }
 
       section.sub-board {
@@ -4066,7 +4103,8 @@ body {
             select {
               max-width: 110px;
               width: 100%;
-              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7.41' viewBox='0 0 12 7.41'%3E%3Cpath id='패스_4975' data-name='패스 4975' d='M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z' transform='translate(-6 -8.59)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat right center / 10px auto;
+              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7.41' viewBox='0 0 12 7.41'%3E%3Cpath id='패스_4975' data-name='패스 4975' d='M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z' transform='translate(-6 -8.59)' fill='%23333'/%3E%3C/svg%3E%0A")
+                no-repeat right center / 10px auto;
               border: none;
               outline: none;
               appearance: none;
@@ -4078,7 +4116,8 @@ body {
                 max-width: 140px;
                 width: 100%;
                 font-size: 17px;
-                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7.41' viewBox='0 0 12 7.41'%3E%3Cpath id='패스_4975' data-name='패스 4975' d='M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z' transform='translate(-6 -8.59)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat right center / 13px auto;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7.41' viewBox='0 0 12 7.41'%3E%3Cpath id='패스_4975' data-name='패스 4975' d='M16.59,8.59,12,13.17,7.41,8.59,6,10l6,6,6-6Z' transform='translate(-6 -8.59)' fill='%23333'/%3E%3C/svg%3E%0A")
+                  no-repeat right center / 13px auto;
               }
 
               option {
@@ -4107,7 +4146,8 @@ body {
             button {
               width: 27px;
               height: 23px;
-              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.251' height='17.251' viewBox='0 0 17.251 17.251'%3E%3Cpath id='패스_4977' data-name='패스 4977' d='M59.963,23.251l-5.082-5.082a6.636,6.636,0,1,1,2.972-5.533,6.606,6.606,0,0,1-1.1,3.649l5.082,5.1ZM55.2,12.635a3.981,3.981,0,1,0-3.981,3.981A3.993,3.993,0,0,0,55.2,12.635Z' transform='translate(-44.583 -6)' fill='%23333'/%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+              background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.251' height='17.251' viewBox='0 0 17.251 17.251'%3E%3Cpath id='패스_4977' data-name='패스 4977' d='M59.963,23.251l-5.082-5.082a6.636,6.636,0,1,1,2.972-5.533,6.606,6.606,0,0,1-1.1,3.649l5.082,5.1ZM55.2,12.635a3.981,3.981,0,1,0-3.981,3.981A3.993,3.993,0,0,0,55.2,12.635Z' transform='translate(-44.583 -6)' fill='%23333'/%3E%3C/svg%3E%0A")
+                no-repeat center / 100% auto;
               border: none;
               font-size: 0;
 
@@ -4138,7 +4178,7 @@ body {
               border-top: none;
 
               &::before {
-                content: '';
+                content: "";
                 display: block;
                 position: absolute;
                 top: 0;
@@ -4151,7 +4191,7 @@ body {
             }
 
             li {
-              position:relative;
+              position: relative;
 
               &:hover {
                 background: #fcf5f7;
@@ -4164,14 +4204,14 @@ body {
               }
 
               button {
-                position:absolute;
-                z-index:20;
-                right:0;
-                bottom:0;
-                background:#222;
-                color:#fff;
-                font-size:12px;
-                border:none;
+                position: absolute;
+                z-index: 20;
+                right: 0;
+                bottom: 0;
+                background: #222;
+                color: #fff;
+                font-size: 12px;
+                border: none;
               }
 
               a {
@@ -4233,6 +4273,7 @@ body {
                       }
 
                       h5 {
+                        position: relative;
                         margin: 0;
                         font-size: 17px;
                         color: #333333;
@@ -4253,6 +4294,22 @@ body {
                           display: -webkit-box;
                           -webkit-line-clamp: 1;
                           -webkit-box-orient: vertical;
+                        }
+
+                        &:has(u) {
+                          padding-left: 34px;
+                          u {
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 24px;
+                            height: 24px;
+                            font-size: 0;
+                            background: url("data:image/svg+xml,%3Csvg id='그룹_13254' data-name='그룹 13254' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='패스_9505' data-name='패스 9505' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='패스_9506' data-name='패스 9506' d='M18,8H17V6A5,5,0,0,0,7,6V8H6a2.006,2.006,0,0,0-2,2V20a2.006,2.006,0,0,0,2,2H18a2.006,2.006,0,0,0,2-2V10A2.006,2.006,0,0,0,18,8Zm-6,9a2,2,0,1,1,2-2A2.006,2.006,0,0,1,12,17Zm3.1-9H8.9V6a3.1,3.1,0,0,1,6.2,0Z' fill='%23dd488e'/%3E%3C/svg%3E%0A")
+                              no-repeat center / 100% auto;
+                          }
                         }
                       }
                     }
@@ -4488,8 +4545,9 @@ body {
                         }
 
                         &::before {
-                          content: '';
-                          background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M17.295,9.4H13.782V3H8.513V9.4H5l6.147,7.47ZM5,19.008v2.134H17.295V19.008Z' transform='translate(0.853 0.512)' fill='%233a9a8f'/%3E%3C/svg%3E%0A") no-repeat center / cover;
+                          content: "";
+                          background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H24V24H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M17.295,9.4H13.782V3H8.513V9.4H5l6.147,7.47ZM5,19.008v2.134H17.295V19.008Z' transform='translate(0.853 0.512)' fill='%233a9a8f'/%3E%3C/svg%3E%0A")
+                            no-repeat center / cover;
                           display: block;
                           margin-left: 3px;
                           width: 28px;
@@ -4511,10 +4569,17 @@ body {
                         color: #555555;
                         padding: 0 10px;
                       }
+
+                      u {
+                        color: #5176b7;
+
+                        &.ok {
+                          color: #b2305a;
+                        }
+                      }
                     }
 
                     &.img {
-
                       // margin: 0 auto;
                       img {
                         width: 295px;
@@ -4595,7 +4660,7 @@ body {
                 }
 
                 &::before {
-                  content: '';
+                  content: "";
                   display: block;
                   position: absolute;
                   left: 10px;
@@ -4603,7 +4668,8 @@ body {
                   transform: translateY(-50%);
                   width: 34px;
                   height: 34px;
-                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.582' height='17.637' viewBox='0 0 9.582 17.637'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='9.582' height='17.637' fill='%23fff'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg  transform='translate(0 0)'%3E%3Cg transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1260' data-name='패스 1260' d='M12.522,42.755H10.251a.388.388,0,0,0-.387.388v2.229a.388.388,0,0,0,.387.388h2.271a.388.388,0,0,0,.388-.388V43.143a.388.388,0,0,0-.388-.388' transform='translate(-6.488 -28.124)' fill='%23fff'/%3E%3Cpath d='M5.015,0C1.827,0,0,1.959,0,5.376a.388.388,0,0,0,.389.387h1.7a.388.388,0,0,0,.388-.387C2.474,3.308,3.3,2.3,4.992,2.3A1.9,1.9,0,0,1,7.107,4.4,3.611,3.611,0,0,1,5.943,6.85a7.79,7.79,0,0,0-2.229,6.039.389.389,0,0,0,.388.388H5.694a.388.388,0,0,0,.388-.388,5.274,5.274,0,0,1,1.55-4.321A5.882,5.882,0,0,0,9.582,4.4,4.246,4.246,0,0,0,5.015,0' transform='translate(0 0)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 26% auto;
+                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='9.582' height='17.637' viewBox='0 0 9.582 17.637'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='9.582' height='17.637' fill='%23fff'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg  transform='translate(0 0)'%3E%3Cg transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1260' data-name='패스 1260' d='M12.522,42.755H10.251a.388.388,0,0,0-.387.388v2.229a.388.388,0,0,0,.387.388h2.271a.388.388,0,0,0,.388-.388V43.143a.388.388,0,0,0-.388-.388' transform='translate(-6.488 -28.124)' fill='%23fff'/%3E%3Cpath d='M5.015,0C1.827,0,0,1.959,0,5.376a.388.388,0,0,0,.389.387h1.7a.388.388,0,0,0,.388-.387C2.474,3.308,3.3,2.3,4.992,2.3A1.9,1.9,0,0,1,7.107,4.4,3.611,3.611,0,0,1,5.943,6.85a7.79,7.79,0,0,0-2.229,6.039.389.389,0,0,0,.388.388H5.694a.388.388,0,0,0,.388-.388,5.274,5.274,0,0,1,1.55-4.321A5.882,5.882,0,0,0,9.582,4.4,4.246,4.246,0,0,0,5.015,0' transform='translate(0 0)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+                    no-repeat center / 26% auto;
                   background-color: #555555;
                   border-radius: 50%;
 
@@ -4615,7 +4681,7 @@ body {
                 }
 
                 &::after {
-                  content: '';
+                  content: "";
                   display: block;
                   position: absolute;
                   right: 10px;
@@ -4623,7 +4689,8 @@ body {
                   margin-top: -4px;
                   width: 14px;
                   height: 8px;
-                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.41' height='9.418' viewBox='0 0 15.41 9.418'%3E%3Cg transform='translate(0.705 8.709) rotate(-90)'%3E%3Cpath d='M7.039,14,0,7,7.039,0,8,.956,1.923,7,8,13.044Z' transform='translate(0 0)' fill='%23555' stroke='%23555' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.41' height='9.418' viewBox='0 0 15.41 9.418'%3E%3Cg transform='translate(0.705 8.709) rotate(-90)'%3E%3Cpath d='M7.039,14,0,7,7.039,0,8,.956,1.923,7,8,13.044Z' transform='translate(0 0)' fill='%23555' stroke='%23555' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A")
+                    no-repeat center / 100% auto;
 
                   @media (min-width: $screen-size-pc) {
                     width: 15px;
@@ -4635,12 +4702,19 @@ body {
                 &.on {
                   &::before {
                     background-color: #818cf2;
-                    @include drop-shadow($x: 0, $y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
+                    @include drop-shadow(
+                      $x: 0,
+                      $y: 3px,
+                      $blur: 6px,
+                      $spread: 0,
+                      $alpha: 0.25
+                    );
                   }
 
                   &::after {
                     transform: rotate(180deg);
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.41' height='9.418' viewBox='0 0 15.41 9.418'%3E%3Cg transform='translate(0.705 8.709) rotate(-90)'%3E%3Cpath d='M7.039,14,0,7,7.039,0,8,.956,1.923,7,8,13.044Z' transform='translate(0 0)' fill='%23555' stroke='%23818CF2' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 100% auto;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.41' height='9.418' viewBox='0 0 15.41 9.418'%3E%3Cg transform='translate(0.705 8.709) rotate(-90)'%3E%3Cpath d='M7.039,14,0,7,7.039,0,8,.956,1.923,7,8,13.044Z' transform='translate(0 0)' fill='%23555' stroke='%23818CF2' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A")
+                      no-repeat center / 100% auto;
                   }
                 }
               }
@@ -4656,7 +4730,13 @@ body {
                 color: #555;
                 line-height: 1.6;
                 word-break: keep-all;
-                @include inner-shadow($x: 0, $y: 4px, $blur: 4px, $spread: 0, $alpha: 0.1);
+                @include inner-shadow(
+                  $x: 0,
+                  $y: 4px,
+                  $blur: 4px,
+                  $spread: 0,
+                  $alpha: 0.1
+                );
 
                 @include ani(0.2s);
 
@@ -4670,7 +4750,7 @@ body {
                 }
               }
 
-              h5.on+div {
+              h5.on + div {
                 max-height: 3000px;
                 padding-top: 34px;
                 padding-bottom: 34px;
@@ -4681,11 +4761,11 @@ body {
         }
 
         div.write {
-
           div.bo_w_tit {
-            margin:0 0 20px;
+            margin: 0 0 20px;
 
-            input[type=text] {
+            input[type="text"],
+            input[type="password"] {
               width: 100%;
               border: 1px solid #ccc;
               padding: 10px;
@@ -4694,79 +4774,78 @@ body {
               color: #222;
 
               &#wr_1 {
-                margin-top:10px;
+                margin-top: 10px;
               }
             }
           }
 
+          div.chk_box {
+            margin: 0 0 20px;
+          }
+
           div.cke_sc {
-            display:none;
+            display: none;
           }
 
           div.bo_w_link,
           div.bo_w_flie {
-
-            &>label {
-              display:block;
-              font-size:14px;
-              width:90px;
-              font-weight:600;
-              line-height:42px;
+            & > label {
+              display: block;
+              font-size: 14px;
+              width: 90px;
+              font-weight: 600;
+              line-height: 42px;
             }
 
             input {
-              font-size:14px;
+              font-size: 14px;
             }
 
-            input[type=text],
-            input[type=file] {
-              border:1px solid #ccc;
-              vertical-align:top;
-              width:calc(100% );
-              height:42px;
+            input[type="text"],
+            input[type="file"] {
+              border: 1px solid #ccc;
+              vertical-align: top;
+              width: calc(100%);
+              height: 42px;
 
-              &[type=file] {
-                border:none;
+              &[type="file"] {
+                border: none;
               }
             }
           }
 
           span.file_del {
-            display:inline-block;
-            
-            input {
-              display:none;
+            display: inline-block;
 
+            input {
+              display: none;
             }
             label {
-              display:block;
-              border:1px solid #222;
-              background:#fff;
-              padding:10px;
-              color:#222;
-              font-weight:600;
+              display: block;
+              border: 1px solid #222;
+              background: #fff;
+              padding: 10px;
+              color: #222;
+              font-weight: 600;
 
               u {
-                display:none;
-                text-decoration:none;
+                display: none;
+                text-decoration: none;
               }
             }
 
             input:checked + label {
-              border-color:#ccc;
-              background:#efefef;
-              color:#999;
+              border-color: #ccc;
+              background: #efefef;
+              color: #999;
 
               u {
-                display:inline-block;
-                background:#ccc;
-                padding:0 10px;
+                display: inline-block;
+                background: #ccc;
+                padding: 0 10px;
               }
             }
           }
-
-
-
 
           div.button-set {
             position: relative;
@@ -4776,7 +4855,7 @@ body {
             a,
             button {
               display: inline-block;
-              border:none;
+              border: none;
               font-size: 16px;
               font-weight: 400;
               color: #333;
@@ -4788,10 +4867,10 @@ body {
               &.btn_submit {
                 background: #333333;
                 color: #fff;
-
               }
 
-              @media (min-width: $screen-size-pc) {}
+              @media (min-width: $screen-size-pc) {
+              }
             }
           }
         }
@@ -4851,7 +4930,7 @@ body {
 
                 &.day {
                   &::before {
-                    content: '';
+                    content: "";
                     display: inline-block;
                     width: 1px;
                     height: 15px;
@@ -4887,27 +4966,24 @@ body {
               text-overflow: ellipsis;
 
               &:last-of-type {
-
                 border-bottom: 1px solid #bbbbbb;
 
                 @media (min-width: $screen-size-pc) {
-
                   padding-bottom: 10px;
                 }
 
-                padding-bottom:15px;
-
+                padding-bottom: 15px;
               }
-
 
               @media (min-width: $screen-size-pc) {
                 font-size: 17px;
               }
 
               &::before {
-                content: '';
+                content: "";
                 display: inline-block;
-                background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='21.333' height='21.333' viewBox='0 0 21.333 21.333'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H21.333V21.333H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M16.851,8.187H13.465V3H8.386V8.187H5l5.926,6.051ZM5,15.967V17.7H16.851V15.967Z' transform='translate(-0.259 -0.156)' fill='%235a83b4'/%3E%3C/svg%3E%0A") no-repeat center / cover;
+                background: url("data:image/svg+xml,%3Csvg id='file_download_black_24dp' xmlns='http://www.w3.org/2000/svg' width='21.333' height='21.333' viewBox='0 0 21.333 21.333'%3E%3Cpath id='패스_789' data-name='패스 789' d='M0,0H21.333V21.333H0Z' fill='none'/%3E%3Cpath id='패스_790' data-name='패스 790' d='M16.851,8.187H13.465V3H8.386V8.187H5l5.926,6.051ZM5,15.967V17.7H16.851V15.967Z' transform='translate(-0.259 -0.156)' fill='%235a83b4'/%3E%3C/svg%3E%0A")
+                  no-repeat center / cover;
                 width: 20px;
                 height: 15px;
                 margin-right: 8px;
@@ -4940,16 +5016,13 @@ body {
               text-overflow: ellipsis;
 
               &:last-of-type {
-
                 border-bottom: 1px solid #bbbbbb;
 
                 @media (min-width: $screen-size-pc) {
-
                   padding-bottom: 10px;
                 }
 
-                padding-bottom:15px;
-
+                padding-bottom: 15px;
               }
 
               @media (min-width: $screen-size-pc) {
@@ -4957,9 +5030,10 @@ body {
               }
 
               &::before {
-                content: '';
+                content: "";
                 display: inline-block;
-                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.198' height='21.142' viewBox='0 0 25.198 21.142'%3E%3Cpath id='link_FILL0_wght500_GRAD0_opsz48' d='M84.366,381.2H79.729a5.71,5.71,0,1,1,0-11.42h4.637v1.894H79.732a3.819,3.819,0,1,0,0,7.639h4.634Zm-3.5-4.836v-1.742H89.68v1.742Zm5.311,4.836v-1.888h4.634a3.82,3.82,0,0,0,0-7.639H86.174v-1.894h4.637a5.71,5.71,0,0,1,0,11.42Z' transform='translate(-248.992 -271.979) rotate(-30)' fill='%2354699d'/%3E%3C/svg%3E%0A") no-repeat center / cover;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.198' height='21.142' viewBox='0 0 25.198 21.142'%3E%3Cpath id='link_FILL0_wght500_GRAD0_opsz48' d='M84.366,381.2H79.729a5.71,5.71,0,1,1,0-11.42h4.637v1.894H79.732a3.819,3.819,0,1,0,0,7.639h4.634Zm-3.5-4.836v-1.742H89.68v1.742Zm5.311,4.836v-1.888h4.634a3.82,3.82,0,0,0,0-7.639H86.174v-1.894h4.637a5.71,5.71,0,0,1,0,11.42Z' transform='translate(-248.992 -271.979) rotate(-30)' fill='%2354699d'/%3E%3C/svg%3E%0A")
+                  no-repeat center / cover;
                 width: 20px;
                 height: 15px;
                 margin-right: 8px;
@@ -5015,10 +5089,10 @@ body {
               &.list {
                 background: #333333;
                 color: #fff;
-
               }
 
-              @media (min-width: $screen-size-pc) {}
+              @media (min-width: $screen-size-pc) {
+              }
             }
           }
 
@@ -5047,9 +5121,10 @@ body {
 
                 &.left {
                   &::before {
-                    content: '';
+                    content: "";
                     display: inline-block;
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='5' viewBox='0 0 10 5'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16' data-name='사각형 16' width='5' height='10' fill='%23111'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_1735' data-name='그룹 1735' transform='translate(0 5) rotate(-90)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M.536,10a.528.528,0,0,1-.358-.14.553.553,0,0,1-.041-.771L3.743,5,.137.911A.553.553,0,0,1,.178.14.53.53,0,0,1,.936.181L4.863,4.634a.554.554,0,0,1,0,.729L.936,9.819a.53.53,0,0,1-.4.181' transform='translate(0 0)' fill='%23111'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / cover;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='5' viewBox='0 0 10 5'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16' data-name='사각형 16' width='5' height='10' fill='%23111'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_1735' data-name='그룹 1735' transform='translate(0 5) rotate(-90)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M.536,10a.528.528,0,0,1-.358-.14.553.553,0,0,1-.041-.771L3.743,5,.137.911A.553.553,0,0,1,.178.14.53.53,0,0,1,.936.181L4.863,4.634a.554.554,0,0,1,0,.729L.936,9.819a.53.53,0,0,1-.4.181' transform='translate(0 0)' fill='%23111'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+                      no-repeat center / cover;
                     width: 10px;
                     height: 7px;
                     margin-right: 10px;
@@ -5058,9 +5133,10 @@ body {
 
                 &.right {
                   &::before {
-                    content: '';
+                    content: "";
                     display: inline-block;
-                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='5' viewBox='0 0 10 5'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16' data-name='사각형 16' width='5' height='10' fill='%23111'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_1736' data-name='그룹 1736' transform='translate(10) rotate(90)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M.536,10a.528.528,0,0,1-.358-.14.553.553,0,0,1-.041-.771L3.743,5,.137.911A.553.553,0,0,1,.178.14.53.53,0,0,1,.936.181L4.863,4.634a.554.554,0,0,1,0,.729L.936,9.819a.53.53,0,0,1-.4.181' transform='translate(0 0)' fill='%23111'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / cover;
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10' height='5' viewBox='0 0 10 5'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_16' data-name='사각형 16' width='5' height='10' fill='%23111'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_1736' data-name='그룹 1736' transform='translate(10) rotate(90)'%3E%3Cg id='그룹_1' data-name='그룹 1' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_1' data-name='패스 1' d='M.536,10a.528.528,0,0,1-.358-.14.553.553,0,0,1-.041-.771L3.743,5,.137.911A.553.553,0,0,1,.178.14.53.53,0,0,1,.936.181L4.863,4.634a.554.554,0,0,1,0,.729L.936,9.819a.53.53,0,0,1-.4.181' transform='translate(0 0)' fill='%23111'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+                      no-repeat center / cover;
                     width: 10px;
                     height: 7px;
                     margin-right: 10px;
@@ -5093,8 +5169,8 @@ body {
             position: relative;
             width: 100%;
             height: 140px;
-            background: #EFEFF8;
-            border: 1px solid #F5F5F6;
+            background: #efeff8;
+            border: 1px solid #f5f5f6;
             padding: 25px 0 24px 24px;
             margin-bottom: 40px;
 
@@ -5157,7 +5233,7 @@ body {
                 justify-content: flex-start;
               }
 
-              >li {
+              > li {
                 width: 345px;
                 // height: 270px;
 
@@ -5168,11 +5244,12 @@ body {
 
                 a {
                   &::before {
-                    content: '';
+                    content: "";
                     position: absolute;
                     width: 70px;
                     height: 70px;
-                    background: url('../images/playlogo.svg') no-repeat center/ cover;
+                    background: url("../images/playlogo.svg") no-repeat center/
+                      cover;
                     top: 80px;
                     left: 135px;
                     transition: all 0.2s ease-in-out;
@@ -5265,6 +5342,62 @@ body {
             }
           }
         }
+
+        #bo_vc {
+          margin: 40px 0 20px;
+          article {
+            display: block;
+            background: #f4f4f4;
+            padding: 20px;
+            margin: 0 0 20px;
+
+            header {
+              background: transparent;
+              text-align: left;
+              height: auto;
+              border-bottom: 1px solid #ccc;
+              padding: 0 0 10px;
+              margin: 0 0 10px;
+
+              h2 {
+                font-size: 16px;
+                color: #222;
+                margin: 0;
+              }
+            }
+
+            .bo_vl_opt {
+              margin: 20px 0 0;
+              a {
+                display: inline-block;
+                margin-right: 10px;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        #bo_vc_w {
+          textarea {
+            width: 100%;
+            background: #fefefe;
+            border: 1px solid #ccc;
+            padding: 20px;
+            height: 140px;
+          }
+        }
+
+        .reply_submit {
+          display: block;
+          width: 100%;
+          background: #333333;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 46px;
+          padding: 0 30px;
+          margin: 0 2px;
+        }
       }
     }
 
@@ -5286,7 +5419,8 @@ body {
           color: #999999;
           padding: 100px 0 0;
 
-          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70.556' height='70.556' viewBox='0 0 70.556 70.556'%3E%3Cpath id='패스_1593' data-name='패스 1593' d='M65.5,2H9.056a7.046,7.046,0,0,0-7.02,7.056L2,72.556,16.111,58.444H65.5a7.076,7.076,0,0,0,7.056-7.056V9.056A7.076,7.076,0,0,0,65.5,2ZM26.694,33.75H19.639V26.694h7.056Zm14.111,0H33.75V26.694h7.056Zm14.111,0H47.861V26.694h7.056Z' transform='translate(-2 -2)' fill='%23bebebe'/%3E%3C/svg%3E%0A") no-repeat center top / 70px auto;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70.556' height='70.556' viewBox='0 0 70.556 70.556'%3E%3Cpath id='패스_1593' data-name='패스 1593' d='M65.5,2H9.056a7.046,7.046,0,0,0-7.02,7.056L2,72.556,16.111,58.444H65.5a7.076,7.076,0,0,0,7.056-7.056V9.056A7.076,7.076,0,0,0,65.5,2ZM26.694,33.75H19.639V26.694h7.056Zm14.111,0H33.75V26.694h7.056Zm14.111,0H47.861V26.694h7.056Z' transform='translate(-2 -2)' fill='%23bebebe'/%3E%3C/svg%3E%0A")
+            no-repeat center top / 70px auto;
         }
       }
     }
@@ -5358,7 +5492,8 @@ body {
           line-height: 1.5;
           margin: 0 0 12px 0;
 
-          @media (min-width: $screen-size-pc) {}
+          @media (min-width: $screen-size-pc) {
+          }
 
           span {
             display: inline-block;
@@ -5401,7 +5536,7 @@ body {
         }
       }
 
-      div.qr{
+      div.qr {
         @media (max-width: $screen-size-pc) {
           display: none;
         }
@@ -5410,23 +5545,21 @@ body {
         right: 215px;
         display: flex;
         gap: 0 10px;
-          a{
-            text-align: center;
-            width: 106px;
-            height: 138px;
-              p{
-                margin: 12px 0 8px;
-                font-size: 15px;
-                font-weight: bold;
-                color: #333333;
-              }
-              img{
-                width: 80.52px;
-                height: 79.54px;
-              }
+        a {
+          text-align: center;
+          width: 106px;
+          height: 138px;
+          p {
+            margin: 12px 0 8px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #333333;
           }
-        
-        
+          img {
+            width: 80.52px;
+            height: 79.54px;
+          }
+        }
       }
 
       div.agency {
@@ -5472,7 +5605,7 @@ body {
             }
           }
 
-          &.on+.agency-link {
+          &.on + .agency-link {
             display: block;
           }
         }
