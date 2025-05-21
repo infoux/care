@@ -3279,7 +3279,7 @@ body header .container h1 a {
     word-break: keep-all;
     margin: 0 0 20px;
     color: #555;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.6;
     opacity: 0;
@@ -5239,6 +5239,12 @@ body div#content.sub section.sub-content div.container div.b-content > div.talk-
 
 body div#content.sub section.sub-content div.container div.b-content div.talk-write {
   margin-top: 24px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content div.talk-write {
+    margin-top: 40px;
+  }
 }
 
 body div#content.sub section.sub-content div.container div.b-content div.talk-write > ul {
