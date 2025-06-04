@@ -5169,7 +5169,7 @@ body div#content.sub section.sub-content div.container div.b-content > div.talk-
 @media (min-width: 1195px) {
   body div#content.sub section.sub-content div.container div.b-content > div.talk-guide > ul > li {
     width: 260px;
-    height: 240px;
+    height: 210px;
   }
 }
 
@@ -5310,50 +5310,6 @@ body div#content.sub section.sub-content div.container div.b-content div.talk-wr
   body div#content.sub section.sub-content div.container div.b-content div.talk-write > ul > li > ul > li {
     font-size: 17px;
     line-height: 30px;
-  }
-}
-
-body div#content.sub section.sub-content div.container div.b-content div.talk-write a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 182px;
-  height: 40px;
-  border: 1px solid #ac2665;
-  background: #d24387;
-  color: #ffffff;
-  font-size: 17px;
-  margin: 32px auto 33px;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content div.talk-write a {
-    width: 200px;
-    height: 44px;
-    font-size: 19px;
-    margin: 50px auto 40px;
-  }
-}
-
-body div#content.sub section.sub-content div.container div.b-content div.talk-write a::before {
-  content: "";
-  display: inline-block;
-  width: 23px;
-  height: 23px;
-  background: url("data:image/svg+xml,%3Csvg id='그룹_13245' data-name='그룹 13245' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='그룹_13240' data-name='그룹 13240'%3E%3Crect id='사각형_5592' data-name='사각형 5592' width='24' height='24' fill='none'/%3E%3C/g%3E%3Cg id='그룹_13244' data-name='그룹 13244'%3E%3Cg id='그룹_13243' data-name='그룹 13243'%3E%3Cg id='그룹_13241' data-name='그룹 13241'%3E%3Cpath id='패스_9503' data-name='패스 9503' d='M3,17.25V21H6.75L17.81,9.94,14.06,6.19Z' fill='%23fbddeb'/%3E%3C/g%3E%3Cg id='그룹_13242' data-name='그룹 13242'%3E%3Cpath id='패스_9504' data-name='패스 9504' d='M20.71,5.63,18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75,1.83-1.83A1,1,0,0,0,20.71,5.63Z' fill='%23fbddeb'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/100%;
-  margin: 4px 4px 0 0;
-}
-
-@media (min-width: 1195px) {
-  body div#content.sub section.sub-content div.container div.b-content div.talk-write a::before {
-    width: 26px;
-    height: 26px;
   }
 }
 
@@ -6345,6 +6301,50 @@ body div#content.sub section.sub-content div.container div.b-content > ul li h5.
     width: 873px;
     height: 703px;
     background: url("../images/ccimage04-pc.png") no-repeat center center/cover;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li a.talk-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 202px;
+  height: 50px;
+  border: 1px solid #ac2665;
+  background: #d24387;
+  color: #ffffff;
+  font-size: 17px;
+  margin: 25px auto 10px;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li a.talk-btn {
+    width: 240px;
+    height: 54px;
+    font-size: 19px;
+    margin: 30px auto 20px;
+  }
+}
+
+body div#content.sub section.sub-content div.container div.b-content > ul li a.talk-btn::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url("data:image/svg+xml,%3Csvg id='그룹_13245' data-name='그룹 13245' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='그룹_13240' data-name='그룹 13240'%3E%3Crect id='사각형_5592' data-name='사각형 5592' width='24' height='24' fill='none'/%3E%3C/g%3E%3Cg id='그룹_13244' data-name='그룹 13244'%3E%3Cg id='그룹_13243' data-name='그룹 13243'%3E%3Cg id='그룹_13241' data-name='그룹 13241'%3E%3Cpath id='패스_9503' data-name='패스 9503' d='M3,17.25V21H6.75L17.81,9.94,14.06,6.19Z' fill='%23fbddeb'/%3E%3C/g%3E%3Cg id='그룹_13242' data-name='그룹 13242'%3E%3Cpath id='패스_9504' data-name='패스 9504' d='M20.71,5.63,18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75,1.83-1.83A1,1,0,0,0,20.71,5.63Z' fill='%23fbddeb'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center/100%;
+  margin: 4px 4px 0 0;
+}
+
+@media (min-width: 1195px) {
+  body div#content.sub section.sub-content div.container div.b-content > ul li a.talk-btn::before {
+    width: 26px;
+    height: 26px;
   }
 }
 
