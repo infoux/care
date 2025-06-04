@@ -7565,6 +7565,7 @@ body div#content.sub section.sub-content div.container div.c-content div.map-mov
 body div#content.sub section.sub-board {
   padding: 0 0 30px;
   text-align: center;
+  margin-top: 30px;
 }
 
 @media (min-width: 1195px) {
